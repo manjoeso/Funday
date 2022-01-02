@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
     # skip_before_action :verify_authenticiy_token
 
-    helper_method :logged_in? #, :current_user
+    helper_method :logged_in?, :current_user
 
     def current_user
         @current_user = User.find_by(session_token: session[:session_token])
