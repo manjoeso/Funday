@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.logout = logout;
     window.signup = signup;
     window.store = store;
-    // TESTING
+    // TESTING 
 
     
     const root = document.getElementById("root");

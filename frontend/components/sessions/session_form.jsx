@@ -35,7 +35,7 @@ class SessionForm extends React.Component {
     render () {
         let title = this.props.formType
         if (title === 'signup'){
-            title = 'Sign Up'
+            title = 'Get Started'
         } else if (title === 'login') {
             title = 'Log in to your account'
         }

@@ -13,3 +13,86 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+    border: 1px solid red;
+    font-family: sofia-pro,Roboto,Helvetica,Arial,sans-serif;
+}
+
+ h1 {
+}
+
+li {
+    list-style-type: none;
+}
+
+nav {
+    width: 100%
+}
+.splash-navbar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* justify-content: space-around */
+}
+
+.left-nav-buttons {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: flex-end; */
+    width: 40%;
+}
+
+.right-nav-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 30%;
+    border: 200px;
+}
+.buttons-parent-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px
+}
+
+.promo-link-buttons {
+    display: flex;
+    flex-direction: row;
+}
+/* 
+.right-nav-buttons .signup-button {
+
+} */
+
+a:link {
+    text-decoration: none;
+    padding: 10px;
+}
+
+.homepage-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+a.signup-button {
+    background-color: #0F1048;
+    color: white;
+    border-radius: 15px;
+}
+
+a.signup-button big {
+    font-size: 16px;
+    text-align: center;
+}
+
+.selectable-tags-container {
+    text-align: center;
+}
+
+.splash-header {
+    text-align: center;
+}
