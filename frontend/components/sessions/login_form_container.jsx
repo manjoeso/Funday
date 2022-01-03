@@ -8,7 +8,7 @@ const mSTP = (state, ownProps) => ({
 })
 
 const mDTP = (dispatch, ownProps) => ({
-    processForm: (user) => dispatch(login(user))
+    login: (user) => dispatch(login(user))
 })
 
 export default connect(mSTP, mDTP)(LoginForm)
