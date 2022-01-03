@@ -19,27 +19,25 @@ const receiveErrors = (errors) => ({
     errors
 })
 
-export const signup = (formUser) => {
-    return function (dispatch) {
-        return SessionApiUtil.signup(formUser)
-        .then(currentUser => dispatch(receiveCurrentUser(currentUser)))
-        .fail((errors) => dispatch(receiveErrors(errors.responseJson)))
-    }
-}
-
-export const login = (formUser) => {
-    return function (dispatch) {
-        return SessionApiUtil.login(formUser)
-        .then(currentUser => dispatch(receiveCurrentUser(currentUser)))
-        .fail((errors) => dispatch(receiveErrors(errors.responseJson)))
-    } 
-}
-
-export const logout = () => {
-    return function (dispatch) {
-        return SessionApiUtil.logout()
-        .then(() => dispatch(logoutCurrentUser()))
-        .fail((errors) => dispatch(receiveErrors(errors.responseJson)))
-    } 
-}
-
+export const signup = user => dispatch => (
+    SessionApiUtil.signup(user).then(currentUser => (
+      dispatch(receiveCurrentUser(currentUser))
+    ), err => (
+      dispatch(receiveErrors(err.responseJSON))
+    ))
+  );
+  
+export const login = user => dispatch => (
+    SessionApiUtil.login(user).then(currentUser => (
+      dispatch(receiveCurrentUser(currentUser))
+    ), err => (
+      dispatch(receiveErrors(err.responseJSON))
+    ))
+  );
+  
+  export const logout = () => dispatch => (
+    SessionApiUtil.logout().then(currentUser => (
+      dispatch(logoutCurrentUser())
+    ))
+  );
+  

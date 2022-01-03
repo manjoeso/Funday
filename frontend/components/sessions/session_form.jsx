@@ -18,9 +18,20 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(this.state);
-        // <Redirect to="/" />
     }
 
+    renderErrors() {
+        return(
+          <ul>
+            {this.props.errors.map((error, i) => (
+              <li key={`error-${i}`}>
+                {error}
+              </li>
+            ))}
+          </ul>
+        );
+    }
+    
     render () {
         let title = this.props.formType
         if (title === 'signup'){
@@ -33,6 +44,7 @@ class SessionForm extends React.Component {
             <div>
                 <h2>{title}</h2>
                 <form onSubmit={this.handleSubmit}>
+                    {this.renderErrors()}
                     <br></br>
                     <label>Enter email 
                         <br></br>

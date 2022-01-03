@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import SessionForm from './session_form'
 
 const mSTP = (state, ownProps) => ({
-    errors: Object.values(state.errors),
+    errors: Object.values(state.errors.session),
     formType: 'login'
 })
 
