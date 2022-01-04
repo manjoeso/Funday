@@ -17,10 +17,9 @@ class SignupForm extends React.Component {
     }
     handleSubmit(e) {
         e.preventDefault();
-        const user = Object.assign({}, this.state);
+        // const user = Object.assign({}, this.state);
         this.props.processForm(this.state);
     }
-
     renderErrors() {
         return(
           <ul>
@@ -35,7 +34,6 @@ class SignupForm extends React.Component {
     
     render () {
         let errors_class = '';
-
         if (this.props.errors.length > 0) { 
             errors_class = 'login-signup-error-display'
         }
@@ -86,7 +84,7 @@ class SignupForm extends React.Component {
                                 <br></br>
                                 <div className='sign-up-option-login-form'>
                                     <span>Already have an account?</span>
-                                    <Link to='/login'>Log in</Link>
+                                    <Link errors={[]} to='/login'>Log in</Link>
                                 </div>
                             </div>
                     </div>

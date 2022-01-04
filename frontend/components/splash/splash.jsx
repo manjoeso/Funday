@@ -43,7 +43,7 @@ class Splash extends React.Component{
                     </div>
                 </div>
             )
-        } else { 
+        } else { // this will be my "logged-in" homepage, with all react components inside
             return (
                 <div>
                     <h1>Greetings {this.props.currentUser.email}</h1>

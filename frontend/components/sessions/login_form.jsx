@@ -36,6 +36,7 @@ class LoginForm extends React.Component {
     render () {
         const demoUser = {email: 'jack@gmail.com', password: 'password', name: ''}
         let errors_class = '';
+        debugger
         if (this.props.errors.length > 0) { // check length
             errors_class = 'login-signup-error-display'
         }

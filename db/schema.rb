@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_03_175352) do
+ActiveRecord::Schema.define(version: 2022_01_04_191913) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,21 @@ ActiveRecord::Schema.define(version: 2022_01_03_175352) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email"
     t.index ["session_token"], name: "index_users_on_session_token"
+  end
+
+  create_table "users_workspaces", force: :cascade do |t|
+    t.integer "workspace_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_users_workspaces_on_user_id"
+    t.index ["workspace_id"], name: "index_users_workspaces_on_workspace_id"
+  end
+
+  create_table "workspaces", force: :cascade do |t|
+    t.string "title", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
