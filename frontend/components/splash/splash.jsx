@@ -12,13 +12,16 @@ class Splash extends React.Component{
                 <div>
                     <div className="splash-navbar-container">
                         <nav className="nav-buttons-parent-container">
+                            <Link to='/'>
+                                <img src="https://cdn.monday.com/images/logos/monday_logo_short.png"/>
+                            </Link>              
                             <div className="left-nav-buttons">
-                                <div className="homepage-logo">
+                                {/* <div className="homepage-logo">
                                     <Link to='/'>Monday.com</Link>
-                                </div>
+                                </div> */}
                                 <ul className='nav-promo-link-buttons'>
-                                    <li className='splash-nav-button'><a href=''>Linked In</a></li>
-                                    <li className='splash-nav-button'><a href=''>Github Repo</a></li>
+                                    <a className='splash-nav-button' href=''>Linked In</a>
+                                    <a className='splash-nav-button' href=''>Github Repo</a>
                                 </ul>
                             </div>
                             <div className="right-nav-buttons">
@@ -29,10 +32,10 @@ class Splash extends React.Component{
                     </div>
                     <div className='splash-headers'>
                         <h1>A platform built for <br></br><b> a new way of working</b></h1>
-                        <h2>What would you like to manage with monday.com Work OS?</h2>
+                        <h2>What would you like to manage with funday.com Work OS?</h2>
                     </div>
                     <div className="selectable-tags-container">
-                        {/* <Link className='signup-button big' to='/signup'>Get Started</Link> */}
+                        <Link className='signup-button big' to='/signup'>Get Started</Link>
                     </div>
                 </div>
             )

@@ -1,41 +1,33 @@
-// .login-monday-top-header-wrapper {
-//     width: 100%;
-//     display: block;
-//     padding-left: 8px;
-//     border-bottom: 1px solid #e0e0e0;
-//     padding-top: 10px;
-//     height: 57px;
-//     background: #f7f7f7;
-// }
+.login-monday-top-header-wrapper {
+    width: 100%;
+    display: block;
+    padding-left: 8px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-top: 10px;
+    height: 57px;
+    background: #f7f7f7;
+}
 
-// .login-monday-top-header-wrapper > img {
-//     width: 180px;
-//     height: 44px;
-//     margin-left: 12px;
-// }
+.login-monday-top-header-wrapper > a > img {
+    width: 180px;
+    height: 44px;
+    margin-left: 12px;
+}
 
-// .router-wrapper {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: flex-start;
-//     align-items: center;
-//     flex-grow: 1;
-//     padding: 40px;
-// }
+.login-router-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    padding: 40px;
+}
 
-// .email-password-component {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     margin-top: 40px;
-//     margin-bottom: 16px;
-// }
-
-// h1 {
-//     font-size: 40px;
-// }
-
-// h2 {
-//     font-size: 20px;
-// }
+.email-password-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 16px;
+}

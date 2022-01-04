@@ -38,9 +38,11 @@ class LoginForm extends React.Component {
         return (
             <div className='login-funday-container'>
                 <div className='login-monday-top-header-wrapper'>
-                    <img src="https://cdn.monday.com/images/logos/monday_logo_short.png"/>
+                    <Link to='/'>
+                        <img src="https://cdn.monday.com/images/logos/monday_logo_short.png"/>
+                    </Link>                          
                 </div>
-                <div className='router-wrapper'>
+                <div className='login-router-wrapper'>
                     <div className='email-password-component'>
                         <h1 className='login-header'>Log in to your account</h1>
                         <form onSubmit={this.handleSubmit}>
@@ -51,6 +53,7 @@ class LoginForm extends React.Component {
                                     type='text'
                                     value={this.state.email}
                                     onChange={this.update('email')}
+                                    placeholder='example@company.com'
                                 />
                             </div>
                             <div className='form-input-wrapper'>
@@ -59,6 +62,7 @@ class LoginForm extends React.Component {
                                     type='password'
                                     value={this.state.password}
                                     onChange={this.update('password')}
+                                    placeholder='password'
                                 />
                             </div>
                             <button type='submit'>{this.props.formType}</button>

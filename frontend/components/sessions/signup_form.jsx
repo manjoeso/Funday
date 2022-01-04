@@ -52,6 +52,7 @@ class SignupForm extends React.Component {
                             type='text'
                             value={this.state.email}
                             onChange={this.update('email')}
+                            placeholder='name@company.com'
                         />
                     </label>
                     <br></br>
@@ -61,6 +62,7 @@ class SignupForm extends React.Component {
                             type='password'
                             value={this.state.password}
                             onChange={this.update('password')}
+                            placeholder='password'
                         />
                     </label>
                     {/* <Link to="/">Click to {this.props.formType}</Link> */}
