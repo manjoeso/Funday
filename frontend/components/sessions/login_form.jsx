@@ -51,7 +51,7 @@ class LoginForm extends React.Component {
                                 <form onSubmit={this.handleSubmit}>
                                     {this.renderErrors()}
                                     <div className='form-input-wrapper'>
-                                        <span id='email-label'>Email</span>
+                                        <span id='form-label'>Email</span>
                                         <input
                                             className='login-signup-text-box'
                                             type='text'
@@ -61,7 +61,7 @@ class LoginForm extends React.Component {
                                         />
                                     </div>
                                     <div className='form-input-wrapper'>
-                                        <span id='password-label'>Password</span> 
+                                        <span id='form-label'>Password</span> 
                                         <input
                                             className='login-signup-text-box'
                                             type='password'

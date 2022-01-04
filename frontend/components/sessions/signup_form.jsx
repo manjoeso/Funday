@@ -6,7 +6,8 @@ class SignupForm extends React.Component {
       super(props);
       this.state = {
         email: "",
-        password: ""
+        password: "",
+        name: "",
       }
       this.handleSubmit = this.handleSubmit.bind(this)
     }
@@ -33,42 +34,59 @@ class SignupForm extends React.Component {
     }
     
     render () {
-        let title = this.props.formType
-        if (title === 'signup'){
-            title = 'Get Started'
-        } else if (title === 'login') {
-            title = 'Log in to your account'
-        }
-
         return (
-            <div>
-                <h2>{title}</h2>
-                <form onSubmit={this.handleSubmit}>
-                    {this.renderErrors()}
-                    <br></br>
-                    <label>Enter email 
-                        <br></br>
-                        <input
-                            type='text'
-                            value={this.state.email}
-                            onChange={this.update('email')}
-                            placeholder='name@company.com'
-                        />
-                    </label>
-                    <br></br>
-                    <label>Enter your password
-                        <br></br>
-                        <input 
-                            type='password'
-                            value={this.state.password}
-                            onChange={this.update('password')}
-                            placeholder='password'
-                        />
-                    </label>
-                    {/* <Link to="/">Click to {this.props.formType}</Link> */}
-
-                    <button type='submit'>{this.props.formType}</button>
-                </form>
+            <div className='login-funday-container'>
+                <div className='login-signup-router-wrapper'>
+                    <div className='login-signup-div-wrapper'>
+                        <h1 className='login-signup-header'>Sign Up</h1>
+                            {/* <div className='login-signup-email-form'>
+                            </div> */}
+                            <div className='e-mail-input-submit-wrapper'>
+                                <form onSubmit={this.handleSubmit}>
+                                    {this.renderErrors()}
+                                    <div className='form-input-wrapper'>
+                                        <span id='form-label'>Full Name</span>
+                                        <input
+                                            className='login-signup-text-box'
+                                            type='text'
+                                            value={this.state.name}
+                                            onChange={this.update('name')}
+                                            placeholder='John Smith'
+                                        />
+                                    </div>
+                                    <div className='form-input-wrapper'>
+                                        <span id='form-label'>Email</span>
+                                        <input
+                                            className='login-signup-text-box'
+                                            type='text'
+                                            value={this.state.email}
+                                            onChange={this.update('email')}
+                                            placeholder='example@company.com'
+                                        />
+                                    </div>
+                                    <div className='form-input-wrapper'>
+                                        <span id='form-label'>Password</span> 
+                                        <input
+                                            className='login-signup-text-box'
+                                            type='password'
+                                            value={this.state.password}
+                                            onChange={this.update('password')}
+                                        />
+                                    </div>
+                                    <div >
+                                        <button
+                                            className='login-action-button-wrapper'
+                                            type='submit'>Sign Up</button>
+                                    </div>
+                                </form>
+                                <br></br>
+                                <div className='sign-up-option-login-form'>
+                                    <span>Already have an account?</span>
+                                    <Link to='/login'>Log in</Link>
+                                </div>
+                            </div>
+                    </div>
+                </div>
             </div>
         )
     }

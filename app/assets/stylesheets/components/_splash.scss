@@ -62,13 +62,30 @@ nav {
     width: 30%;
 }
 
-a.signup-button {
+a.signup-button-small {
     background-color: #0F1048;
     color: white;
     border-radius: 30px;
     margin-left: 30px;
     padding: 15px;
 }
+
+a.signup-button-small > p:hover {
+    opacity: 0.5;
+}
+
+.signup-button-big {
+    background-color: #0F1048;
+    color: white;
+    border-radius: 30px;
+    font-size: 18px;
+    padding: 50px;
+}
+
+a.signup-button-big > p:hover {
+    opacity: 0.5;
+}
+
 
 // .homepage-logo {
 //     display: flex;
@@ -86,13 +103,6 @@ a:link {
     padding: 10px;
 }
 
-.signup-button.big {
-    font-size: 18px;
-}
-
-.selectable-tags-container {
-    text-align: center;
-}
 
 .splash-headers {
     text-align: center;
@@ -112,3 +122,7 @@ a:link {
     font-weight: lighter;
 }
 
+.selectable-tags-container {
+    text-align: center;
+    padding: 20px;
+}

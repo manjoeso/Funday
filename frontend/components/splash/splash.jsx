@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+// import gif from '../../../app/assets/images/splash.gif'
 
 class Splash extends React.Component{
     constructor(props){
@@ -26,7 +27,7 @@ class Splash extends React.Component{
                             </div>
                             <div className="right-nav-buttons">
                                 <Link className='splash-nav-button' to='/login'>Login</Link>
-                                <Link className='signup-button' to='/signup'>Get Started</Link>
+                                <Link className='signup-button-small' to='/signup'><p>Get Started</p></Link>
                             </div>
                         </nav>
                     </div>
@@ -35,7 +36,10 @@ class Splash extends React.Component{
                         <h2>What would you like to manage with funday.com Work OS?</h2>
                     </div>
                     <div className="selectable-tags-container">
-                        <Link className='signup-button big' to='/signup'>Get Started</Link>
+                        <Link className='signup-button-big' to='/signup'>Get Started</Link>
+                         {// change to button eventually to fix styling
+                         }
+                        <img></img>
                     </div>
                 </div>
             )
