@@ -34,11 +34,17 @@ class SignupForm extends React.Component {
     }
     
     render () {
+        let errors_class = '';
+
+        if (this.props.errors.length > 0) { 
+            errors_class = 'login-signup-error-display'
+        }
+
         return (
             <div className='login-funday-container'>
                 <div className='login-signup-router-wrapper'>
                     <div className='login-signup-div-wrapper'>
-                    {/* <div className='login-signup-error-display'>{this.renderErrors()}</div> */}
+                    <div className={errors_class}>{this.renderErrors()}</div>
                         <h1 className='login-signup-header'>Sign Up</h1>
                             {/* <div className='login-signup-email-form'>
                             </div> */}

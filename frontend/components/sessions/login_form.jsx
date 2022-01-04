@@ -18,7 +18,7 @@ class LoginForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm({email: user.email, password: user.password});
+        this.props.processForm(this.state);
     }
 
     renderErrors() {
@@ -34,9 +34,9 @@ class LoginForm extends React.Component {
     }
     
     render () {
-        const demoUser = {email: 'john_smith@gmail.com', password: 'password', name: 'John Smith'}
+        const demoUser = {email: 'jack@gmail.com', password: 'password', name: ''}
         let errors_class = '';
-        if (this.props.errors != []) {
+        if (this.props.errors.length > 0) { // check length
             errors_class = 'login-signup-error-display'
         }
         return (
@@ -75,7 +75,7 @@ class LoginForm extends React.Component {
                                     <div >
                                         <button
                                             className='login-action-button-wrapper'
-                                            type='submit'>{this.props.formType}</button>
+                                            type='submit'>Login</button>
                                     </div>
                                 </form>
                                 <div className='or-sign-in-with-separator'>
