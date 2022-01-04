@@ -42,36 +42,57 @@ class LoginForm extends React.Component {
                         <img src="https://cdn.monday.com/images/logos/monday_logo_short.png"/>
                     </Link>                          
                 </div>
-                <div className='login-router-wrapper'>
-                    <div className='email-password-component'>
-                        <h1 className='login-header'>Log in to your account</h1>
-                        <form onSubmit={this.handleSubmit}>
-                            {this.renderErrors()}
-                            <div className='form-input-wrapper'>
-                                <span>Email</span>
-                                <input
-                                    type='text'
-                                    value={this.state.email}
-                                    onChange={this.update('email')}
-                                    placeholder='example@company.com'
-                                />
+                <div className='login-signup-router-wrapper'>
+                    <div className='login-signup-div-wrapper'>
+                        <h1 className='login-signup-header'>Log in</h1>
+                            {/* <div className='login-signup-email-form'>
+                            </div> */}
+                            <div className='e-mail-input-submit-wrapper'>
+                                <form onSubmit={this.handleSubmit}>
+                                    {this.renderErrors()}
+                                    <div className='form-input-wrapper'>
+                                        <span id='email-label'>Email</span>
+                                        <input
+                                            className='login-signup-text-box'
+                                            type='text'
+                                            value={this.state.email}
+                                            onChange={this.update('email')}
+                                            placeholder='example@company.com'
+                                        />
+                                    </div>
+                                    <div className='form-input-wrapper'>
+                                        <span id='password-label'>Password</span> 
+                                        <input
+                                            className='login-signup-text-box'
+                                            type='password'
+                                            value={this.state.password}
+                                            onChange={this.update('password')}
+                                            placeholder='password'
+                                        />
+                                    </div>
+                                    <div >
+                                        <button
+                                            className='login-action-button-wrapper'
+                                            type='submit'>{this.props.formType}</button>
+                                    </div>
+                                </form>
+                                <div className='or-sign-in-with-separator'>
+                                    <span className='separator-line'></span>
+                                    <h2>Or Sign in with</h2>
+                                    <span className='separator-line'></span>
+                                </div>
+                                <div className='demo-user'>
+                                    <button 
+                                        className='login-action-button-wrapper'
+                                        type='submit' 
+                                        onClick={() => this.props.login(demoUser)}>Demo User</button>
+                                </div>
+                                <br></br>
+                                <div className='sign-up-option-login-form'>
+                                    <span>Don't have an account yet?</span>
+                                    <Link to='/signup'>Sign up</Link>
+                                </div>
                             </div>
-                            <div className='form-input-wrapper'>
-                                <span>Password</span> 
-                                <input
-                                    type='password'
-                                    value={this.state.password}
-                                    onChange={this.update('password')}
-                                    placeholder='password'
-                                />
-                            </div>
-                            <button type='submit'>{this.props.formType}</button>
-                            <h2>Or Sign in with</h2>
-                            <button type='submit' onClick={() => this.props.login(demoUser)}>Demo User</button>
-                            <br></br>
-                            <span>Don't have an account yet?</span>
-                            <Link to='/signup'>Sign up</Link>
-                        </form>
                     </div>
                 </div>
             </div>
