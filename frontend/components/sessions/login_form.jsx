@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link, Redirect} from 'react-router-dom'
-
+ 
 class LoginForm extends React.Component {
     constructor(props) {
       super(props);
@@ -18,23 +18,27 @@ class LoginForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.login(this.state);
+        this.props.processForm({email: user.email, password: user.password});
     }
 
     renderErrors() {
         return(
-          <ul>
+            <ul>
             {this.props.errors.map((error, i) => (
-              <li key={`error-${i}`}>
+                <li key={`error-${i}`}>
                 {error}
-              </li>
+                </li>
             ))}
-          </ul>
-        );
+            </ul>
+        )
     }
     
     render () {
         const demoUser = {email: 'john_smith@gmail.com', password: 'password', name: 'John Smith'}
+        let errors_class = '';
+        if (this.props.errors != []) {
+            errors_class = 'login-signup-error-display'
+        }
         return (
             <div className='login-funday-container'>
                 <div className='login-monday-top-header-wrapper'>
@@ -43,13 +47,11 @@ class LoginForm extends React.Component {
                     </Link>                          
                 </div>
                 <div className='login-signup-router-wrapper'>
+                <div className={errors_class}>{this.renderErrors()}</div>
                     <div className='login-signup-div-wrapper'>
                         <h1 className='login-signup-header'>Log in</h1>
-                            {/* <div className='login-signup-email-form'>
-                            </div> */}
                             <div className='e-mail-input-submit-wrapper'>
                                 <form onSubmit={this.handleSubmit}>
-                                    {this.renderErrors()}
                                     <div className='form-input-wrapper'>
                                         <span id='form-label'>Email</span>
                                         <input
@@ -85,7 +87,7 @@ class LoginForm extends React.Component {
                                     <button 
                                         className='login-action-button-wrapper'
                                         type='submit' 
-                                        onClick={() => this.props.login(demoUser)}>Demo User</button>
+                                        onClick={() => this.props.processForm(demoUser)}>Demo User</button>
                                 </div>
                                 <br></br>
                                 <div className='sign-up-option-login-form'>

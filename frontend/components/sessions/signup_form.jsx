@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link, Redirect} from 'react-router-dom'
-
+ 
 class SignupForm extends React.Component {
     constructor(props) {
       super(props);
@@ -38,12 +38,12 @@ class SignupForm extends React.Component {
             <div className='login-funday-container'>
                 <div className='login-signup-router-wrapper'>
                     <div className='login-signup-div-wrapper'>
+                    {/* <div className='login-signup-error-display'>{this.renderErrors()}</div> */}
                         <h1 className='login-signup-header'>Sign Up</h1>
                             {/* <div className='login-signup-email-form'>
                             </div> */}
                             <div className='e-mail-input-submit-wrapper'>
                                 <form onSubmit={this.handleSubmit}>
-                                    {this.renderErrors()}
                                     <div className='form-input-wrapper'>
                                         <span id='form-label'>Full Name</span>
                                         <input
@@ -74,9 +74,7 @@ class SignupForm extends React.Component {
                                         />
                                     </div>
                                     <div >
-                                        <button
-                                            className='login-action-button-wrapper'
-                                            type='submit'>Sign Up</button>
+                                        <button className='login-action-button-wrapper'>Sign Up</button>
                                     </div>
                                 </form>
                                 <br></br>

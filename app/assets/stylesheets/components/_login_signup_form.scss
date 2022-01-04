@@ -17,7 +17,7 @@
     height: 44px;
     margin-left: 12px;
 }
-
+ 
 .login-signup-router-wrapper {
     height: 100vh;
     display: flex;
@@ -113,5 +113,12 @@
     text-align: center;
 }
 
-
-
+.login-signup-error-display {
+    background: #e2445c;
+    padding: 12px 32px;
+    margin-bottom: 10px;
+    border-radius: 0px;
+}
+.login-signup-error-display > ul > li {
+    list-style-type: square;
+}
