@@ -47,7 +47,8 @@ class Splash extends React.Component{
             return (
                 <div>
                     <h1>Greetings {this.props.currentUser.email}</h1>
-                    <button onClick={()=> this.props.logout()}>Logout</button>           
+                    <button onClick={()=> this.props.logout()}>Logout</button>
+                    {/* <Workspace currentUser={this.currentUser}/>         */}
                 </div>
             )
         }
