@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import WorkspaceContainer from '../workspaces/workspace_container'
 // import gif from '../../../app/assets/images/splash.gif'
 
 class Splash extends React.Component{
@@ -46,9 +47,12 @@ class Splash extends React.Component{
         } else { // this will be my "logged-in" homepage, with all react components inside
             return (
                 <div>
+                    <br></br>
+                    <br></br>
+                    <br></br>
                     <h1>Greetings {this.props.currentUser.email}</h1>
                     <button onClick={()=> this.props.logout()}>Logout</button>
-                    {/* <Workspace currentUser={this.currentUser}/>         */}
+                    <WorkspaceContainer currentUser={this.props.currentUser}/>        
                 </div>
             )
         }

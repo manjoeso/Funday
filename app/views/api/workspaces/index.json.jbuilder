@@ -1,9 +1,12 @@
-json.workspaces @user.workspaces do |workspace|
-    json.workspace_id workspace.id
+json.array! @user.workspaces do |workspace|
+    #json.array!(workspace)
+    json.id workspace.id
     json.title workspace.title
-    json.users workspace.users do |user|
-        json.name user.name
-    end
+    #json.users workspace.users do |user| 
+        #json.name user.name
+    #end
+end
+
     # json.board workspace.boards do |board|
     #     json.board_id board.id
     #     json.title board.title
@@ -18,4 +21,3 @@ json.workspaces @user.workspaces do |workspace|
     #         end
     #     end
     # end
-end

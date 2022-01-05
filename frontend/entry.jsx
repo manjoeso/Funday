@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom'
 import { login, logout, signup } from './actions/session_actions'
 import configureStore from './store/store'
 import Root from "./components/root";
+import {fetchWorkspaces} from './actions/workspace_actions' 
 
 document.addEventListener("DOMContentLoaded", () => {
-    
     let store;
     if (window.currentUser) {
         const preloadedState = {
@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
     store = configureStore();
     }
     // TESTING
+    window.fetchWorkspaces = fetchWorkspaces;
+
     window.login = login;
     window.logout = logout;
     window.signup = signup;
