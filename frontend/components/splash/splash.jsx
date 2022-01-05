@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link, Switch, Route} from 'react-router-dom'
-import WorkspaceContainer from '../workspaces/workspace_container'
+import Homepage from '../workspaces/homepage_container'
 // import gif from '../../../app/assets/images/splash.gif'
 
 class Splash extends React.Component{
@@ -44,33 +44,9 @@ class Splash extends React.Component{
                     </div>
                 </div>
             )
-        } else { // this will be my "logged-in" homepage, with all react components inside
-            // conditional logic here to set workspace_id to first in array?
+        } else { 
             return (
-                <div className='homepage-parent-container'>
-                    <br></br>
-                    <br></br>
-                    {//<h1>Greetings {this.props.currentUser.email}</h1>
-                }
-                    <div className='sidebar'>
-                        <div className='logout-button'>
-                            <button onClick={()=> this.props.logout()}>Logout</button>
-                        </div>
-                    </div>
-                    <div className='main-work-area'>
-                        <div className='workspace-board-container'>
-                            <div className='workspace-parent-container'>
-                            <h1>Workspaces</h1>
-                                <div className='workspace-container'>
-                                    <WorkspaceContainer currentUser={this.props.currentUser}/> 
-                                </div>
-                            </div>
-                            <div className='board-parent-container'>
-                                <h1>Boards go here</h1>                        
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Homepage currentUser={this.props.currentUser}/> 
             )
         }
     }
