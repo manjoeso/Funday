@@ -32,11 +32,15 @@ class LoginForm extends React.Component {
             </ul>
         )
     }
+
+    componentWillUnmount () {
+        this.props.removeErrors();
+    }
     
     render () {
         const demoUser = {email: 'john_smith@gmail.com', password: 'password', name: 'John Smith'}
         let errors_class = '';
-        debugger
+        
         if (this.props.errors.length > 0) { // check length
             errors_class = 'login-signup-error-display'
         }
