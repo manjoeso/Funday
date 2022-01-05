@@ -31,7 +31,7 @@ class SignupForm extends React.Component {
           </ul>
         );
     }
-    
+     
     render () {
         let errors_class = '';
         if (this.props.errors.length > 0) { 

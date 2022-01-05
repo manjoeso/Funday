@@ -11,4 +11,4 @@ const mDTP = (dispatch, ownProps) => ({
     processForm: (user) => dispatch(login(user))
 })
 
-export default connect(mSTP, mDTP)(LoginForm)
+export default connect(mSTP, mDTP)(LoginForm); 
