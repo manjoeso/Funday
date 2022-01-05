@@ -1,6 +1,6 @@
-export const receiveWorkspace = (userId) => {
+export const fetchWorkspaces = (userId) => {
     return $.ajax({
-        method: "POST",
-        url: `/api/users/${userId}` 
+        method: "GET",
+        url: `/api/users/${userId}/workspaces` 
     })
 }
