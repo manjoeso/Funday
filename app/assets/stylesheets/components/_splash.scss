@@ -124,3 +124,56 @@ a:link {
     text-align: center;
     padding: 20px;
 }
+
+// LOGGED IN SPLASH
+
+.homepage-parent-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main-work-area {
+    width: 100vw;
+}
+
+.workspace-board-container {
+    height: 100vh;
+    width: 25%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    border-right: 2px solid black;
+}
+
+.workspace-parent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+
+}
+
+.workspace-container {
+    padding: 10px;
+}
+
+.workspace-container li {
+    padding: 10px;
+}
+
+.board-parent-container {
+    height: 75vh;
+}
+
+.sidebar {
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    border-right: 2px solid black;
+}
+.logout-button {
+    display: flex;
+}

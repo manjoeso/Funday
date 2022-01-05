@@ -1,5 +1,5 @@
 import React from 'react';
-
+import WorkspaceIndexItem from './workspace_index_item'
 class Workspace extends React.Component {
     constructor(props) {
         super(props)
@@ -13,9 +13,14 @@ class Workspace extends React.Component {
     render () {
             return (
                 <div>
-                    <ul>{}
+                    <ul>
                         {
-                            this.props.workspaces.map((workspace, idx) => <li key={idx}>{workspace.title}</li>)
+                            this.props.workspaces.map((workspace, idx) => <WorkspaceIndexItem key={idx} workspace={workspace}/>)
+                        }
+                    </ul>
+                    <ul>
+                        {
+                            //this.props.workspaces.forEach(workspace => workspace.board)
                         }
                     </ul>
                 </div>
@@ -23,4 +28,4 @@ class Workspace extends React.Component {
     }
 }
 
-export default Workspace
+export default Workspace;
