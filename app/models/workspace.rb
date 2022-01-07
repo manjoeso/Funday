@@ -19,4 +19,9 @@ class Workspace < ApplicationRecord
     through: :associated_users,
     source: :users
     
+    has_many :boards,
+    primary_key: :id,
+    foreign_key: :workspace_id,
+    class_name: :Board
+    
 end

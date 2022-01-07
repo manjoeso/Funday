@@ -4,7 +4,8 @@ import { login, logout, signup } from './actions/session_actions'
 import configureStore from './store/store'
 import Root from "./components/root";
 import {fetchWorkspaces} from './actions/workspace_actions' 
-
+import {fetchBoards} from './actions/board_actions' 
+ 
 document.addEventListener("DOMContentLoaded", () => {
     let store;
     if (window.currentUser) {
@@ -22,6 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     // TESTING
     window.fetchWorkspaces = fetchWorkspaces;
+    window.fetchBoards = fetchBoards;
+
 
     window.login = login;
     window.logout = logout;

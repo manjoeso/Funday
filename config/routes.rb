@@ -7,10 +7,14 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :index, :show] do 
       resources :workspaces, only: [:index]
     end
+    resources :workspaces, only: [:index] do 
+      resources :boards, only: [:index]
+    end
     # resources :workspaces, only: [:create, :index, :show, :edit, :destroy]
     # resources :users_workspaces, only: [:create, :destroy]
   end
   
+ 
 
 
   namespace :api, defaults: {format: :json} do 

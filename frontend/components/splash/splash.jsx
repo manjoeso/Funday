@@ -1,15 +1,17 @@
 import React from 'react'
 import {Link, Switch, Route} from 'react-router-dom'
-import Homepage from '../workspaces/homepage_container'
+import WorkspaceIndexContainer from '../workspaces/workspace_index_container'
+import SidebarContainer from '../workspaces/sidebar_container'
+import { AuthRoute, ProtectedRoute } from '../../util/route_util';
+
+
 // import gif from '../../../app/assets/images/splash.gif'
 
 class Splash extends React.Component{
     constructor(props){
         super(props)
     }
-
     render (){
-        if (!this.props.currentUser){
             return (
                 <div>
                     <div className="splash-navbar-container">
@@ -44,12 +46,8 @@ class Splash extends React.Component{
                     </div>
                 </div>
             )
-        } else { 
-            return (
-                <Homepage currentUser={this.props.currentUser}/> 
-            )
-        }
     }
 }
+
 
 export default Splash;

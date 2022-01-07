@@ -10,6 +10,7 @@
 User.destroy_all 
 Workspace.destroy_all
 UsersWorkspace.destroy_all
+Board.destroy_all
 
 user1 = User.create(email: 'john_smith@gmail.com', password: 'password', name: 'John Smith')
 user2 = User.create(email: 'josh_allen@gmail.com', password: 'password2', name: 'Josh Allen')
@@ -19,6 +20,13 @@ user5 = User.create(email: 'mctown@gmail.com', password: 'password5', name: 'Isa
 
 workspace1 = Workspace.create(title: "Workspace1")
 workspace2 = Workspace.create(title: "Workspace2")
+
+board1 = Board.create(title: "Board1", workspace_id: workspace1.id)
+board2 = Board.create(title: "Board2", workspace_id: workspace1.id)
+
+board3 = Board.create(title: "Board3", workspace_id: workspace2.id)
+board4 = Board.create(title: "Board4", workspace_id: workspace2.id)
+
 
 user_workspace1 = UsersWorkspace.create(workspace_id: workspace1.id, user_id: user1.id)
 user_workspace2 = UsersWorkspace.create(workspace_id: workspace1.id, user_id: user2.id)

@@ -3,6 +3,9 @@ nav {
     width: 100% 
 }
 
+#root {
+    width: 100%
+}
 .splash-navbar-container {
     display: flex;
     flex-direction: row;
@@ -84,7 +87,6 @@ a.signup-button-big:hover { // not working!
 }
 
 
-
 // .homepage-logo {
 //     display: flex;
 //     align-items: center;
@@ -127,15 +129,23 @@ a:link {
 
 // LOGGED IN SPLASH
 
-.homepage-parent-container {
+// .homepage-parent-container {
+//     width: 100vh;
+// }
+
+
+.main-work-area {
+    width: 100vw;
     display: flex;
     flex-direction: row;
     width: 100vw;
     height: 100vh;
 }
 
-.main-work-area {
-    width: 100vw;
+.sidebar {
+    display: flex;
+    align-items: flex-end;
+    border-right: 2px solid black;
 }
 
 .workspace-board-container {
@@ -153,7 +163,7 @@ a:link {
     align-items: center;
     justify-content: center;
     height: 25vh;
-
+    
 }
 
 .workspace-container {
@@ -166,13 +176,6 @@ a:link {
 
 .board-parent-container {
     height: 75vh;
-}
-
-.sidebar {
-    height: 100vh;
-    display: flex;
-    align-items: flex-end;
-    border-right: 2px solid black;
 }
 .logout-button {
     display: flex;
