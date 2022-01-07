@@ -1,14 +1,13 @@
 import * as WorkspaceApiUtil from '../util/entities_api_util';
-export const RECEIVE_WORKSPACES = 'RECEIVE_WORKSPACES';
+export const RECEIVE_ALL_WORKSPACE_DATA = 'RECEIVE_ALL_WORKSPACE_DATA';
 
-
-const receiveWorkspaces = (workspaces) => ({
-    type: RECEIVE_WORKSPACES, 
-    workspaces
+const receiveAllWorkspaceData = (payload) => ({
+    type: RECEIVE_ALL_WORKSPACE_DATA, 
+    payload
 }) 
 
-export const fetchWorkspaces = userId => dispatch => (
-    WorkspaceApiUtil.fetchWorkspaces(userId)
-        .then(workspaces => dispatch(receiveWorkspaces(workspaces)))
+export const fetchAllWorkspaceData = userId => dispatch => (
+    WorkspaceApiUtil.fetchAllWorkspaceData(userId)
+        .then(payload => dispatch(receiveAllWorkspaceData(payload)))
 )
  

@@ -8,11 +8,11 @@ class BoardIndex extends React.Component {
 
  
     render () {
-        debugger
         return (
-            <div>
+            <div className='board-parent-container'>
+                <h1>Boards</h1>
                 {
-                    // {this.props}
+                    this.props.boards.map(board => <li key={board.id}>{board.title}</li>)
                 }
             </div>
         )

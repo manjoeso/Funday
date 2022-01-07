@@ -1,6 +1,5 @@
 import React from 'react';
-import WorkspaceIndexItem from './workspace_index_item';
-// import WorkspaceIndexItem from './workspace_index_item';
+import {Link} from 'react-router-dom'
 
 class WorkspaceIndex extends React.Component {
     constructor(props) {
@@ -11,35 +10,28 @@ class WorkspaceIndex extends React.Component {
 
     }
     componentDidMount () {
-        this.props.fetchWorkspaces(this.props.currentUser.id);
-        // debugger
-        // this.setState({workspaces: this.props.workspaces})
-        
+        this.props.fetchAllWorkspaceData(this.props.currentUser.id);
     }
 
  
     render () {
+        // debugger
+        if(this.props.workspaces){
             return (
-                <div className='workspace-board-container'>
-                    <div className='workspace-parent-container'>
+                <div className='workspace-parent-container'>
+                    <div className='workspace-header'>
                         <h1>Workspaces</h1>
-                        <div className='workspace-container'>
-                            <ul>
-                                {this.props.workspaces.map((workspace, idx) => <WorkspaceIndexItem key={idx} workspace={workspace}/>)}
-                            </ul>
-                                {
-                                    // this.props.workspaces.forEach(workspace => workspace.board)
-                                }
-                        </div>
                     </div>
-                    <div className='board-parent-container'>
-                        <h1>Boards</h1>
+                    <div className='workspace-index-container'>
                         <ul>
-
-                        </ul>                        
+                            {this.props.workspaces.map((workspace) =>  <Link to={`/workspaces/${workspace.id}`}>{workspace.title}</Link>)}
+                        </ul>
                     </div>
-            </div>
+                </div>
             )
+        } else {
+            return null;
+        }
     }
 }
 

@@ -12,7 +12,7 @@ class Splash extends React.Component{
         super(props)
     }
     render (){
-            return (
+            return ( 
                 <div>
                     <div className="splash-navbar-container">
                         <nav className="nav-buttons-parent-container">

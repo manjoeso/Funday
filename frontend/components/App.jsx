@@ -12,18 +12,24 @@ import BoardIndexContainer from './workspaces/board_index_container'
 
 
 const App = () => (
-  <div className='homepage-parent-container'>
+  <div>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
-      {/* <Switch> */}
       <AuthRoute exact path="/" component={SplashContainer} />
-      <ProtectedRoute path="/"  component={SidebarContainer} />
-      <ProtectedRoute path='/'  component={WorkspaceIndexContainer} />
-      <ProtectedRoute path='/workspaces/:workspace_id'  component={BoardIndexContainer} />
-      {/* </Switch> */}
-      {/* <Switch> */}
-          {/* <ProtectedRoute path="/board/:board_id" component={BoardShow}/> */}
-      {/* </Switch> */}
+
+
+      <div className='main-parent-container'>
+        <ProtectedRoute path="/"  component={SidebarContainer} />
+        <div className='dashboard-main-parent-container'> 
+          <div className='workspace-board-parent-container'>
+            <ProtectedRoute path='/'  component={WorkspaceIndexContainer} />
+            <ProtectedRoute path='/workspaces/:workspace_id' component={BoardIndexContainer} />
+          </div>
+          <div className='board-show-parent-container'>
+            {/* <ProtectedRoute path='/boards/:boarde_id' component={BoardShowContainer} /> */}
+          </div>
+        </div>
+      </div>
   </div>
 );
 

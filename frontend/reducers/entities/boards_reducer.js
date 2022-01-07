@@ -1,11 +1,12 @@
-import {RECEIVE_BOARDS} from '../../actions/board_actions'
+import {RECEIVE_ALL_WORKSPACE_DATA} from '../../actions/workspace_actions'
 
 const boardsReducer = (oldState = {}, action) => {
+    
     Object.freeze(oldState);
 
     switch(action.type){ 
-        case RECEIVE_BOARDS:
-            return action.boards; // replaces current state with boards!
+        case RECEIVE_ALL_WORKSPACE_DATA:
+            return action.payload['boards'];
         default: 
             return oldState;
     }

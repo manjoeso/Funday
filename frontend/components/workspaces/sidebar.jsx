@@ -7,11 +7,12 @@ class Sidebar extends React.Component {
 
     render() {
         return (
-            // <h1>Hello</h1>
-            <div className='logout-button'>
-                <br></br>
-                <br></br>
-                <button onClick={()=> this.props.logout()}>Logout</button>
+            <div className='sidebar-container'>
+                <div className='logout-button'>
+                    <br></br>
+                    <br></br>
+                    <button onClick={()=> this.props.logout()}>Logout</button>
+                </div>
             </div>
         )
     }

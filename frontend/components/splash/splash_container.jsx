@@ -10,4 +10,4 @@ const mDTP = (dispatch) => ({
     logout: () => dispatch(logout())
 })
 
-export default connect(mSTP, mDTP)(Splash); 
+export default connect(mSTP, mDTP)(Splash);  

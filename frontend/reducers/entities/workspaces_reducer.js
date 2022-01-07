@@ -1,11 +1,11 @@
-import {RECEIVE_WORKSPACES} from '../../actions/workspace_actions'
+import {RECEIVE_ALL_WORKSPACE_DATA} from '../../actions/workspace_actions'
 
 const workspacesReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
-    
+
     switch(action.type){ 
-        case RECEIVE_WORKSPACES:
-            return action.workspaces;
+        case RECEIVE_ALL_WORKSPACE_DATA:
+            return action.payload['workspaces'];
         default: 
             return oldState;
     }

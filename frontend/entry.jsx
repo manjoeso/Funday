@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom'
 import { login, logout, signup } from './actions/session_actions'
 import configureStore from './store/store'
 import Root from "./components/root";
-import {fetchWorkspaces} from './actions/workspace_actions' 
-import {fetchBoards} from './actions/board_actions' 
+
+import {fetchAllWorkspaceData} from './actions/workspace_actions' 
+// import {fetchBoards} from './actions/board_actions' 
  
 document.addEventListener("DOMContentLoaded", () => {
     let store;
@@ -22,8 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     store = configureStore();
     }
     // TESTING
-    window.fetchWorkspaces = fetchWorkspaces;
-    window.fetchBoards = fetchBoards;
+    window.fetchAllWorkspaceData = fetchAllWorkspaceData;
 
 
     window.login = login;
