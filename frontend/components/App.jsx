@@ -9,14 +9,14 @@ import SplashContainer from './splash/splash_container'
 import WorkspaceIndexContainer from './workspaces/workspace_index_container'
 import SidebarContainer from './workspaces/sidebar_container'
 import BoardIndexContainer from './workspaces/board_index_container'
+import BoardShowContainer from './workspaces/board_show_container'
 
 
 const App = () => (
-  <div>
+  <div> 
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <AuthRoute exact path="/" component={SplashContainer} />
-
 
       <div className='main-parent-container'>
         <ProtectedRoute path="/"  component={SidebarContainer} />
@@ -26,7 +26,7 @@ const App = () => (
             <ProtectedRoute path='/workspaces/:workspace_id' component={BoardIndexContainer} />
           </div>
           <div className='board-show-parent-container'>
-            {/* <ProtectedRoute path='/boards/:boarde_id' component={BoardShowContainer} /> */}
+            <ProtectedRoute path='/boards/:board_id' component={BoardShowContainer} />
           </div>
         </div>
       </div>

@@ -11,6 +11,7 @@ User.destroy_all
 Workspace.destroy_all
 UsersWorkspace.destroy_all
 Board.destroy_all
+Project.destroy_all
 
 user1 = User.create(email: 'john_smith@gmail.com', password: 'password', name: 'John Smith')
 user2 = User.create(email: 'josh_allen@gmail.com', password: 'password2', name: 'Josh Allen')
@@ -26,6 +27,18 @@ board2 = Board.create(title: "Board2", workspace_id: workspace1.id)
 
 board3 = Board.create(title: "Board3", workspace_id: workspace2.id)
 board4 = Board.create(title: "Board4", workspace_id: workspace2.id)
+
+project1 = Project.create(title: "Project1", board_id: board1.id)
+project2 = Project.create(title: "Project2", board_id: board1.id)
+
+project3 = Project.create(title: "Project3", board_id: board2.id)
+project4 = Project.create(title: "Project4", board_id: board2.id)
+
+project5 = Project.create(title: "Project5", board_id: board3.id)
+project6 = Project.create(title: "Project6", board_id: board3.id)
+
+project7 = Project.create(title: "Project7", board_id: board4.id)
+project8 = Project.create(title: "Project8", board_id: board4.id)
 
 
 user_workspace1 = UsersWorkspace.create(workspace_id: workspace1.id, user_id: user1.id)

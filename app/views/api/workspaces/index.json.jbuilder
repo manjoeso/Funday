@@ -19,3 +19,16 @@ json.boards do
     end
 end
 
+
+json.projects do
+    @user.workspaces.each do |workspace|
+        workspace.boards.each do |board|
+            json.set! board.id do
+                json.array! board.projects do |project|
+                json.extract! project, :id, :title
+                end
+            end
+        end
+    end
+end
+

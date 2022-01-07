@@ -10,10 +10,14 @@
 #
 class Board < ApplicationRecord
 
-
     belongs_to :workspace,
     primary_key: :id,
     foreign_key: :workspace_id,
     class_name: :Workspace
+
+    has_many :projects,
+    primary_key: :id,
+    foreign_key: :board_id,
+    class_name: :Project
 
 end

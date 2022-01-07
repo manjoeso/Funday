@@ -1,7 +1,6 @@
 import {connect} from 'react-redux';
 import WorkspaceIndex from './workspace_index';
 import { fetchAllWorkspaceData } from '../../actions/workspace_actions'
-import { fetchBoards } from '../../actions/board_actions'
 import { logout } from '../../actions/session_actions'
 
 const mSTP = (state) => ({
@@ -15,4 +14,4 @@ const mDTP = (dispatch) => ({
     logout: () => (dispatch(logout()))
 })
 
-export default connect(mSTP, mDTP)(WorkspaceIndex)  
+export default connect(mSTP, mDTP)(WorkspaceIndex)   

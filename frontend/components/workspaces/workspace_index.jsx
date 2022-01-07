@@ -15,7 +15,6 @@ class WorkspaceIndex extends React.Component {
 
  
     render () {
-        // debugger
         if(this.props.workspaces){
             return (
                 <div className='workspace-parent-container'>
@@ -23,8 +22,8 @@ class WorkspaceIndex extends React.Component {
                         <h1>Workspaces</h1>
                     </div>
                     <div className='workspace-index-container'>
-                        <ul>
-                            {this.props.workspaces.map((workspace) =>  <Link to={`/workspaces/${workspace.id}`}>{workspace.title}</Link>)}
+                        <ul> 
+                            {this.props.workspaces.map((workspace) =>  <Link key={workspace.id}to={`/workspaces/${workspace.id}`}>{workspace.title}</Link>)}
                         </ul>
                     </div>
                 </div>

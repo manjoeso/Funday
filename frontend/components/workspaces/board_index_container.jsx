@@ -9,4 +9,4 @@ const mSTP = (state, ownProps) => ({
     
 // })
 
-export default connect(mSTP, null)(BoardIndex)
+export default connect(mSTP, null)(BoardIndex) 
