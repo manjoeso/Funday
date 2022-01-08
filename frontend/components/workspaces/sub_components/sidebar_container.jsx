@@ -1,9 +1,9 @@
 import {connect} from 'react-redux';
 import Sidebar from './sidebar';
-import { logout } from '../../actions/session_actions'
+import { logout } from '../../../actions/session_actions'
 
-const mSTP = (state) => ({
-})
+// const mSTP = (state) => ({
+// })
 
 const mDTP = (dispatch) => ({
     logout: () => (dispatch(logout()))

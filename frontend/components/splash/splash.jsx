@@ -1,7 +1,6 @@
 import React from 'react'
 import {Link, Switch, Route} from 'react-router-dom'
-import WorkspaceIndexContainer from '../workspaces/workspace_index_container'
-import SidebarContainer from '../workspaces/sidebar_container'
+import WorkspaceContainer from '../workspaces/sub_components/workspace_container'
 import { AuthRoute, ProtectedRoute } from '../../util/route_util';
 
 

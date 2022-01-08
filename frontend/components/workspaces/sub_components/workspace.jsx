@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 
-class WorkspaceIndex extends React.Component {
+class Workspace extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -9,10 +9,7 @@ class WorkspaceIndex extends React.Component {
         }
 
     }
-    componentDidMount () {
-        this.props.fetchAllWorkspaceData(this.props.currentUser.id);
-    }
-
+    
  
     render () {
         if(this.props.workspaces){
@@ -23,7 +20,15 @@ class WorkspaceIndex extends React.Component {
                     </div>
                     <div className='workspace-index-container'>
                         <ul> 
-                            {this.props.workspaces.map((workspace) =>  <Link key={workspace.id}to={`/workspaces/${workspace.id}`}>{workspace.title}</Link>)}
+                            {this.props.workspaces.map((workspace) =>  
+                                <Link 
+                                    key={workspace.id} 
+                                    to={`/workspaces/${workspace.id}`} 
+                                    state={{ currentWorkspaceId: workspace.id }}
+                                >
+                                {workspace.title}
+                                </Link>)
+                            }
                         </ul>
                     </div>
                 </div>
@@ -34,4 +39,4 @@ class WorkspaceIndex extends React.Component {
     }
 }
 
-export default WorkspaceIndex;
+export default Workspace;

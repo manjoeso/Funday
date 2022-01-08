@@ -14,6 +14,7 @@ json.boards do
         json.set! workspace.id do
             json.array! workspace.boards do |board|
                json.extract! board, :id, :title
+               json.workspaceId workspace.id
             end
         end
     end

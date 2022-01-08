@@ -189,7 +189,18 @@ a:link {
     display: flex;
     flex-direction: row;
 }
-.board-show-parent-container{
+
+.dashboard-container{
     width: 70vw;
     border: 3px solid blue;
 }
+
+// welcome dashboard
+.welcome-dashboard-parent-container {
+    text-align: center;
+    h1 {
+        font-size: 32px;
+    }
+}
+
+//board info display dashboard
