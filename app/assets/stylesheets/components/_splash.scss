@@ -6,6 +6,7 @@ nav {
 #root {
     width: 100%
 }
+
 .splash-navbar-container {
     display: flex;
     flex-direction: row;
@@ -127,80 +128,3 @@ a:link {
     padding: 20px;
 }
 
-// LOGGED IN SPLASH
-
-
-.main-parent-container {
-    display: flex;
-    width: 100vh;
-    height: 100vh
-}
-
-.sidebar-container {
-    display: flex;
-    align-items: flex-end;
-    border-right: 2px solid black;
-}
-
-.logout-button {
-    display: flex;
-    padding: 20px;
-}
-
-// .board-index-parent-container {
-    
-// }
-
-
-
-.workspace-board-parent-container {
-    border-right: 2px solid black;
-    width: 25%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.workspace-parent-container {
-    display: flex;
-    flex-direction: column;
-    height: 30%;
-    border: 3px solid blue;
-    padding: 10px;
-    margin: 10px;
-}
-
-.workspace-index-container {
-    display: flex;
-}
-
-.board-parent-container{
-    height: 75%;
-    border: 3px solid blue;
-    padding: 10px;
-    margin: 10px
-    
-}
-
-.dashboard-main-parent-container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-}
-
-.dashboard-container{
-    width: 70vw;
-    border: 3px solid blue;
-}
-
-// welcome dashboard
-.welcome-dashboard-parent-container {
-    text-align: center;
-    h1 {
-        font-size: 32px;
-    }
-}
-
-//board info display dashboard

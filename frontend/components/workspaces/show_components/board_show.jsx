@@ -11,20 +11,29 @@ import { AuthRoute, ProtectedRoute } from '../../../util/route_util';
 class BoardShow extends React.Component {
     constructor(props) {
         super(props)
-       
+
+        this.findCurrentBoard = this.findCurrentBoard.bind(this);
+    }
+
+    findCurrentBoard () {
+        let currentBoardId = parseInt(this.props.match.params.board_id);
+
+        this.boards.forEach( board => {
+            if (board.id === currentBoardId) {
+                this.currentBoard = board;
+            }
+        })
     }
 
     componentDidMount () {
-        // dispatch action, to set current board state to this.props.match.params.board_Id
+        this.findCurrentBoard;
     }
-
-    // pass through current workspace to workspace container so 
-    // we know which one is selected, eventually (when implementing drop down)
     
     render () {
-        // debugger
         let currentWorkspaceId = this.props.match.params.workspace_id;
-        let currentBoardId = this.props.match.params.board_id;
+        debugger
+
+        this.findCurrentBoard;
         if(this.props.workspaces){
             return (
                 <div className='main-parent-container'>
@@ -35,10 +44,13 @@ class BoardShow extends React.Component {
                             <BoardIndexContainer currentWorkspaceId={currentWorkspaceId} boards={this.props.boards}/>  
                         </div>
                         <div className='dashboard-container'>
-                            <BoardDashboardContainer  
-                                currentUser={this.props.currentUser}
-                                currentBoardId={currentBoardId}
-                            />
+                            <h1> This is the board dashboard container for board with id {this.props.currentBoardId}</h1> 
+                            <h1></h1>
+                            <ul>
+                                {
+                                    this.props.projects.map(project => <li key={project.id}>{project.title}</li>)
+                                }
+                            </ul>
                         </div>
                     </div>
                 </div>

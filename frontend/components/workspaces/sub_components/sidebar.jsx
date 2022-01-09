@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 class Sidebar extends React.Component {
     constructor(props) {
@@ -6,12 +7,14 @@ class Sidebar extends React.Component {
     }
 
     render() {
+        let id = this.props.workspaces[0].id
         return (
             <div className='sidebar-container'>
-                <div className='logout-button'>
-                    <br></br>
-                    <br></br>
-                    <button onClick={()=> this.props.logout()}>Logout</button>
+                <div className='sidebar-top-buttons'>
+                    <Link className='workspace-home-link-button' to={`/workspaces/${id}`}>W</Link>
+                </div>
+                <div className='sidebar-bottom-buttons'>
+                    <button className='logout-button' onClick={()=> this.props.logout()}>{this.props.currentUser.name[0]}</button>
                 </div>
             </div>
         )
@@ -19,3 +22,4 @@ class Sidebar extends React.Component {
 }
 
 export default Sidebar;
+

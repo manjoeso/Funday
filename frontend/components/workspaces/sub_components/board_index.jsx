@@ -9,14 +9,14 @@ class BoardIndex extends React.Component {
     }
 
     render () {
-        debugger
         return (
             <div className='board-parent-container'>
-                <h1>Boards</h1>
-                {
-                    // this.props.boards.map(board => <li key={board.id}>{board.title}</li>)
-                    this.props.boards.map((board) =>  <Link key={board.id} to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}>{board.title}</Link>)
-                }
+                <div className='board-list-container'>
+                    {
+                        // this.props.boards.map(board => <li key={board.id}>{board.title}</li>)
+                        this.props.boards.map((board) =>  <Link key={board.id} to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}>{board.title}</Link>)
+                    }
+                </div>
             </div>
         )
     }

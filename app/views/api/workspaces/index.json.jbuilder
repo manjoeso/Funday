@@ -1,5 +1,3 @@
-
-
 json.workspaces do
     json.set! @user.id do 
         json.array! @user.workspaces do |workspace|

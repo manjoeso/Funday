@@ -20,3 +20,9 @@
 // Components 
 @import "components/*";
 @import "base/fonts.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}

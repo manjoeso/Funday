@@ -6,6 +6,7 @@ const mSTP = (state, ownProps) => ({
     // selectedBoard: state.entities.boards[ownProps.match.params.board_id], // this is incorrect
     boards: state.entities.boards[ownProps.match.params.workspace_id],
     workspaces: state.entities.workspaces[state.session.id],
+    projects: state.entities.projects[ownProps.match.params.board_id],
     currentUser: state.entities.users[state.session.id]
 })
 
