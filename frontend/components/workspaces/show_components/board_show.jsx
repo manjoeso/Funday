@@ -11,29 +11,10 @@ import { AuthRoute, ProtectedRoute } from '../../../util/route_util';
 class BoardShow extends React.Component {
     constructor(props) {
         super(props)
-
-        this.findCurrentBoard = this.findCurrentBoard.bind(this);
-    }
-
-    findCurrentBoard () {
-        let currentBoardId = parseInt(this.props.match.params.board_id);
-
-        this.boards.forEach( board => {
-            if (board.id === currentBoardId) {
-                this.currentBoard = board;
-            }
-        })
-    }
-
-    componentDidMount () {
-        this.findCurrentBoard;
     }
     
     render () {
         let currentWorkspaceId = this.props.match.params.workspace_id;
-        debugger
-
-        this.findCurrentBoard;
         if(this.props.workspaces){
             return (
                 <div className='main-parent-container'>
@@ -44,13 +25,27 @@ class BoardShow extends React.Component {
                             <BoardIndexContainer currentWorkspaceId={currentWorkspaceId} boards={this.props.boards}/>  
                         </div>
                         <div className='dashboard-container'>
-                            <h1> This is the board dashboard container for board with id {this.props.currentBoardId}</h1> 
-                            <h1></h1>
-                            <ul>
-                                {
-                                    this.props.projects.map(project => <li key={project.id}>{project.title}</li>)
-                                }
-                            </ul>
+                            <div className='board-dashboard-banner'>
+                                <div className='banner-left'>
+                                    <p>{this.props.currentBoard.title}</p> 
+                                </div>
+                                <div className='banner-right'>
+
+                                </div>
+                            </div>
+                            <div className='project-parent-container'>
+                                    {
+                                        this.props.projects.map(project =>
+                                            <div className='project' key={project.id}>
+                                                <div className='project-banner'>
+                                                    {project.title}
+                                                </div>
+                                                <div classNAme='task-item-container'>
+                                                    
+                                                </div>
+                                            </div>)
+                                    }
+                            </div>
                         </div>
                     </div>
                 </div>

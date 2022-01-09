@@ -7,7 +7,8 @@ const mSTP = (state, ownProps) => ({
     boards: state.entities.boards[ownProps.match.params.workspace_id],
     workspaces: state.entities.workspaces[state.session.id],
     projects: state.entities.projects[ownProps.match.params.board_id],
-    currentUser: state.entities.users[state.session.id]
+    currentUser: state.entities.users[state.session.id],
+    currentBoard: state.entities.board[ownProps.match.params.board_id]
 })
 
 // const mDTP = (dispatch) => ({

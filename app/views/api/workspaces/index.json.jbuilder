@@ -31,3 +31,12 @@ json.projects do
     end
 end
 
+json.board do
+    @user.workspaces.each do |workspace|
+        workspace.boards.each do |board|
+            json.set! board.id do 
+                json.extract! board, :id, :title, :workspace_id
+            end
+        end
+    end
+end
