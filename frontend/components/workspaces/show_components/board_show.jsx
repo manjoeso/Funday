@@ -4,6 +4,7 @@ import SidebarContainer from '../sub_components/sidebar_container'
 import WorkspaceContainer from '../sub_components/workspace_container';
 import BoardIndexContainer from '../sub_components/board_index_container';
 import BoardDashboardContainer from '../sub_components/board_dashboard_container'
+import ProjectShowContainer from '../sub_components/project_show_container'
 
 import { AuthRoute, ProtectedRoute } from '../../../util/route_util';
 
@@ -15,6 +16,7 @@ class BoardShow extends React.Component {
     
     render () {
         let currentWorkspaceId = this.props.match.params.workspace_id;
+        debugger
         if(this.props.workspaces){
             return (
                 <div className='main-parent-container'>
@@ -34,17 +36,12 @@ class BoardShow extends React.Component {
                                 </div>
                             </div>
                             <div className='project-parent-container'>
-                                    {
-                                        this.props.projects.map(project =>
-                                            <div className='project' key={project.id}>
-                                                <div className='project-banner'>
-                                                    {project.title}
-                                                </div>
-                                                <div classNAme='task-item-container'>
-                                                    
-                                                </div>
-                                            </div>)
-                                    }
+                                    {this.props.projects.map(project => 
+                                    <ProjectShowContainer 
+                                        key={project.id}
+                                        project={project} 
+                                        currentBoard={this.props.currentBoard}>
+                                    </ProjectShowContainer>)}
                             </div>
                         </div>
                     </div>

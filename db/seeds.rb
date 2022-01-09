@@ -12,6 +12,7 @@ Workspace.destroy_all
 UsersWorkspace.destroy_all
 Board.destroy_all
 Project.destroy_all
+Task.destroy_all
 
 user1 = User.create(email: 'john_smith@gmail.com', password: 'password', name: 'John Smith')
 user2 = User.create(email: 'josh_allen@gmail.com', password: 'password2', name: 'Josh Allen')
@@ -39,6 +40,18 @@ project6 = Project.create(title: "Project6", board_id: board3.id)
 
 project7 = Project.create(title: "Project7", board_id: board4.id)
 project8 = Project.create(title: "Project8", board_id: board4.id)
+
+task1 = Task.create(title: 'Walk the dog', project_id: project1.id, status: 'Done')
+
+task2 = Task.create(title: 'Walk the dog', project_id: project3.id, status: 'Done')
+task3 = Task.create(title: 'Walk the cat', project_id: project3.id, status: 'Stuck')
+
+task4 = Task.create(title: 'Do the thing that takes a long time thought lalalalla', project_id: project2.id, status: 'Stuck')
+task5 = Task.create(title: 'Do the other thing', project_id: project2.id, status: 'Stuck')
+task6 = Task.create(title: 'Do the special thing', project_id: project2.id, status: 'Done')
+task7 = Task.create(title: 'But most importantly', project_id: project2.id, status: 'Working on it')
+task8 = Task.create(title: 'Do the right thing', project_id: project2.id, status: 'Done')
+
 
 
 user_workspace1 = UsersWorkspace.create(workspace_id: workspace1.id, user_id: user1.id)

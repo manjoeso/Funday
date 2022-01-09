@@ -15,4 +15,9 @@ class Project < ApplicationRecord
     foreign_key: :board_id,
     class_name: :Board
 
+    has_many :tasks,
+    primary_key: :id,
+    foreign_key: :project_id,
+    class_name: :Task
+
 end

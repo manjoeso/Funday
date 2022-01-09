@@ -40,3 +40,17 @@ json.board do
         end
     end
 end
+
+json.tasks do 
+    @user.workspaces.each do |workspace|
+        workspace.boards.each do |board|
+            board.projects.each do |project|
+                json.set! project.id do
+                    json.array! project.tasks do |task|
+                        json.extract! task, :id, :title, :status, :due_date, :project_id
+                    end
+                end
+            end
+        end
+    end
+end
