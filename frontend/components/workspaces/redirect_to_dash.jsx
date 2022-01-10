@@ -9,6 +9,7 @@ class RedirectToDash extends React.Component {
     }
     componentDidMount () {
         this.props.fetchAllWorkspaceData(this.props.currentUser.id);
+        
     }
 
     // will need logic here for new accounts, possibly to create a default workspace for them?

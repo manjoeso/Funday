@@ -4,13 +4,15 @@ import BoardFormContainer from './forms/create_board_form_container'
 
 
 class BoardIndex extends React.Component {
-    constructor(props) {
+    constructor(props) { 
         super(props)
     }
 
     render () {
+        debugger
         return (
             <div className='board-parent-container'>
+                <BoardFormContainer currentWorkspaceId={this.props.currentWorkspaceId}/>
                 <div className='board-list-container'>
                     {
                         this.props.boards.map((board) =>  
@@ -22,7 +24,6 @@ class BoardIndex extends React.Component {
                         </Link>)
                     }
                 </div>
-                <BoardFormContainer currentWorkspaceId={this.props.currentWorkspaceId}/>
             </div>
         )
     }

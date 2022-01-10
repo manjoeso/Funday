@@ -17,7 +17,6 @@ class BoardForm extends React.Component {
 
     processCreate () {
         this.setState({workspace_id: parseInt(this.props.currentWorkspaceId)})
-        debugger
         this.props.createBoard(this.state)
     }
 

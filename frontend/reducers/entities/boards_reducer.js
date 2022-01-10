@@ -1,17 +1,14 @@
-import {RECEIVE_ALL_WORKSPACE_DATA} from '../../actions/workspace_actions'
 import { CREATE_BOARD } from '../../actions/board_actions';
+import {RECEIVE_ALL_WORKSPACE_DATA} from '../../actions/workspace_actions'
 
 const boardsReducer = (oldState = {}, action) => {
-    // debugger
     Object.freeze(oldState);
-    let newState = Object.assign({}, oldState)
-
+    
     switch(action.type){ 
         case RECEIVE_ALL_WORKSPACE_DATA:
             return action.payload['boards'];
         case CREATE_BOARD:
-            newState[action.board.workspace_id].push(action.board);
-            return newState;
+            return Object.assign({}, oldState, {[action.board.id]: action.board})
         default: 
             return oldState;
     }

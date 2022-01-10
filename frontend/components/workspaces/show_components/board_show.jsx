@@ -13,8 +13,13 @@ class BoardShow extends React.Component {
     constructor(props) {
         super(props)
     }
+
+    componentDidMount () {
+        // run some function that sets currentWorkspaceId onto the user in the state, and persists on the DB
+    }
     
     render () {
+        debugger 
         let currentWorkspaceId = this.props.match.params.workspace_id;
         if(this.props.workspaces){
             return (
