@@ -1,11 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import BoardFormContainer from './forms/create_board_form_container'
 
 
 class BoardIndex extends React.Component {
     constructor(props) {
         super(props)
-       
     }
 
     render () {
@@ -13,10 +13,16 @@ class BoardIndex extends React.Component {
             <div className='board-parent-container'>
                 <div className='board-list-container'>
                     {
-                        // this.props.boards.map(board => <li key={board.id}>{board.title}</li>)
-                        this.props.boards.map((board) =>  <Link key={board.id} to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}>{board.title}</Link>)
+                        this.props.boards.map((board) =>  
+                        <Link 
+                            key={board.id} 
+                            to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}
+                        >
+                                {board.title}
+                        </Link>)
                     }
                 </div>
+                <BoardFormContainer currentWorkspaceId={this.props.currentWorkspaceId}/>
             </div>
         )
     }

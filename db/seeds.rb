@@ -16,7 +16,7 @@ Task.destroy_all
 
 user1 = User.create(email: 'john_smith@gmail.com', password: 'password', name: 'John Smith')
 user2 = User.create(email: 'josh_allen@gmail.com', password: 'password2', name: 'Josh Allen')
-user3 = User.create(email: 'Stefon_Diggs@gmail.com', password: 'password3', name: 'Stephon Diggs')
+user3 = User.create(email: 'Stefon_Diggs@gmail.com', password: 'password3', name: 'Demo User')
 user4 = User.create(email: 'ColeB@gmail.com', password: 'password4', name: 'Cole Beasley')
 user5 = User.create(email: 'mctown@gmail.com', password: 'password5', name: 'Isaiah Mckenzie')
 

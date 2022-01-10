@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       resources :workspaces, only: [:index]
     end
     resources :workspaces, only: [:index] do 
-      resources :boards, only: [:index]
+      resources :boards, only: [:index, :create, :show]
     end
     # resources :workspaces, only: [:create, :index, :show, :edit, :destroy]
     # resources :users_workspaces, only: [:create, :destroy]

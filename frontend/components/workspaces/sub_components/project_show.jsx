@@ -7,15 +7,30 @@ class ProjectShow extends React.Component {
 
     render () {
         return (
-            <div>
+            <div className='single-project-container'>
                 <div className='project-banner'>
                     {this.props.project.title}
                 </div>
-                <div className='task-item-container'>
-                    {this.props.tasks[this.props.project.id].map(task => <li key={task.id}>{task.title}</li>)}
+                
+                <div className='task-item-list-container'>
+                    {this.props.tasks[this.props.project.id].map(task =>
+                        <div className='task-container' key={task.id}>
+                            <div className='task-title'>
+                                {task.title}
+                            </div>
+                            <div className='task-person'>
+                                Person
+                            </div>
+                            <div className='task-status'>
+                                {task.status}
+                            </div>
+                            <div className='task-due-date'>
+                                {task.due_date}
+                            </div>
+                        </div>)
+                    }
                 </div>
             </div>
-            // {this.props.tasks[this.props.project.id].map(task => task.title)}
         )
     }
 }

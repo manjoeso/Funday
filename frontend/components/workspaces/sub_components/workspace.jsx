@@ -16,7 +16,7 @@ class Workspace extends React.Component {
             return (
                 <div className='workspace-parent-container'>
                     <div className='workspace-header'>
-                        <h1>Workspaces</h1>
+                        <h1>Workspaces</h1> 
                     </div>
                     <div className='workspace-index-container'>
                         <ul> 

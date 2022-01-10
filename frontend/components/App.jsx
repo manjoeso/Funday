@@ -22,6 +22,6 @@ const App = () => (
         <ProtectedRoute path='/:workspace_id/boards/:board_id' component={BoardShowContainer} />
       </Switch>      
   </div>
-); 
+);  
 
 export default App;  

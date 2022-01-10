@@ -16,7 +16,6 @@ class BoardShow extends React.Component {
     
     render () {
         let currentWorkspaceId = this.props.match.params.workspace_id;
-        debugger
         if(this.props.workspaces){
             return (
                 <div className='main-parent-container'>
@@ -35,7 +34,10 @@ class BoardShow extends React.Component {
 
                                 </div>
                             </div>
-                            <div className='project-parent-container'>
+                            <div className='project-nav-bar'>
+                                <button className='new-project-button'>Add Item</button>
+                            </div>
+                            <div className='projects-parent-container'>
                                     {this.props.projects.map(project => 
                                     <ProjectShowContainer 
                                         key={project.id}

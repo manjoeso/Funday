@@ -1,6 +1,5 @@
 import {connect} from 'react-redux';
 import BoardShow from './board_show';
-// import { logout } from '../../actions/session_actions'
 
 const mSTP = (state, ownProps) => ({
     // selectedBoard: state.entities.boards[ownProps.match.params.board_id], // this is incorrect
@@ -12,6 +11,7 @@ const mSTP = (state, ownProps) => ({
 })
 
 // const mDTP = (dispatch) => ({
+
 // })
 
 export default connect(mSTP, null)(BoardShow)     

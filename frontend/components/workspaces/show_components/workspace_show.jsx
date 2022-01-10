@@ -39,7 +39,7 @@ class WorkspaceShow extends React.Component {
                 </div>
             )
         } else {
-            return null
+            return null 
         }
     }
 }
