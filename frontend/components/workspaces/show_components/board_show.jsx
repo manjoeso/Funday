@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 import SidebarContainer from '../sub_components/sidebar_container'
 import WorkspaceContainer from '../sub_components/workspace_container';
-import BoardIndexContainer from '../sub_components/board_index_container';
+import BoardIndex from '../sub_components/board_index';
 import BoardDashboardContainer from '../sub_components/board_dashboard_container'
 import ProjectShowContainer from '../sub_components/project_show_container'
 
@@ -23,7 +23,7 @@ class BoardShow extends React.Component {
                     <div className='dashboard-main-parent-container'>
                         <div className='workspace-board-parent-container'>
                             <WorkspaceContainer currentWorkspaceId={currentWorkspaceId}/> 
-                            <BoardIndexContainer currentWorkspaceId={currentWorkspaceId} boards={this.props.boards}/>  
+                            <BoardIndex currentWorkspaceId={currentWorkspaceId} boards={this.props.boards}/>  
                         </div>
                         <div className='dashboard-container'>
                             <div className='board-dashboard-banner'>

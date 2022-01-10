@@ -5,7 +5,6 @@ const boardsReducer = (oldState = {}, action) => {
     // debugger
     Object.freeze(oldState);
     let newState = Object.assign({}, oldState)
-    debugger
 
     switch(action.type){ 
         case RECEIVE_ALL_WORKSPACE_DATA:
