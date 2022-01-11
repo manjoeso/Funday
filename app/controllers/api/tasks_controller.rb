@@ -8,15 +8,15 @@ class Api::TasksController < ApplicationController
 
     def create 
         # debugger
-        @task = Task.new(title: params[:project][:title], title: params[:project][:status], title: params[:project][:date], project_id: params[:project_id])
+        @task = Task.new(task_params)
         if @task.save! 
             render :show
         else
-            # @project = Project.new(title: 'New Project', project_id: params[:project_id])
+            render json: @task.errors.full_messages, status: 422
         end
     end
-
-    def board_params 
-        # params.require(:board).permit(:title, :workspace_id)
+    
+    def task_params 
+        params.require(:task).permit(:title, :project_id)
     end
 end

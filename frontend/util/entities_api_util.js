@@ -44,10 +44,19 @@ export const deleteProject = (project) => {
  
 
 // task util functions
-export const createTask = (task, project_id) => {
+
+export const createTask = (task) => { 
     return $.ajax({
         method: "POST",
-        url: `api/projects/${project_id}/tasks`,
+        url: `api/projects/${task.project_id}/tasks`,
         data: {task}
     })
 }
+
+// export const deleteTask = (task) => {
+//     return $.ajax({
+//         method: "DELETE",
+//         url: `api/projects/${task.project_id}/tasks`,
+//         data: {task}
+//     })
+// }

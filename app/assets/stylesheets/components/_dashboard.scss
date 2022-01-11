@@ -272,6 +272,8 @@
     width: 33%;
 }
 
+// TASKS 
+
 .task-item-list-container div {
     list-style: none;
     padding: 5px;
@@ -309,6 +311,24 @@
 .task-due-date {
     width: 10%;
     border-right: 1px solid white;
-
 }
+
+#new-task-container {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#new-task-input-field {
+    width: 95%;
+    height: 100%;
+}
+
+#new-task-form-buttom {
+    width: 5%;
+    height: 100%
+}
+
+
 

@@ -15,17 +15,16 @@ class BoardIndex extends React.Component {
                 <div className='board-list-container'>
                     {
                         this.props.boards.map((board, idx) =>  
-                        <div className='board-item-container'>
+                        <div key={board.id} className='board-item-container'>
                             <div className='board-title'>
                                 <Link 
-                                    key={idx} 
                                     to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}
                                 >
                                         {board.title}
                                 </Link>
                             </div>
                             <div className='board-dropdown-button'>
-                                <BoardDropdownContainer key={board.id} board={board}></BoardDropdownContainer>
+                                <BoardDropdownContainer key={idx} board={board}></BoardDropdownContainer>
                             </div>
                         </div>
                         )

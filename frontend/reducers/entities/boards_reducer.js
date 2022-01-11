@@ -18,4 +18,4 @@ const boardsReducer = (oldState = {}, action) => {
     }
 }
 
-export default boardsReducer;
+export default boardsReducer; 

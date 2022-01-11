@@ -1,5 +1,6 @@
 import React from 'react'
 import ProjectDropdownContainer from './dropdowns/project_dropdown_container'
+import TaskFormContainer from './forms/create_task_form_container'
 
 class ProjectShow extends React.Component { 
     constructor(props) {
@@ -38,7 +39,6 @@ class ProjectShow extends React.Component {
                         <span>Date</span>
                     </div>
                 </div>
-                
                 <div className='task-item-list-container'>
                     {this.tasksSelector(this.props.tasks, this.props.project.id).map(task =>
                         <div className='task-container' key={task.id}>
@@ -56,7 +56,10 @@ class ProjectShow extends React.Component {
                             </div>
                         </div>)
                     }
-                </div>
+                    </div>
+                    <div id='new-task-container'>
+                        <TaskFormContainer project={this.props.project}/>
+                    </div>
             </div>
         )
     }

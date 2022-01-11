@@ -7,8 +7,8 @@ const receiveTask = (task) => ({
     task
 }) 
 
-export const createTask = (task, currentProjectId) => dispatch => (
-    WorkspaceApiUtil.createTask(task, currentProjectId)
+export const createTask = (task) => dispatch => (
+    WorkspaceApiUtil.createTask(task)
         .then(task => dispatch(receiveTask(task)))
 )
   
