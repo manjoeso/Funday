@@ -7,8 +7,8 @@ const addBoard = (board) => ({
     board
 }) 
 
-export const createBoard = board => dispatch => (
-    WorkspaceApiUtil.createBoard(board)
+export const createBoard = (board, currentWorkspaceId) => dispatch => (
+    WorkspaceApiUtil.createBoard(board, currentWorkspaceId)
         .then(board => dispatch(addBoard(board)))
 )
- 
+  

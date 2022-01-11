@@ -12,7 +12,7 @@ const mSTP = (state, ownProps) => ({
 })
 
 // const mDTP = (dispatch) => ({
-
+    // assignCurrentWorkspace: (currentUser, workspaceId) => dispatch(assignCurrentWorkspace(currentUser, workspaceId))
 // })
 
 export default connect(mSTP, null)(BoardShow)     

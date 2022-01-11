@@ -11,10 +11,15 @@ class WorkspaceShow extends React.Component {
     constructor(props) {
         super(props)
        
+
     }
-    // componentDidMount () {
-    //     this.props.fetchAllWorkspaceData(this.props.currentUser.id);
-    // }
+    componentDidMount () {
+        this.props.fetchAllWorkspaceData(this.props.currentUser.id);
+    }
+
+    componentDidUpdate () {
+        this.props.assignCurrentWorkspace(this.props.currentUser, parseInt(this.props.currentWorkspaceId))
+    }
     // pass through current workspace to workspace container so 
     // we know which one is selected, eventually (when implementing drop down)
     // receiveCurrentWorkspaceId () {
@@ -22,7 +27,6 @@ class WorkspaceShow extends React.Component {
     //     const { currentWorkspaceId } = location.state;
     // }
     render () {
-        debugger
         let currentWorkspaceId = this.props.match.params.workspace_id;
         if(this.props.workspaces){
             return (

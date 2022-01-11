@@ -6,10 +6,18 @@ class ProjectShow extends React.Component {
     }
 
     render () {
+        debugger
         return (
             <div className='single-project-container'>
                 <div className='project-banner'>
-                    {this.props.project.title}
+                    <div className='project-banner-left'>
+                        {this.props.project.title}
+                    </div>
+                    <div className='project-banner-right'>
+                        <span>Person</span>
+                        <span>Status</span>
+                        <span>Date</span>
+                    </div>
                 </div>
                 
                 <div className='task-item-list-container'>

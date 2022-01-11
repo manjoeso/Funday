@@ -130,6 +130,14 @@
     margin: 10px;
 }
 
+.add-board-button {
+    background-color: blue;
+    color: white;
+    height: 35px;
+    width: 90px;
+    border-radius: 5px;
+}
+
 // welcome dashboard
 .welcome-dashboard-parent-container {
     text-align: center;
@@ -145,6 +153,13 @@
     font-size: 36px;
     font-weight: 400;
     margin: 15px;
+}
+.new-project-button {
+    background-color: blue;
+    color: white;
+    height: 35px;
+    width: 95px;
+    border-radius: 5px;
 }
 
 .project-nav-bar { 
@@ -162,14 +177,36 @@
     padding: 5px;
 }
 
+.add-project-button {
+    background-color: blue;
+    color: white;
+    height: 35px;
+    width: 90px;
+    border-radius: 5px;
+}
+
 .single-project-container {
     padding: 20px;
 }
 
 .project-banner {
-    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 7px;
+}
+
+.project-banner-left {
+    padding-left: 10px;
     color: blue;
     font-size: 18px;
+    width: 68%
+}
+
+.project-banner-right {
+    display: flex;
+    justify-content: space-around;
+    width: 33%;
 }
 
 .task-item-list-container div {
@@ -211,3 +248,4 @@
     border-right: 1px solid white;
 
 }
+

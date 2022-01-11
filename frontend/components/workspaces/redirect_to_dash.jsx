@@ -9,12 +9,10 @@ class RedirectToDash extends React.Component {
     }
     componentDidMount () {
         this.props.fetchAllWorkspaceData(this.props.currentUser.id);
-        
+        // this.props.assignCurrentWorkspace(this.props.currentUser, this.props.workspaces[0].id)
     }
 
-    // will need logic here for new accounts, possibly to create a default workspace for them?
-    // will need create route before tackling this..
-    // what if a user deletes all of their workspaces? default?
+   
     // need logic somewhere to clear the state upon logging out, right now it persists.
     render () {
         if (this.props.workspaces){

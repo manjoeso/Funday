@@ -5,18 +5,20 @@ export const fetchAllWorkspaceData = (userId) => {
     })
 }
 
-export const createBoard = (board) => {
-    // debugger
+export const createBoard = (board, workspace_id) => {
+    debugger
     return $.ajax({
         method: "POST",
-        url: `/api/workspaces/${board.workspace_id}/boards`,
+        url: `/api/workspaces/${workspace_id}/boards`,
         data: {board}
     })
 }
+
+export const createProject = (project, board_id) => {
+    return $.ajax({
+        method: "POST",
+        url: `/api/boards/${board_id}/projects`,
+        data: {project}
+    })
+}
  
-// export const fetchBoards = (workspaceId) => {
-//     return $.ajax({
-//         method: "GET",
-//         url: `api/workspaces/${workspaceId}/boards`
-//     })
-// }

@@ -1,9 +1,9 @@
 import React from 'react'
 
-class BoardForm extends React.Component {
+class ProjectForm extends React.Component {
     constructor (props){
         super(props)
-        this.state = this.props.board;
+        this.state = this.props.project;
 
         this.processCreate = this.processCreate.bind(this)
     }
@@ -13,26 +13,24 @@ class BoardForm extends React.Component {
     }
 
     processCreate () {
-        debugger
-        this.props.createBoard(this.state, parseInt(this.props.currentWorkspaceId))
+        this.props.createProject(this.state, parseInt(this.props.currentBoard.id))
     }
  
     render(){
-        
         return (
-            <div className='create-board-form-container'>
+            <div className='create-project-form-container'>
                 <form onSubmit={this.processCreate}>
-                    <label>Board Title
+                    <label>Project Title
                         <input type='text' 
                             value={this.state.title}
                             onChange={this.updateTitle()}
                         />
                     </label>
-                <button className='add-board-button' type='submit'>Add Board</button>
+                <button className='add-project-button' type='submit'>New Item</button>
                 </form>
             </div>
         )
     }
 }
 
-export default BoardForm;
+export default ProjectForm;

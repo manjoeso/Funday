@@ -10,9 +10,8 @@ class Api::BoardsController < ApplicationController
 
     def create 
         # debugger
-        @board = Board.new(board_params)
+        @board = Board.new(title: params[:board][:title], workspace_id: params[:workspace_id])
         if @board.save! 
-            # debugger
             render :show
         else
             @board = Board.new(title: 'New Board', workspace_id: params[:workspace_id])
@@ -20,6 +19,6 @@ class Api::BoardsController < ApplicationController
     end
 
     def board_params 
-        params.require(:board).permit(:title, :workspace_id)
+        # params.require(:board).permit(:title, :workspace_id)
     end
 end
