@@ -16,7 +16,7 @@ class Api::ProjectsController < ApplicationController
         end
     end
 
-    def board_params 
+    def project_params 
         # params.require(:board).permit(:title, :workspace_id)
     end
 end

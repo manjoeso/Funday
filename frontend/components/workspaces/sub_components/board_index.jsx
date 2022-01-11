@@ -23,6 +23,7 @@ class BoardIndex extends React.Component {
                         </Link>)
                     }
                 </div>
+                // add react drop down component
             </div>
         )
     }

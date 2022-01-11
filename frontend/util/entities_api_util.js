@@ -22,3 +22,10 @@ export const createProject = (project, board_id) => {
     })
 }
  
+export const createTask = (task, project_id) => {
+    return $.ajax({
+        method: "POST",
+        url: `api/projects/${project_id}/tasks`,
+        data: {task}
+    })
+}

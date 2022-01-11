@@ -8,13 +8,16 @@ Rails.application.routes.draw do
       resources :workspaces, only: [:index]
     end
     resources :workspaces, only: [:index] do 
-      resources :boards, only: [:index, :create, :show]
+      resources :boards, only: [:index, :create, :show, :edit]
     end
 
     resources :boards, only: [:index] do
-      resources :projects, only: [:create, :show]
+      resources :projects, only: [:create, :show, :destroy, :edit]
     end
-    # resources :workspaces, only: [:create, :index, :show, :edit, :destroy]
+
+    resources :projects, only: [:index] do
+      resources :tasks, only: [:create, :show, :destory, :edit]
+    end
     # resources :users_workspaces, only: [:create, :destroy]
   end
   

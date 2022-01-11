@@ -5,8 +5,22 @@ class ProjectShow extends React.Component {
         super(props)
     }
 
+    tasksSelector = function(tasks, projectId) {
+        let taskArray = Object.values(tasks)
+        let returnArr = [];
+        let id = parseInt(projectId)
+    
+        taskArray.forEach(task => {
+            if (task.project_id === id) {
+                returnArr.push(task)    
+            }
+        })
+        return returnArr;
+    }
+
     render () {
         debugger
+        // conditional here, if no tasks, make some, else display
         return (
             <div className='single-project-container'>
                 <div className='project-banner'>
@@ -21,7 +35,7 @@ class ProjectShow extends React.Component {
                 </div>
                 
                 <div className='task-item-list-container'>
-                    {this.props.tasks[this.props.project.id].map(task =>
+                    {this.tasksSelector(this.props.tasks, this.props.project.id).map(task =>
                         <div className='task-container' key={task.id}>
                             <div className='task-title'>
                                 {task.title}
