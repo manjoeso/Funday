@@ -1,4 +1,5 @@
 import React from 'react'
+import ProjectDropdownContainer from './dropdowns/project_dropdown_container'
 
 class ProjectShow extends React.Component { 
     constructor(props) {
@@ -19,13 +20,17 @@ class ProjectShow extends React.Component {
     }
 
     render () {
-        debugger
         // conditional here, if no tasks, make some, else display
         return (
             <div className='single-project-container'>
                 <div className='project-banner'>
                     <div className='project-banner-left'>
-                        {this.props.project.title}
+                        <div className='project-banner-dropdown'>
+                            <ProjectDropdownContainer project={this.props.project}/>
+                        </div>
+                        <div className='project-banner-title'>
+                            {this.props.project.title}
+                        </div>
                     </div>
                     <div className='project-banner-right'>
                         <span>Person</span>

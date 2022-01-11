@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import BoardFormContainer from './forms/create_board_form_container'
-
+import BoardDropdownContainer from './dropdowns/board_dropdown_container'
 
 class BoardIndex extends React.Component {
     constructor(props) { 
@@ -14,16 +14,23 @@ class BoardIndex extends React.Component {
                 <BoardFormContainer/>
                 <div className='board-list-container'>
                     {
-                        this.props.boards.map((board) =>  
-                        <Link 
-                            key={board.id} 
-                            to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}
-                        >
-                                {board.title}
-                        </Link>)
+                        this.props.boards.map((board, idx) =>  
+                        <div className='board-item-container'>
+                            <div className='board-title'>
+                                <Link 
+                                    key={idx} 
+                                    to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}
+                                >
+                                        {board.title}
+                                </Link>
+                            </div>
+                            <div className='board-dropdown-button'>
+                                <BoardDropdownContainer key={board.id} board={board}></BoardDropdownContainer>
+                            </div>
+                        </div>
+                        )
                     }
                 </div>
-                // add react drop down component
             </div>
         )
     }

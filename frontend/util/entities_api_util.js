@@ -5,6 +5,8 @@ export const fetchAllWorkspaceData = (userId) => {
     })
 }
 
+// board util functions
+
 export const createBoard = (board, workspace_id) => {
     debugger
     return $.ajax({
@@ -14,6 +16,16 @@ export const createBoard = (board, workspace_id) => {
     })
 }
 
+export const deleteBoard = (board) => {
+    debugger
+    return $.ajax({
+        method: "DELETE",
+        url: `/api/boards/${board.id}`
+    })
+}
+
+// project util functions
+
 export const createProject = (project, board_id) => {
     return $.ajax({
         method: "POST",
@@ -21,7 +33,17 @@ export const createProject = (project, board_id) => {
         data: {project}
     })
 }
+
+export const deleteProject = (project) => {
+    debugger
+    return $.ajax({
+        method: "DELETE",
+        url: `/api/projects/${project.id}`
+    })
+}
  
+
+// task util functions
 export const createTask = (task, project_id) => {
     return $.ajax({
         method: "POST",

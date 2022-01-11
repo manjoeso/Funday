@@ -72,10 +72,6 @@
 }
 // SIDEBAR END
 
-// .board-index-parent-container {
-    
-// }
-
 .workspace-board-parent-container {
     width: 235px;
     padding: 10px;
@@ -104,7 +100,7 @@
     margin: 10px;;
 }
 
-.board-list-container {
+.board-title {
     display: flex;
     width: 85%;
     // height: 80%;
@@ -116,6 +112,63 @@
     background-color: rgba(212, 211, 211, 0.87);
     border-radius: 5px
 }
+
+.board-item-container {
+    display: flex;
+}
+
+.board-dropdown-button {
+    width: 30px;
+    height: 30px;
+}
+.board-dropdown-button:hover {
+    background-color: blue;
+}
+
+
+// board dropdown start
+.dropdown-button {
+    background: transparent;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.dropdown-button:hover {
+    background: transparent;
+}
+
+.display-dropdown {
+    top: 22px;
+    position: relative;
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px 10px 5px 20px;
+    min-width: 150px;
+    box-shadow: 5px 5px 5px 5px rgba(192, 192, 192, 0.25);
+    line-height: 20px;
+    text-align: left;
+    margin: 10px;
+ }
+
+ .no-dropdown {
+    display: none;
+ }
+
+ .board-inner-dropdown-button {
+    background: none;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.board-inner-dropdown-button:hover {
+    background-color: rgba(212, 211, 211, 0.87);
+    border-radius: 5px
+}
+
+
+// board dropdown end
 
 .dashboard-main-parent-container {
     width: 100vw;
@@ -197,10 +250,20 @@
 }
 
 .project-banner-left {
-    padding-left: 10px;
+    display: flex;
+    // padding-left: 10px;
     color: blue;
     font-size: 18px;
     width: 68%
+}
+
+.project-banner-dropdown {
+    width: 15px;
+    margin-right: 10px;
+}
+
+.project-banner-dropdown:hover {
+    background-color: blue;
 }
 
 .project-banner-right {

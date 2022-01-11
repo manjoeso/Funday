@@ -11,11 +11,11 @@ Rails.application.routes.draw do
       resources :boards, only: [:index, :create, :show, :edit]
     end
 
-    resources :boards, only: [:index] do
+    resources :boards, only: [:index, :destroy] do
       resources :projects, only: [:create, :show, :destroy, :edit]
     end
 
-    resources :projects, only: [:index] do
+    resources :projects, only: [:index, :destroy] do
       resources :tasks, only: [:create, :show, :destory, :edit]
     end
     # resources :users_workspaces, only: [:create, :destroy]
