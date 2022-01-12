@@ -1,4 +1,4 @@
-
+ 
 // BOARDS 
 
 .board-dropdown-button {
@@ -18,10 +18,6 @@
     height: 100%;
 }
 
-// .dropdown-button:hover {
-//     background: transparent;
-// }
-
 .display-dropdown {
     top: 22px;
     position: relative;
@@ -38,6 +34,8 @@
  .no-dropdown {
     display: none;
  }
+
+ // dropdown styling 
 
  .board-inner-dropdown-button {
     background: none;
@@ -66,9 +64,9 @@
 
 // PROJECT END
 
-.task-dropdown-parent {
+.task-dropdown-button {
     width: 15px;
-    height: 15px;
+    height: 10px;
     margin-right: 10px;
 }
 

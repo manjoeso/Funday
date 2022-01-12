@@ -45,7 +45,7 @@ class ProjectShow extends React.Component {
                 <div className='task-item-list-container'>
                     {this.tasksSelector(this.props.tasks, this.props.project.id).map(task =>
                         <div className='task-container' key={task.id}>
-                            <div className='task-dropdown-parent'>
+                            <div className='task-dropdown-button'>
                                 <TaskDropdownContainer task={task}/>
                             </div>
                             <TaskIndexItemContainer task={task}/>

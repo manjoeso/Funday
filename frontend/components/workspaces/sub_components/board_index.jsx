@@ -29,7 +29,7 @@ class BoardIndex extends React.Component {
                         </div>
                         )
                     }
-                </div>
+                </div> 
             </div>
         )
     }
