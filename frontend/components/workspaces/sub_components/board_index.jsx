@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import BoardFormContainer from './forms/create_board_form_container'
+import EditBoardFormContainer from './forms/edit_board_form_container'
 import BoardDropdownContainer from './dropdowns/board_dropdown_container'
 
 class BoardIndex extends React.Component {
@@ -21,10 +21,7 @@ class BoardIndex extends React.Component {
                                 <Link 
                                     to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}
                                 >
-                                        <input
-                                            value={board.title}
-                                        >
-                                        </input>
+                                <EditBoardFormContainer board={board}/>
                                 </Link>
                             </div>
                             <div className='board-dropdown-button-container'>
