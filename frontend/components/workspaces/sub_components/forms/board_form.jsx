@@ -13,6 +13,7 @@ class BoardForm extends React.Component {
     }
 
     processCreate () {
+        debugger
         this.props.createBoard(this.state, parseInt(this.props.currentWorkspaceId))
         .then(obj => this.createProjects(obj))
         .then(this.setState({['title']: ''}))
@@ -26,15 +27,28 @@ class BoardForm extends React.Component {
     render(){
         
         return (
-            <div className='create-board-form-container'>
+            <div className='create-workspace-board-form-container'>
+                <div className='create-workspace-board-header'>
+                    <h1>Create Board</h1>
+                </div>
                 <form onSubmit={this.processCreate}>
-                    <label>Board Title
+                    <div className='create-workspace-board-input-container'>
+                        <h3>Board name</h3>
                         <input type='text' 
                             value={this.state.title}
                             onChange={this.updateTitle()}
                         />
-                    </label>
-                <button className='add-board-button' type='submit'>Add Board</button>
+                    </div>
+                    <div className='create-workspace-board-form-button-container'>
+                        <button 
+                            className='add-board-button' 
+                            type='submit'
+                            // onClick={() => this.props.closeModal()}
+                        >
+                        Create Board
+                        </button>
+                        <button onClick={() => this.props.closeModal()} className='cancel-button'>Cancel</button>
+                    </div>
                 </form>
             </div>
         )

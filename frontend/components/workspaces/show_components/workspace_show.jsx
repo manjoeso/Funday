@@ -2,7 +2,7 @@ import React from 'react';
 import {Link, useLocation} from 'react-router-dom'
 import SidebarContainer from '../sub_components/sidebar_container'
 import WorkspaceContainer from '../sub_components/workspace_container';
-import BoardIndex from '../sub_components/board_index';
+import BoardIndexContainer from '../sub_components/board_index_container';
 import WelcomeDashboard from '../sub_components/welcome_dashboard'
 import { AuthRoute, ProtectedRoute } from '../../../util/route_util';
 
@@ -35,7 +35,7 @@ class WorkspaceShow extends React.Component {
                     <div className='dashboard-main-parent-container'>
                         <div className='workspace-board-parent-container'>
                             <WorkspaceContainer currentWorkspaceId={currentWorkspaceId}/> 
-                            <BoardIndex currentWorkspaceId={currentWorkspaceId} boards={this.props.boards}/>  
+                            <BoardIndexContainer currentWorkspaceId={currentWorkspaceId} boards={this.props.boards}/>  
                         </div>
                         <div className='dashboard-container'>
                             <WelcomeDashboard  currentUser={this.props.currentUser}/>

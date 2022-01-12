@@ -1,21 +1,37 @@
  
 // BOARDS 
 
+.board-dropdown-button-container {
+    width: 20px;
+    height: 20px;
+}
+
 .board-dropdown-button {
-    width: 30px;
-    height: 30px;
-}
-
-.board-dropdown-button:hover {
-    background-color: blue;
-}
-
-.dropdown-button {
+    display: none;
     background: transparent;
     margin: 0px;
     padding: 0px;
     width: 100%;
     height: 100%;
+}
+
+
+.board-display-dropdown {
+    top: 10px;
+    right: 20px;
+    position: relative;
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px 10px 5px 10px;
+    min-width: 150px;
+    box-shadow: 5px 5px 5px 5px rgba(192, 192, 192, 0.25);
+    line-height: 20px;
+    text-align: left;
+    margin: 10px;
+}
+
+.no-dropdown {
+    display: none;
 }
 
 .display-dropdown {
@@ -30,11 +46,6 @@
     text-align: left;
     margin: 10px;
  }
-
- .no-dropdown {
-    display: none;
- }
-
  // dropdown styling 
 
  .board-inner-dropdown-button {
@@ -52,26 +63,38 @@
 
 // PROJECT START
 
-.project-banner-dropdown {
+.project-dropdown-container {
     width: 15px;
     height: 15px;
     margin-right: 10px;
 }
 
-.project-banner-dropdown:hover {
+.project-dropdown-container:hover {
     background-color: blue;
+}
+
+.project-dropdown-button {
+    background: transparent;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
 }
 
 // PROJECT END
 
-.task-dropdown-button {
+.task-dropdown-button-container {
     width: 15px;
     height: 10px;
     margin-right: 10px;
 }
 
-.task-dropdown-parent:hover {
-    background-color: blue;
+.task-dropdown-button {
+    background: transparent;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
 }
 
 // TASK START

@@ -12,14 +12,14 @@ class TaskDropdown extends React.Component {
 
     focusOrBlur(e) {
         let newState = !this.state.open
-        this.setState({
+        this.setState({ 
             open: newState
         })
     }
 
     render() {
         return (
-                <button onFocus={this.focusOrBlur} onBlur={this.focusOrBlur} className="dropdown-button">
+                <button onFocus={this.focusOrBlur} onBlur={this.focusOrBlur} className="task-dropdown-button">
                     {/* <DropdownIcon className="dropdown-icon"/> */}
                     <ul onClick={e => e.stopPropagation()} className={this.state.open ? "display-dropdown" : "no-dropdown"}>
                         <div className="board-inner-dropdown-button">Rename Task</div>

@@ -19,9 +19,9 @@ class BoardDropdown extends React.Component {
 
     render() {
         return (
-                <button onFocus={this.focusOrBlur} onBlur={this.focusOrBlur} className="dropdown-button">
+                <button onFocus={this.focusOrBlur} onBlur={this.focusOrBlur} className="board-dropdown-button">
                     {/* <DropdownIcon className="dropdown-icon"/> */}
-                    <ul onClick={e => e.stopPropagation()} className={this.state.open ? "display-dropdown" : "no-dropdown"}>
+                    <ul onClick={e => e.stopPropagation()} className={this.state.open ? "board-display-dropdown" : "no-dropdown"}>
                         <div className="board-inner-dropdown-button">Rename Board</div>
                         <div onClick={() => this.props.deleteBoard(this.props.board)} className="board-inner-dropdown-button">Delete</div>
                     </ul>

@@ -5,6 +5,7 @@ import LoginFormContainer from './sessions/login_form_container'
 import SignupFormContainer from './sessions/sign_up_form_container'
 import RedirectToDashContainer from './workspaces/redirect_to_dash_container'
 import SplashContainer from './splash/splash_container'
+import Modal from './modals/modal'
 
 // import BoardShowContainer from './workspaces/show_components/board_show_container'
 import WorkspaceShowContainer from './workspaces/show_components/workspace_show_container'
@@ -13,6 +14,7 @@ import BoardShowContainer from './workspaces/show_components/board_show_containe
 
 const App = () => (
   <div> 
+      <Modal />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
       <AuthRoute exact path="/" component={SplashContainer} />

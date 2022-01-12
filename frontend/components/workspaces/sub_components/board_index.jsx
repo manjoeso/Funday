@@ -9,10 +9,11 @@ class BoardIndex extends React.Component {
     }
 
     render () {
+        debugger
         return (
             <div className='board-parent-container'>
-                <BoardFormContainer currentWorkspaceId={this.props.currentWorkspaceId}/>
-                <div className='board-list-container'>
+                {/* <BoardFormContainer currentWorkspaceId={this.props.currentWorkspaceId}/> */}
+                <button className='add-board-display-button' onClick={() => this.props.openModal('addBoard')}>Add Board</button>
                     {
                         this.props.boards.map((board, idx) =>  
                         <div key={board.id} className='board-item-container'>
@@ -20,16 +21,18 @@ class BoardIndex extends React.Component {
                                 <Link 
                                     to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}
                                 >
-                                        {board.title}
+                                        <input
+                                            value={board.title}
+                                        >
+                                        </input>
                                 </Link>
                             </div>
-                            <div className='board-dropdown-button'>
+                            <div className='board-dropdown-button-container'>
                                 <BoardDropdownContainer key={idx} board={board}></BoardDropdownContainer>
                             </div>
                         </div>
                         )
                     }
-                </div> 
             </div>
         )
     }

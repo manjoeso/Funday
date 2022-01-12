@@ -72,6 +72,12 @@
 }
 // SIDEBAR END
 
+
+
+// WORKSPACE START
+
+
+
 .workspace-board-parent-container {
     width: 235px;
     padding: 10px;
@@ -85,8 +91,7 @@
 .workspace-parent-container {
     display: flex;
     flex-direction: column;
-    height: 20%;
-    border-bottom: 1px solid rgb(218, 216, 216);
+    height: 10%;
 }
 
 .workspace-index-container {
@@ -94,12 +99,24 @@
 }
 
 
+
+// WORKSPACE END
+
+
+// BOARD START 
+
 .board-parent-container{
     height: 80%;
     width: 100%;
-    margin: 10px;;
+    margin: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgb(218, 216, 216);
 }
 
+
+.board-list-container {
+    margin-top: 10px;
+}
 .board-title {
     display: flex;
     width: 85%;
@@ -108,13 +125,34 @@
     text-align: left;
 }
 
-.board-list-container a:hover {
-    background-color: rgba(212, 211, 211, 0.87);
-    border-radius: 5px
+.add-board-display-button {
+    width: 100%;
+    background: none;
+    // height: 80%;
+    border: none;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px;
 }
+
+.add-board-display-button:hover {
+    background-color: rgba(212, 211, 211, 0.87);
+    border-radius: 5px;
+}
+
 
 .board-item-container {
     display: flex;
+    align-items: center;
+}
+
+.board-item-container:hover {
+    background-color: rgba(212, 211, 211, 0.87);
+    border-radius: 5px;
+
+    .board-dropdown-button {
+        display: inline;
+    }
 }
 
 .dashboard-main-parent-container {
@@ -130,13 +168,7 @@
     margin: 10px;
 }
 
-.add-board-button {
-    background-color: blue;
-    color: white;
-    height: 35px;
-    width: 90px;
-    border-radius: 5px;
-}
+
 
 // welcome dashboard
 .welcome-dashboard-parent-container {
@@ -178,7 +210,7 @@
 }
 
 .add-project-button {
-    background-color: blue;
+    background-color: #0085ff;
     color: white;
     height: 35px;
     width: 90px;

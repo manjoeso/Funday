@@ -29,7 +29,7 @@ class ProjectShow extends React.Component {
             <div className='single-project-container'>
                 <div className='project-banner'>
                     <div className='project-banner-left'>
-                        <div className='project-banner-dropdown'>
+                        <div className='project-dropdown-container'>
                             <ProjectDropdownContainer project={this.props.project}/>
                         </div>
                         <div className='project-banner-title'>
@@ -45,7 +45,7 @@ class ProjectShow extends React.Component {
                 <div className='task-item-list-container'>
                     {this.tasksSelector(this.props.tasks, this.props.project.id).map(task =>
                         <div className='task-container' key={task.id}>
-                            <div className='task-dropdown-button'>
+                            <div className='task-dropdown-button-container'>
                                 <TaskDropdownContainer task={task}/>
                             </div>
                             <TaskIndexItemContainer task={task}/>
