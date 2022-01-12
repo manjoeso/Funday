@@ -11,7 +11,7 @@ class BoardIndex extends React.Component {
     render () {
         return (
             <div className='board-parent-container'>
-                <BoardFormContainer/>
+                <BoardFormContainer currentWorkspaceId={this.props.currentWorkspaceId}/>
                 <div className='board-list-container'>
                     {
                         this.props.boards.map((board, idx) =>  

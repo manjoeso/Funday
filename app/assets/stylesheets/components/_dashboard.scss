@@ -117,59 +117,6 @@
     display: flex;
 }
 
-.board-dropdown-button {
-    width: 30px;
-    height: 30px;
-}
-.board-dropdown-button:hover {
-    background-color: blue;
-}
-
-
-// board dropdown start
-.dropdown-button {
-    background: transparent;
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    height: 100%;
-}
-
-.dropdown-button:hover {
-    background: transparent;
-}
-
-.display-dropdown {
-    top: 22px;
-    position: relative;
-    border-radius: 10px;
-    background-color: white;
-    padding: 5px 10px 5px 20px;
-    min-width: 150px;
-    box-shadow: 5px 5px 5px 5px rgba(192, 192, 192, 0.25);
-    line-height: 20px;
-    text-align: left;
-    margin: 10px;
- }
-
- .no-dropdown {
-    display: none;
- }
-
- .board-inner-dropdown-button {
-    background: none;
-    padding: 10px;
-    font-size: 18px;
-}
-
-.board-inner-dropdown-button:hover {
-    background-color: rgba(212, 211, 211, 0.87);
-    border-radius: 5px
-}
-
-
-// board dropdown end
-
 .dashboard-main-parent-container {
     width: 100vw;
     height: 100vh;
@@ -257,14 +204,7 @@
     width: 68%
 }
 
-.project-banner-dropdown {
-    width: 15px;
-    margin-right: 10px;
-}
 
-.project-banner-dropdown:hover {
-    background-color: blue;
-}
 
 .project-banner-right {
     display: flex;
@@ -276,40 +216,96 @@
 
 .task-item-list-container div {
     list-style: none;
-    padding: 5px;
-    background-color: rgb(226, 226, 226);
     margin-bottom: 1px;
+    height: 30px;
+    display: flex;
+    align-items: center;
 }
-.task-item-list-container div:hover {
+
+.task-item-content-container {
+    width: 100%;
+    background-color: rgb(236, 236, 236);
+}
+
+// holds all task, minus button
+.task-item-content-container:hover {
     list-style: none;
-    padding: 5px;
-    background-color: rgb(202, 199, 199);
+    // padding: 5px;
+    background-color: rgb(211, 211, 211);
+
+    .task-edit-button {
+        display: inline;
+        background: transparent;
+        border: none;
+    }
+
+    .task-dropdown-button {
+        display: block;
+    }
 }
+
+.task-dropdown-button {
+    display: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+
 
 .task-container {
     display: flex;
     flex-direction: row;
 }
 
-.task-title {
-    width: 70%;
-    border-right: 1px solid white;
+
+.task-item-left-side {
+    display: flex;
+    width: 70%
+}
+
+.task-edit-button {
+    display: none;
+    margin-left: 5px;
+}
+
+
+.task-edit-button-hidden {
+    display: none;
+}
+
+
+.task-item-right-side {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+// .task-title {
+//     width: 70%;
+//     border-right: 1px solid white;
+// }
+
+.task-title input {
+    background: none;
+    border: none;
+    width: 100%;
+    margin: 10px;
 }
 
 .task-person {
-    width: 10%;
+    width: 33%;
     border-right: 1px solid white;
-
+    border-left: 1px solid white;
 }
 
 .task-status {
-    width: 10%;
+    width: 33%;
     border-right: 1px solid white;
-
 }
 
 .task-due-date {
-    width: 10%;
+    width: 33%;
     border-right: 1px solid white;
 }
 
@@ -321,13 +317,17 @@
 }
 
 #new-task-input-field {
-    width: 95%;
-    height: 100%;
+    margin-left: 23px;
+    width: 94%;
+    height: 25px;
 }
 
 #new-task-form-buttom {
-    width: 5%;
-    height: 100%
+    // width: 7%;
+    height: 30px;
+    padding: 3px;
+    background-color: blue;
+    color: white;
 }
 
 

@@ -14,13 +14,25 @@ class ProjectForm extends React.Component {
 
     processCreate () {
         this.props.createProject(this.state, parseInt(this.props.currentBoard.id))
+        .then(obj => this.createTasks(obj))
+        .then(this.setState({['title']: ''})) // resets form input field
     }
- 
+    
+    createTasks (obj) {
+        debugger;
+        let task = {}
+        task['project_id'] = obj.project.id
+        task['title'] = 'Item 1'
+        this.props.createTask(task)
+        task['title'] = 'Item 2'
+        this.props.createTask(task)
+    }
+
     render(){
         return (
             <div className='create-project-form-container'>
                 <form onSubmit={this.processCreate}>
-                    <label>Project Title
+                    <label>
                         <input type='text' 
                             value={this.state.title}
                             onChange={this.updateTitle()}

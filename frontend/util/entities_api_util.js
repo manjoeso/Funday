@@ -8,7 +8,6 @@ export const fetchAllWorkspaceData = (userId) => {
 // board util functions
 
 export const createBoard = (board, workspace_id) => {
-    debugger
     return $.ajax({
         method: "POST",
         url: `/api/workspaces/${workspace_id}/boards`,
@@ -17,7 +16,6 @@ export const createBoard = (board, workspace_id) => {
 }
 
 export const deleteBoard = (board) => {
-    debugger
     return $.ajax({
         method: "DELETE",
         url: `/api/boards/${board.id}`
@@ -35,7 +33,6 @@ export const createProject = (project, board_id) => {
 }
 
 export const deleteProject = (project) => {
-    debugger
     return $.ajax({
         method: "DELETE",
         url: `/api/projects/${project.id}`
@@ -53,10 +50,16 @@ export const createTask = (task) => {
     })
 }
 
-// export const deleteTask = (task) => {
-//     return $.ajax({
-//         method: "DELETE",
-//         url: `api/projects/${task.project_id}/tasks`,
-//         data: {task}
-//     })
-// }
+export const deleteTask = (task) => {
+    return $.ajax({
+        method: "DELETE",
+        url: `/api/tasks/${task.id}`
+    })
+}
+export const updateTask = (task, id) => {
+    return $.ajax({
+        method: "PATCH",
+        url: `/api/tasks/${id}`,
+        data: {task}
+    })
+}

@@ -1,6 +1,9 @@
 import React from 'react'
 import ProjectDropdownContainer from './dropdowns/project_dropdown_container'
+import TaskDropdownContainer from './dropdowns/task_dropdown_container'
 import TaskFormContainer from './forms/create_task_form_container'
+import TaskIndexItemContainer from './task_index_item_container'
+import ProjectTitleFormContainer from './project_title_form_container'
 
 class ProjectShow extends React.Component { 
     constructor(props) {
@@ -30,7 +33,7 @@ class ProjectShow extends React.Component {
                             <ProjectDropdownContainer project={this.props.project}/>
                         </div>
                         <div className='project-banner-title'>
-                            {this.props.project.title}
+                            <ProjectTitleFormContainer project={this.props.project}/>
                         </div>
                     </div>
                     <div className='project-banner-right'>
@@ -42,24 +45,16 @@ class ProjectShow extends React.Component {
                 <div className='task-item-list-container'>
                     {this.tasksSelector(this.props.tasks, this.props.project.id).map(task =>
                         <div className='task-container' key={task.id}>
-                            <div className='task-title'>
-                                {task.title}
+                            <div className='task-dropdown-parent'>
+                                <TaskDropdownContainer task={task}/>
                             </div>
-                            <div className='task-person'>
-                                Person
-                            </div>
-                            <div className='task-status'>
-                                {task.status}
-                            </div>
-                            <div className='task-due-date'>
-                                {task.due_date}
-                            </div>
+                            <TaskIndexItemContainer task={task}/>
                         </div>)
                     }
-                    </div>
-                    <div id='new-task-container'>
-                        <TaskFormContainer project={this.props.project}/>
-                    </div>
+                </div>
+                {/* <div id='new-task-container'> */}
+                    <TaskFormContainer project={this.props.project}/>
+                {/* </div> */}
             </div>
         )
     }

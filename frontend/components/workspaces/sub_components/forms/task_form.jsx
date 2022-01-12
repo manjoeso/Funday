@@ -13,8 +13,7 @@ class TaskForm extends React.Component {
     }
 
     processCreate () {
-        debugger
-        this.props.createTask(this.state)
+        this.props.createTask(this.state).then(this.setState({['title']: ''}))
     }
 
     render () {
