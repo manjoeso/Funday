@@ -1,30 +1,32 @@
 
-.workspace-dropdown-button {
-    display: flex;
-    justify-content: row;
-    background: transparent;
-    margin: 0px;
-    padding: 0px;
-    // width: 100%;
-    height: 40px;
-    border-radius: 4px;
-    border-width: thin;
-    font-size: 16px;
-    font-weight: bold;
-}
 
 .workspace-dropdown-button:hover {
     cursor: pointer;
 }
 .workspace-dropdown-button-container {
-    box-sizing: border-box;
+    border-style: solid;
+    border-radius: 4px;
+    border-width: thin;
     width: 100%;
     height: 40px;
     display: flex;
-    align-items: center;
     padding: 6px;
-    
+    box-sizing: border-box;
+
 }
+.workspace-dropdown-button {
+    display: flex;
+    justify-content: row;
+    background: transparent;
+
+    // width: 100%;
+    
+    font-size: 16px;
+    font-weight: bold;
+    align-items: center;
+    box-sizing: border-box;
+}
+
 .workspace-dropdown-icon {
     width: auto;
     text-align: center;
@@ -67,7 +69,7 @@
     flex-direction: column;
     border-radius: 10px;
     background-color: white;
-    // padding: 5px 10px 5px 10px;
+    padding: 5px 10px 5px 10px;
     min-width: 265px;
     box-shadow: 5px 5px 5px 5px rgba(192, 192, 192, 0.25);
     line-height: 20px;
@@ -77,17 +79,31 @@
     // height: 300px;
 }
 
-.workspace-display-dropdown:focus {
-    display: flex;
+// .workspace-display-dropdown:focus {
+//     display: flex;
+// }   
 
-}   
+.workspace-inner-dropdown-container {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.workspace-inner-dropdown-title {
+    color: #676879;
+    font-size: 14px;
+}
 
 .workspace-inner-dropdown-button {
-    background: none;
+//     background: none;
     padding: 10px;
-    font-size: 12px;
-    border: 1px solid red;
-    font-size: 18px;
+    width: 90%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+//     font-size: 12px;
+//     border: 1px solid red;
+//     font-size: 18px;
 }
 
 .workspace-inner-dropdown-button:hover {
@@ -96,26 +112,23 @@
 
 // BOARDS 
 
-.board-dropdown-button-container {
-    width: 20px;
-    height: 20px;
-}
-
 .board-dropdown-button {
+    // width: 20px;
+    height: 20px;
     display: none;
+    border: none;
     background: transparent;
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
     color: black;
-    content: '\2807';
-    font-size: 30px;  
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 32px;  
+    text-align: center;
+    // padding: 5px;
 }
 
 
 .board-display-dropdown {
+    display: fixed;
     top: 10px;
     right: 20px;
     position: relative;

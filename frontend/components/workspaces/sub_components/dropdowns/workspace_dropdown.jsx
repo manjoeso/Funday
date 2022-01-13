@@ -12,23 +12,6 @@ class WorkspaceDropdown extends React.Component {
         this.handleClick = this.handleClick.bind(this); 
     }
 
-    // focusOrBlur(e) {
-    //     e.preventDefault()
-    //     debugger
-    //     // let newState = !this.state.open
-    //     this.setState( state => {
-    //         return {
-    //             open: !state.open
-    //         }
-    //     })
-    // }
-
-    // redirect (id) {
-    //     return (
-    //         <Redirect to={`/workspaces/${id}`}/>
-    //     )
-    // }
-
     handleClick (e) {
         e.preventDefault()
         this.setState( state => {
@@ -37,12 +20,12 @@ class WorkspaceDropdown extends React.Component {
             }
         })
     }
-    // onClick={this.handleClick} onFocus={this.focusOrBlur} onBlur={this.focusOrBlur}
+
     render() {
         if (this.props.currentWorkspace){
             return(
-                <div className="workspace-dropdown-button">
-                    <div onClick={this.handleClick} className='workspace-dropdown-button-container'>
+                <div className="workspace-dropdown-button-container">
+                    <div onClick={this.handleClick} className='workspace-dropdown-button'>
                         <div className='workspace-dropdown-icon'>
                             {this.props.currentWorkspace.title[0]}
                         </div>
@@ -54,20 +37,27 @@ class WorkspaceDropdown extends React.Component {
                         </div>
                     </div>
                     <ul onClick={(e) => e.stopPropagation()} className={this.state.open ? "workspace-display-dropdown" : "no-dropdown"}>
-                            {this.props.workspaces.map((workspace) => {
+                        <div className='workspace-inner-dropdown-container'>
+                            <div className='workspace-inner-dropdown-title'>
+                                My workspaces
+                            </div>
+                            {
+                            this.props.workspaces.map((workspace) => {
                                 return (
-                                    <li>
+                                    // <li>
                                         <Link 
                                             key={workspace.id}
                                             className="workspace-inner-dropdown-button"
                                             to={`/workspaces/${workspace.id}`} 
+                                            
                                         >
                                         {workspace.title}
                                         </Link>
-                                    </li>
+                                    // </li>
                                 )
                             })
-                        }
+                            }
+                        </div>
                     </ul>
                 </div>
 

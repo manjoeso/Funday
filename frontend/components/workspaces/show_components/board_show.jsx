@@ -38,7 +38,11 @@ class BoardShow extends React.Component {
                     <div className='dashboard-main-parent-container'>
                         <div className='workspace-board-parent-container'>
                             <WorkspaceContainer currentWorkspaceId={currentWorkspaceId}/> 
-                            <BoardIndexContainer currentWorkspaceId={currentWorkspaceId} boards={this.props.boards}/>  
+                            <BoardIndexContainer 
+                                currentWorkspaceId={currentWorkspaceId}
+                                boards={this.props.boards}
+                                currentBoard={this.props.currentBoard}
+                                />  
                         </div>
                         <div className='dashboard-container'>
                             <div className='board-dashboard-banner'>

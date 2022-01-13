@@ -8,31 +8,68 @@ class BoardIndex extends React.Component {
         super(props)
     }
 
+
+    setCurrentBoardClass (board) {
+        debugger
+        if (board.id === this.props.currentBoard.id){
+            debugger
+            return ('selected-board-item-container');
+        } else {
+            return ('board-item-container');
+        }       
+    }
     render () {
-        
-        return (
-            <div className='board-parent-container'>
-                {/* <BoardFormContainer currentWorkspaceId={this.props.currentWorkspaceId}/> */}
-                <button className='add-board-display-button' onClick={() => this.props.openModal('addBoard')}>+ Add Board</button>
-                    {
-                        this.props.boards.map((board, idx) =>  
-                        <div key={board.id} className='board-item-container'>
-                            <div className='board-title'>
-                                <Link 
-                                    to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}
-                                >
-                                {/* <EditBoardFormContainer board={board}/> */}
-                                {board.title}
-                                </Link>
+
+        // the if else statement here was a quick workaround to get the class name of the selected board to change
+        // the reason it has to be if else is because shared by workspace show, which renders board index. current board at 
+        // workspace show will be nil, so the "else" is to render normally
+        if(this.props.currentBoard){
+            return (
+                <div className='board-parent-container'>
+                    <button className='add-board-display-button' onClick={() => this.props.openModal('addBoard')}>+ Add Board</button>
+                        {
+                            this.props.boards.map((board, idx) =>  
+                                                   
+                            <div key={board.id} className={`${this.setCurrentBoardClass(board)}`}>
+                                <div className='board-title'>
+                                    <Link 
+                                        to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}
+                                    >
+                                    {/* <EditBoardFormContainer board={board}/> */}
+                                    {board.title}
+                                    </Link>
+                                </div>
+                                <div className='board-dropdown-container'>
+                                    <BoardDropdownContainer key={idx} board={board}></BoardDropdownContainer>
+                                </div>
                             </div>
-                            <div className='board-dropdown-button-container'>
-                                <BoardDropdownContainer key={idx} board={board}></BoardDropdownContainer>
-                            </div>
+                            )
+                        }
+                </div>
+            )
+        } else {
+            return (<div className='board-parent-container'>
+            <button className='add-board-display-button' onClick={() => this.props.openModal('addBoard')}>+ Add Board</button>
+                {
+                    this.props.boards.map((board, idx) =>  
+                                           
+                    <div key={board.id} className={`board-item-container`}>
+                        <div className='board-title'>
+                            <Link 
+                                to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}
+                            >
+                            {/* <EditBoardFormContainer board={board}/> */}
+                            {board.title}
+                            </Link>
                         </div>
-                        )
-                    }
-            </div>
-        )
+                        <div className='board-dropdown-container'>
+                            <BoardDropdownContainer key={idx} board={board}></BoardDropdownContainer>
+                        </div>
+                    </div>
+                    )
+                }
+        </div>)
+        }
     }
 }
 

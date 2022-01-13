@@ -6,13 +6,23 @@
 
 // SIDEBAR START
 
+
+
+
 .sidebar-container {
+//
+    position: fixed;
+    height: 100vh;
+//
     display: flex;
     flex-direction: column;
     border-right: 2px solid black;
     background-color: rgb(46, 53, 80)
     // width: 65px;
 }
+
+
+
 
 // .workspace-home-link-button {
 
@@ -78,7 +88,16 @@
 
 
 
+
+
 .workspace-board-parent-container {
+//
+    position: fixed;
+    left: 65px;
+    height: 100vh;
+//
+
+
     width: 235px;
     padding: 10px;
     display: flex;
@@ -93,6 +112,7 @@
     flex-direction: column;
     width: 100%;
     height: 10%;
+    margin: 5px;
 }
 
 .workspace-header {
@@ -144,34 +164,74 @@
 }
 
 .add-board-display-button:hover {
-    background-color: rgba(212, 211, 211, 0.87);
+    background-color:  rgba(228, 228, 228, 0.87);
     border-radius: 5px;
 }
 
+// .board-dropdown-container {
+//     display: flex;
+//     align-items: center;
+// }
 
 .board-item-container {
     display: flex;
     align-items: center;
 }
 
+
 .board-item-container:hover {
-    background-color: rgba(212, 211, 211, 0.87);
-    border-radius: 5px;
+    background-color: rgba(228, 228, 228, 0.87);
+    border-radius: 7px;
 
     .board-dropdown-button {
-        display: inline;
+        display: block;
+    }
+
+    .board-dropdown-button::after {
+        content: "\2026";
+        // font-size: 32px;
     }
 }
 
+.selected-board-item-container {
+    display: flex;
+    align-items: center;
+    background-color: #bfe4ff;
+    border-radius: 7px;
+}
+
+
+.selected-board-item-container:hover {
+    border-radius: 7px;
+
+    .board-dropdown-button {
+        display: block;
+    }
+
+    .board-dropdown-button::after {
+        content: "\2026";
+        // font-size: 32px;
+    }
+}
+
+.board-title a {
+    color: inherit;
+    font-size: 14px;
+}
+
 .dashboard-main-parent-container {
-    width: 100vw;
-    height: 100vh;
+//
+    position: relative;
+    left: 320px;
+//
+    // width: 100vw;
+    // height: 100vh;
     display: flex;
     flex-direction: row;
 }
 
 .dashboard-container{
-    width: 70vw;
+    width: 81vw;
     padding: 10px;
     margin: 10px;
 }
@@ -218,7 +278,7 @@
     // justify-content: center;
     // align-items: center;
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
     padding: 5px;
 }
 
