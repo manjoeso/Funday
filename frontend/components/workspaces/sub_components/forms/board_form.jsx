@@ -13,18 +13,24 @@ class BoardForm extends React.Component {
     }
 
     processCreate () {
-        debugger
-
         this.props.createBoard(this.state, parseInt(this.props.currentWorkspaceId))
         .then(obj => this.createProjects(obj))
+        .then(obj => this.createProjects(obj))
+        .then(obj => this.props.history.push(`/${this.props.currentWorkspaceId}/boards/${obj.board.id}`))
         .then(this.setState({['title']: ''}))
         .then(this.props.closeModal())
-        // last .then doesnt work, would like to go to created board after creation
     } 
+
+    handleFocus(event) {
+        event.target.select();
+    }
 
     createProjects (obj) {
         let project = {title: 'New Project'}
         this.props.createProject(project, obj.board.id)
+            .then(obj => this.props.createTask({title: 'New Task', project_id: obj.project.id}))
+
+        return (obj)
     }
  
     render(){
@@ -40,6 +46,7 @@ class BoardForm extends React.Component {
                         <input type='text' 
                             value={this.state.title}
                             onChange={this.updateTitle()}
+                            onFocus={this.handleFocus}
                         />
                     </div>
                     <div className='create-workspace-board-form-button-container'>

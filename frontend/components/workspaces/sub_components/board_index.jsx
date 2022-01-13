@@ -10,7 +10,6 @@ class BoardIndex extends React.Component {
 
 
     setCurrentBoardClass (board) {
-        debugger
         if (board.id === this.props.currentBoard.id){
             debugger
             return ('selected-board-item-container');
