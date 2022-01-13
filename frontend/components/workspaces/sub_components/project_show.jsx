@@ -24,6 +24,7 @@ class ProjectShow extends React.Component {
     }
 
     render () {
+        // have this.props.color for styling here
         // conditional here, if no tasks, make some, else display
         return (
             <div className='single-project-container'>
@@ -32,7 +33,7 @@ class ProjectShow extends React.Component {
                         <div className='project-dropdown-container'>
                             <ProjectDropdownContainer project={this.props.project}/>
                         </div>
-                        <ProjectTitleFormContainer project={this.props.project}/>
+                        <ProjectTitleFormContainer color={this.props.color} project={this.props.project}/>
                     </div>
                     <div className='project-banner-right'>
                         <span>Person</span>
@@ -43,10 +44,10 @@ class ProjectShow extends React.Component {
                 <div className='task-item-list-container'>
                     {this.tasksSelector(this.props.tasks, this.props.project.id).map(task =>
                         <div className='task-container' key={task.id}>
-                            <div className='task-dropdown-button-container'>
+                            <div style={{color: `${this.props.color}`}} className='task-dropdown-button-container'>
                                 <TaskDropdownContainer task={task}/>
                             </div>
-                            <TaskIndexItemContainer task={task}/>
+                            <TaskIndexItemContainer color={this.props.color} task={task}/>
                         </div>)
                     }
                 </div>

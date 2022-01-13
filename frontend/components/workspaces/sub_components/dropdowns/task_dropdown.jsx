@@ -9,7 +9,7 @@ class TaskDropdown extends React.Component {
         }
         this.focusOrBlur = this.focusOrBlur.bind(this); 
     }
-
+ 
     focusOrBlur(e) {
         let newState = !this.state.open
         this.setState({ 

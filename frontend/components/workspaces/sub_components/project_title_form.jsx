@@ -35,11 +35,15 @@ class ProjectTitleForm extends React.Component {
     render () {
         return ( 
             <div className='project-banner-title'>
+                {/* <p 
+                style={{color: `${this.props.color}`}}
+                >{this.props.project.title}</p> */}
                 <form onSubmit={this.updateProjectTitle}>
                             <input
                                 disabled={this.state.disabled}
                                 value={this.state.project.title}
                                 onChange={this.updateTitle()}
+                                style={{color: `${this.props.color}`}}
                             >
                             </input>
                 </form>

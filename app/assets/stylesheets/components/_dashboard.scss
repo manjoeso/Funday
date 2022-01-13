@@ -261,7 +261,6 @@
 .project-banner-left {
     display: flex;
     // padding-left: 10px;
-    color: #0085ff;
     font-size: 18px;
     width: 68%;
 
@@ -271,9 +270,10 @@
     display: none;
 }
 
-.project-banner-title {
+.project-banner-title form input {
     display: flex;
     flex-direction: row;
+    font-size: 20px;
 }
 
 

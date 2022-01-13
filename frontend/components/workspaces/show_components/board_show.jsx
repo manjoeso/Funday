@@ -15,6 +15,20 @@ class BoardShow extends React.Component {
         super(props)
     }
 
+    assignColor (idx) {
+        let colorOptions = {
+            0: "#579BFC",
+            1: "#A25DDC",
+            2: "#C4C4C4",
+            3: "#CAB641",
+            4: "#784bd1"
+        }
+
+        return (
+            colorOptions[idx % 5]
+        )
+    }
+
     render () {
         let currentWorkspaceId = this.props.match.params.workspace_id;
         if(this.props.workspaces){
@@ -39,11 +53,13 @@ class BoardShow extends React.Component {
                                
                             </div>
                             <div className='projects-parent-container'>
-                                    {this.props.projects.map(project => 
+                                    {this.props.projects.map((project, idx) => 
                                     <ProjectShowContainer 
                                         key={project.id}
                                         project={project} 
-                                        currentBoard={this.props.currentBoard}>
+                                        currentBoard={this.props.currentBoard}
+                                        color={this.assignColor(idx)}
+                                        >
                                     </ProjectShowContainer>)}
                             </div>
                         </div>
