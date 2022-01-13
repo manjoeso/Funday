@@ -29,17 +29,17 @@ board2 = Board.create(title: "Board2", workspace_id: workspace1.id)
 board3 = Board.create(title: "Board3", workspace_id: workspace2.id)
 board4 = Board.create(title: "Board4", workspace_id: workspace2.id)
 
-project1 = Project.create(title: "Project1", board_id: board1.id)
-project2 = Project.create(title: "Project2", board_id: board1.id)
+project1 = Project.create(title: "Group1", board_id: board1.id)
+project2 = Project.create(title: "Group2", board_id: board1.id)
 
-project3 = Project.create(title: "Project3", board_id: board2.id)
-project4 = Project.create(title: "Project4", board_id: board2.id)
+project3 = Project.create(title: "Group3", board_id: board2.id)
+project4 = Project.create(title: "Group4", board_id: board2.id)
 
-project5 = Project.create(title: "Project5", board_id: board3.id)
-project6 = Project.create(title: "Project6", board_id: board3.id)
+project5 = Project.create(title: "Group5", board_id: board3.id)
+project6 = Project.create(title: "Group6", board_id: board3.id)
 
-project7 = Project.create(title: "Project7", board_id: board4.id)
-project8 = Project.create(title: "Project8", board_id: board4.id)
+project7 = Project.create(title: "Group7", board_id: board4.id)
+project8 = Project.create(title: "Group8", board_id: board4.id)
 
 task1 = Task.create(title: 'Walk the dog', project_id: project1.id, status: 'Done')
 

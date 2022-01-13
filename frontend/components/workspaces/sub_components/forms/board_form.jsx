@@ -26,7 +26,7 @@ class BoardForm extends React.Component {
     }
 
     createProjects (obj) {
-        let project = {title: 'New Project'}
+        let project = {title: 'New Group'}
         this.props.createProject(project, obj.board.id)
             .then(obj => this.props.createTask({title: 'New Task', project_id: obj.project.id}))
 
