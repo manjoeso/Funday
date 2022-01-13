@@ -32,16 +32,16 @@ class TaskIndexItem extends React.Component {
         this.setState({['task']: {['status']: event.target.value}})
     }
 
+    updateTaskStatus () {
+        //  this.props.updateTask(this.state)
+        this.props.updateTask(this.state.task, this.props.task.id)
+    } 
+
     updateTaskTitle () {
         //  this.props.updateTask(this.state)
         this.props.updateTask(this.state.task, this.props.task.id)
         this.setState({editButtonClass: 'task-edit-button'})
         this.setState({disabled: !this.state.disabled})
-    } 
-
-    updateTaskStatus () {
-        //  this.props.updateTask(this.state)
-        this.props.updateTask(this.state.task, this.props.task.id)
     } 
     
     render () {

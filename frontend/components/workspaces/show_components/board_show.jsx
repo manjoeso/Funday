@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom'
 import SidebarContainer from '../sub_components/sidebar_container'
 import WorkspaceContainer from '../sub_components/workspace_container';
 import BoardIndexContainer from '../sub_components/board_index_container';
-import BoardDashboardContainer from '../sub_components/board_dashboard_container'
 import ProjectShowContainer from '../sub_components/project_show_container'
 import ProjectFormContainer from '../sub_components/forms/create_project_form_container'
+import EditBoardFormContainer from '../sub_components/forms/edit_board_form_container'
 
 import { AuthRoute, ProtectedRoute } from '../../../util/route_util';
 
@@ -28,15 +28,15 @@ class BoardShow extends React.Component {
                         </div>
                         <div className='dashboard-container'>
                             <div className='board-dashboard-banner'>
-                                <div className='banner-left'>
-                                    <p>{this.props.currentBoard.title}</p> 
-                                </div>
+                                <EditBoardFormContainer board={this.props.currentBoard}/>
                                 <div className='banner-right'>
 
-                                </div>
-                            </div> 
+                            </div>  
+                            </div>
+                        
                             <div className='project-nav-bar'>
                                 <ProjectFormContainer currentBoard={this.props.currentBoard}/>
+                               
                             </div>
                             <div className='projects-parent-container'>
                                     {this.props.projects.map(project => 

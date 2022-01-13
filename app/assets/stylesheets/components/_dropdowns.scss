@@ -1,4 +1,49 @@
- 
+.workspace-dropdown-button-container {
+    width: 100%;
+    height: 40px;
+}
+
+.workspace-dropdown-button {
+    background: transparent;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.workspace-display-dropdown {
+    top: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: white;
+    // padding: 5px 10px 5px 10px;
+    min-width: 150px;
+    box-shadow: 5px 5px 5px 5px rgba(192, 192, 192, 0.25);
+    line-height: 20px;
+    text-align: left;
+    margin: 10px;
+    height: 300px;
+}
+
+.workspace-display-dropdown:focus {
+    display: flex;
+
+}   
+
+.workspace-inner-dropdown-button {
+    background: none;
+    padding: 10px;
+    font-size: 12px;
+    border: 1px solid red;
+    font-size: 18px;
+}
+
+.workspace-inner-dropdown-button:hover {
+    background-color:rgba(192, 192, 192, 0.25)
+}
+
 // BOARDS 
 
 .board-dropdown-button-container {
@@ -13,6 +58,10 @@
     padding: 0px;
     width: 100%;
     height: 100%;
+    cursor: pointer;
+    color: black;
+    content: '\2807';
+    font-size: 30px;  
 }
 
 
@@ -34,18 +83,6 @@
     display: none;
 }
 
-.display-dropdown {
-    top: 22px;
-    position: relative;
-    border-radius: 10px;
-    background-color: white;
-    padding: 5px 10px 5px 20px;
-    min-width: 150px;
-    box-shadow: 5px 5px 5px 5px rgba(192, 192, 192, 0.25);
-    line-height: 20px;
-    text-align: left;
-    margin: 10px;
- }
  // dropdown styling 
 
  .board-inner-dropdown-button {
@@ -81,12 +118,28 @@
     height: 100%;
 }
 
+
+.project-display-dropdown {
+    top: 5px;
+    right: 10px;
+    position: relative;
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px 10px 5px 20px;
+    min-width: 150px;
+    box-shadow: 5px 5px 5px 5px rgba(192, 192, 192, 0.25);
+    line-height: 20px;
+    text-align: left;
+    margin: 10px;
+ }
+
 // PROJECT END
 
 .task-dropdown-button-container {
-    width: 15px;
-    height: 10px;
-    margin-right: 10px;
+    display: none;
+    // width: 15px;
+    // height: 10px;
+    // margin-right: 10px;
 }
 
 .task-dropdown-button {
@@ -96,5 +149,19 @@
     width: 100%;
     height: 100%;
 }
+
+.task-display-dropdown {
+    top: 5px;
+    right: 20px;
+    position: relative;
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px 10px 5px 20px;
+    min-width: 150px;
+    box-shadow: 5px 5px 5px 5px rgba(192, 192, 192, 0.25);
+    line-height: 20px;
+    text-align: left;
+    margin: 10px;
+ }
 
 // TASK START

@@ -9,7 +9,7 @@ class BoardIndex extends React.Component {
     }
 
     render () {
-        debugger
+        
         return (
             <div className='board-parent-container'>
                 {/* <BoardFormContainer currentWorkspaceId={this.props.currentWorkspaceId}/> */}
@@ -21,7 +21,8 @@ class BoardIndex extends React.Component {
                                 <Link 
                                     to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}
                                 >
-                                <EditBoardFormContainer board={board}/>
+                                {/* <EditBoardFormContainer board={board}/> */}
+                                {board.title}
                                 </Link>
                             </div>
                             <div className='board-dropdown-button-container'>

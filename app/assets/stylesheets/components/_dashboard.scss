@@ -91,6 +91,7 @@
 .workspace-parent-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
     height: 10%;
 }
 
@@ -168,8 +169,6 @@
     margin: 10px;
 }
 
-
-
 // welcome dashboard
 .welcome-dashboard-parent-container {
     text-align: center;
@@ -186,6 +185,13 @@
     font-weight: 400;
     margin: 15px;
 }
+
+.board-banner-left input{
+    background: none;
+    border: none;
+    font-size: 32px;
+}
+
 .new-project-button {
     background-color: blue;
     color: white;
@@ -228,15 +234,46 @@
     padding-bottom: 7px;
 }
 
+.project-banner-left:hover {
+    list-style: none;
+    // padding: 5px;
+    // background-color: rgb(211, 211, 211);
+
+    .project-edit-button {
+        display: inline;
+        background: transparent;
+        border: none;
+    }
+
+}
+
+.project-edit-button {
+    display: none;
+}
+
 .project-banner-left {
     display: flex;
     // padding-left: 10px;
-    color: blue;
+    color: #0085ff;
     font-size: 18px;
-    width: 68%
+    width: 68%;
+
+}
+
+.project-edit-button-hidden {
+    display: none;
+}
+
+.project-banner-title {
+    display: flex;
+    flex-direction: row;
 }
 
 
+.project-banner-title input{
+    background: none;
+    border: none;
+}
 
 .project-banner-right {
     display: flex;
@@ -254,32 +291,43 @@
     align-items: center;
 }
 
+.task-container {
+    display: flex;
+    flex-direction: row;
+}
+
 .task-item-content-container {
     width: 100%;
     background-color: rgb(236, 236, 236);
 }
 
 // holds all task, minus button
-.task-item-content-container:hover {
+.task-container:hover {
     list-style: none;
     // padding: 5px;
-    background-color: rgb(211, 211, 211);
+    .task-item-content-container {
+        background-color: rgb(211, 211, 211);
 
+    }
     .task-edit-button {
         display: inline;
         background: transparent;
         border: none;
     }
 
-    // .task-dropdown-button {
-    //     display: block;
-    // }
+    .task-dropdown-button-container {
+        display: flex;
+        align-items: center;
+        width: 15px;
+        height: 10px;
+        margin-right: 10px;
+    }
+
 }
 
-
-.task-container {
-    display: flex;
-    flex-direction: row;
+.task-edit-button {
+    display: none;
+    margin-left: 5px;
 }
 
 
@@ -288,10 +336,6 @@
     width: 70%
 }
 
-.task-edit-button {
-    display: none;
-    margin-left: 5px;
-}
 
 
 .task-edit-button-hidden {
@@ -341,18 +385,21 @@
 }
 
 #new-task-input-field {
-    margin-left: 23px;
-    width: 94%;
+    margin-left: 0;
+    width: 95%;
     height: 25px;
 }
 
-#new-task-form-buttom {
-    // width: 7%;
+.new-task-form-button {
+    width: 4.3%;
     height: 30px;
     padding: 3px;
-    background-color: blue;
+    background-color: #0085ff;
     color: white;
 }
 
+.single-project-container form {
+    width: 100%;
+}
 
 

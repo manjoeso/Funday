@@ -1,11 +1,18 @@
 json.workspaces do
-    json.set! @user.id do 
-        json.array! @user.workspaces do |workspace|
-        # @user.workspaces.each do |workspace| 
+    @user.workspaces.each do |workspace|
+        json.set! workspace.id do 
             json.extract! workspace, :id, :title
         end
     end
 end
+# json.workspaces do
+#     json.set! @user.id do 
+#         json.array! @user.workspaces do |workspace|
+#         # @user.workspaces.each do |workspace| 
+#             json.extract! workspace, :id, :title
+#         end
+#     end
+# end
 
 json.boards do
     @user.workspaces.each do |workspace|
@@ -43,17 +50,4 @@ json.tasks do
         end
     end
 end
-# json.tasks do 
-#     @user.workspaces.each do |workspace|
-#         workspace.boards.each do |board|
-#             board.projects.each do |project|
-#                 json.set! project.id do
-#                     json.array! project.tasks do |task|
-#                         json.extract! task, :id, :title, :status, :due_date, :project_id
-#                     end
-#                 end
-#             end
-#         end
-#     end
-# end
 

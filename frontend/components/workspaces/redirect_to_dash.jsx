@@ -7,15 +7,15 @@ class RedirectToDash extends React.Component {
     constructor(props) {
         super(props)
     }
+
     componentDidMount () {
         this.props.fetchAllWorkspaceData(this.props.currentUser.id);
         // this.props.assignCurrentWorkspace(this.props.currentUser, this.props.workspaces[0].id)
     }
-
    
     // need logic somewhere to clear the state upon logging out, right now it persists.
     render () {
-        if (this.props.workspaces){
+        if (this.props.workspaces.length > 0){
             let id = this.props.workspaces[0].id
             return(
                 <Redirect to={`/workspaces/${id}`}/>

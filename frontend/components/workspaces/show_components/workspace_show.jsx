@@ -10,7 +10,7 @@ import { AuthRoute, ProtectedRoute } from '../../../util/route_util';
 class WorkspaceShow extends React.Component {
     constructor(props) {
         super(props)
-       
+
 
     }
     componentDidMount () {
@@ -20,21 +20,16 @@ class WorkspaceShow extends React.Component {
     componentDidUpdate () {
         this.props.assignCurrentWorkspace(this.props.currentUser, parseInt(this.props.currentWorkspaceId))
     }
-    // pass through current workspace to workspace container so 
-    // we know which one is selected, eventually (when implementing drop down)
-    // receiveCurrentWorkspaceId () {
-    //     const location = useLocation()
-    //     const { currentWorkspaceId } = location.state;
-    // }
+
     render () {
         let currentWorkspaceId = this.props.match.params.workspace_id;
-        if(this.props.workspaces){
+        if(this.props.workspaces.length > 0){
             return (
                 <div className='main-parent-container'>
                     <ProtectedRoute path="/"  component={SidebarContainer} />
                     <div className='dashboard-main-parent-container'>
                         <div className='workspace-board-parent-container'>
-                            <WorkspaceContainer currentWorkspaceId={currentWorkspaceId}/> 
+                            <WorkspaceContainer/> 
                             <BoardIndexContainer currentWorkspaceId={currentWorkspaceId} boards={this.props.boards}/>  
                         </div>
                         <div className='dashboard-container'>

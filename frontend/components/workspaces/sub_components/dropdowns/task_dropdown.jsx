@@ -21,7 +21,7 @@ class TaskDropdown extends React.Component {
         return (
                 <button onFocus={this.focusOrBlur} onBlur={this.focusOrBlur} className="task-dropdown-button">
                     {/* <DropdownIcon className="dropdown-icon"/> */}
-                    <ul onClick={e => e.stopPropagation()} className={this.state.open ? "display-dropdown" : "no-dropdown"}>
+                    <ul onClick={e => e.stopPropagation()} className={this.state.open ? "task-display-dropdown" : "no-dropdown"}>
                         <div className="board-inner-dropdown-button">Rename Task</div>
                         <div onClick={() => this.props.deleteTask(this.props.task)} className="board-inner-dropdown-button">Delete</div>
                     </ul>

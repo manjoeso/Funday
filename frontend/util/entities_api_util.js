@@ -38,6 +38,14 @@ export const deleteProject = (project) => {
         url: `/api/projects/${project.id}`
     })
 }
+
+export const updateProject = (project, id) => {
+    return $.ajax({
+        method: "PATCH",
+        url: `/api/projects/${id}`,
+        data: {project}
+    })
+}
  
 
 // task util functions

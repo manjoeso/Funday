@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import WorkspaceDropdownContainer from './dropdowns/workspace_dropdown_container'
 
 class Workspace extends React.Component {
     constructor(props) {
@@ -10,27 +11,15 @@ class Workspace extends React.Component {
 
     }
     
- 
+
     render () {
         if(this.props.workspaces){
             return (
                 <div className='workspace-parent-container'>
                     <div className='workspace-header'>
-                        <h1>Workspaces</h1> 
+                        Workspace
                     </div>
-                    <div className='workspace-index-container'>
-                        <ul> 
-                            {this.props.workspaces.map((workspace) =>  
-                                <Link 
-                                    key={workspace.id} 
-                                    to={`/workspaces/${workspace.id}`} 
-                                    state={{ currentWorkspaceId: workspace.id }}
-                                >
-                                {workspace.title}
-                                </Link>)
-                            }
-                        </ul>
-                    </div>
+                    <WorkspaceDropdownContainer workspaces={this.props.workspaces} />
                 </div>
             )
         } else {

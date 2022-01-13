@@ -33,16 +33,22 @@ class EditBoardForm extends React.Component {
     } 
 
     render(){
-        
+        // probably want to change classname on click as well, to make it more noticeable
         return (
-            <form onSubmit={this.changeBoardtitle}>
-            <input
-                disabled={this.state.disabled}
-                value={this.state.board.title}
-                onChange={this.updateTitle()}
-            >
-            </input>
-            </form>
+            <div className='board-banner-left'>
+            
+                {/* <p>{this.props.board.title}</p>  */}
+                
+                <form onSubmit={this.changeBoardtitle}>
+                    <input
+                        disabled={this.state.disabled}
+                        value={this.state.board.title}
+                        onChange={this.updateTitle()}
+                        >
+                    </input>
+                </form>
+            </div>
+
         )
     }
 }

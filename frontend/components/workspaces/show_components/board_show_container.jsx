@@ -4,7 +4,7 @@ import {boardsSelector} from '../../selectors/boards_selector'
 import {projectsSelector} from '../../selectors/projects_selector'
 
 const mSTP = (state, ownProps) => ({
-    workspaces: state.entities.workspaces[state.session.id],
+    workspaces: Object.values(state.entities.workspaces),
     boards: boardsSelector(state.entities.boards, ownProps.match.params.workspace_id),
     projects: projectsSelector(state.entities.projects, ownProps.match.params.board_id),
     currentUser: state.entities.users[state.session.id],

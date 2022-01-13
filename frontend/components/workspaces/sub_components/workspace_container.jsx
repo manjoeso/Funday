@@ -4,7 +4,8 @@ import { fetchAllWorkspaceData } from '../../../actions/workspace_actions'
 import { logout } from '../../../actions/session_actions'
 
 const mSTP = (state) => ({
-    workspaces: state.entities.workspaces[state.session.id],
+    currentWorkspace: state.entities.workspaces[state.entities.users[state.session.id].current_workspace_id],
+    workspaces: Object.values(state.entities.workspaces),
     currentUser: state.entities.users[state.session.id]
 })
 

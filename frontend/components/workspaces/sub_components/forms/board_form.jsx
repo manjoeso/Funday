@@ -14,9 +14,11 @@ class BoardForm extends React.Component {
 
     processCreate () {
         debugger
+
         this.props.createBoard(this.state, parseInt(this.props.currentWorkspaceId))
         .then(obj => this.createProjects(obj))
         .then(this.setState({['title']: ''}))
+        .then(this.props.closeModal())
     } 
 
     createProjects (obj) {

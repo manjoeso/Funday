@@ -5,7 +5,7 @@ import {boardsSelector} from '../../selectors/boards_selector'
 import { assignCurrentWorkspace } from '../../../actions/session_actions'
 
 const mSTP = (state, ownProps) => ({
-        workspaces: state.entities.workspaces[state.session.id],
+        workspaces: Object.values(state.entities.workspaces),
         currentUser: state.entities.users[state.session.id],
         boards: boardsSelector(state.entities.boards, ownProps.match.params.workspace_id),
         currentWorkspaceId: ownProps.match.params.workspace_id

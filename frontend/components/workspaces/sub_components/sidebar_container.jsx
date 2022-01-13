@@ -3,7 +3,7 @@ import Sidebar from './sidebar';
 import { logout } from '../../../actions/session_actions'
 
 const mSTP = (state) => ({
-    workspaces: state.entities.workspaces[state.session.id],
+    workspaces: Object.values(state.entities.workspaces),
     currentUser: state.entities.users[state.session.id]
 })
 

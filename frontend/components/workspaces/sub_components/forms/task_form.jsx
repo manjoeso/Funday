@@ -28,7 +28,7 @@ class TaskForm extends React.Component {
                     placeholder='+ Add Item'
                     />
                 </label>
-                <button id='new-task-form-button'>Add</button>
+                <button className='new-task-form-button'>Add</button>
             </form>
         )
     }
