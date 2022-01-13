@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Redirect} from 'react-redux'
 class BoardForm extends React.Component {
     constructor (props){
         super(props)
@@ -19,6 +19,7 @@ class BoardForm extends React.Component {
         .then(obj => this.createProjects(obj))
         .then(this.setState({['title']: ''}))
         .then(this.props.closeModal())
+        // last .then doesnt work, would like to go to created board after creation
     } 
 
     createProjects (obj) {

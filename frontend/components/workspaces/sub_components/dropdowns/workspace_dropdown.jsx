@@ -18,33 +18,41 @@ class WorkspaceDropdown extends React.Component {
         })
     }
 
-    redirect (id) {
-        return (
-            <Redirect to={`/workspaces/${id}`}/>
-        )
-    }
+    // redirect (id) {
+    //     return (
+    //         <Redirect to={`/workspaces/${id}`}/>
+    //     )
+    // }
 
     render() {
         if (this.props.currentWorkspace){
             return(
-                <div className='workspace-dropdown-button-container'>
-                    <button onFocus={this.focusOrBlur} onBlur={this.focusOrBlur} className="workspace-dropdown-button">
-                        {this.props.currentWorkspace.title}
+                <button onFocus={this.focusOrBlur} onBlur={this.focusOrBlur} className="workspace-dropdown-button">
+                    <div className='workspace-dropdown-button-container'>
+                        <div className='workspace-dropdown-icon'>
+                            {this.props.currentWorkspace.title[0]}
+                        </div>
+                        <div className='workspace-dropdown-title'>
+                            {this.props.currentWorkspace.title}
+                        </div>
+                        <div class='arrow-icon'>
+                            
+                        </div>
                         <ul onClick={e => e.stopPropagation()} className={this.state.open ? "workspace-display-dropdown" : "no-dropdown"}>
                                 {this.props.workspaces.map((workspace) =>  
-                                        // <Link 
-                                        //     key={workspace.id}
-                                        //     className="workspace-inner-dropdown-button"
-                                        //     to={`/workspaces/${workspace.id}`} 
-                                        // >
-                                    <button onClick={() => redirect(workspace.id)}>{workspace.title}</button>
-                                    // </Link>
+                                        <Link 
+                                            key={workspace.id}
+                                            className="workspace-inner-dropdown-button"
+                                            to={`/workspaces/${workspace.id}`} 
+                                        >{workspace.title}
+                                    </Link>
+                                    // <button onClick={() => redirect(workspace.id)}>{workspace.title}</button>
                                 )
                                 }
                         </ul>
-                    </button>
+                    </div>
+                </button>
 
-                </div>
             )
         } else {
             return (

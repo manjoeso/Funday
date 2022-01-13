@@ -22,7 +22,6 @@ class ProjectDropdown extends React.Component {
                 <button onFocus={this.focusOrBlur} onBlur={this.focusOrBlur} className="project-dropdown-button">
                     {/* <DropdownIcon className="dropdown-icon"/> */}
                     <ul onClick={e => e.stopPropagation()} className={this.state.open ? "project-display-dropdown" : "no-dropdown"}>
-                        <div className="board-inner-dropdown-button">Rename Project</div>
                         <div onClick={() => this.props.deleteProject(this.props.project)} className="board-inner-dropdown-button">Delete</div>
                     </ul>
                 </button>

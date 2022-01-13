@@ -12,9 +12,13 @@ class EditBoardForm extends React.Component {
         // this.changeBoardtitle = this.changeBoardtitle.bind(this)
     }
 
-    componentDidMount () {
-        this.setState({board: this.props.board})
-    }
+    // componentDidMount () {
+    //     this.setState({board: this.props.board})
+    // }
+
+    // componentDidUpdate () {
+    //     this.setState({board: this.props.board})
+    // }
 
     switchInput () {
         this.setState({ disabled: !this.state.disabled})
@@ -37,8 +41,8 @@ class EditBoardForm extends React.Component {
         return (
             <div className='board-banner-left'>
             
-                {/* <p>{this.props.board.title}</p>  */}
-                
+                <p>{this.props.board.title}</p> 
+{/*                 
                 <form onSubmit={this.changeBoardtitle}>
                     <input
                         disabled={this.state.disabled}
@@ -46,7 +50,7 @@ class EditBoardForm extends React.Component {
                         onChange={this.updateTitle()}
                         >
                     </input>
-                </form>
+                </form> */}
             </div>
 
         )

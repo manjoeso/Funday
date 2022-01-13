@@ -13,7 +13,7 @@ class BoardIndex extends React.Component {
         return (
             <div className='board-parent-container'>
                 {/* <BoardFormContainer currentWorkspaceId={this.props.currentWorkspaceId}/> */}
-                <button className='add-board-display-button' onClick={() => this.props.openModal('addBoard')}>Add Board</button>
+                <button className='add-board-display-button' onClick={() => this.props.openModal('addBoard')}>+ Add Board</button>
                     {
                         this.props.boards.map((board, idx) =>  
                         <div key={board.id} className='board-item-container'>
