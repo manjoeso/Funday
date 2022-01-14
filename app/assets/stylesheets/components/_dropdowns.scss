@@ -223,7 +223,7 @@
 }
 
 .task-display-dropdown {
-    top: 5px;
+    top: 50px;
     right: 20px;
     position: relative;
     border-radius: 10px;
@@ -234,6 +234,7 @@
     line-height: 20px;
     text-align: left;
     margin: 10px;
+    z-index: 10;
  }
 
 // TASK START

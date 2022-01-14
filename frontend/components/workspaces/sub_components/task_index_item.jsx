@@ -44,6 +44,9 @@ class TaskIndexItem extends React.Component {
         this.setState({disabled: !this.state.disabled})
     } 
     
+    selectInput(e) {
+        e.target.select();
+    }
     render () {
         return (
             <div className='task-item-content-container'>
@@ -55,6 +58,7 @@ class TaskIndexItem extends React.Component {
                                 disabled={this.state.disabled}
                                 value={this.state.task.title}
                                 onChange={this.updateTitle()}
+                                onClick={this.selectInput}
                             >
                             </input>
                         </form>
