@@ -113,19 +113,18 @@
 // BOARDS 
 
 .board-dropdown-button {
-    // width: 20px;
-    height: 20px;
+    // height: 20px;
     display: none;
-    border: none;
-    background: transparent;
-    color: black;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 32px;  
-    text-align: center;
-    // padding: 5px;
+    // border: none;
+    // background: transparent;
+    // color: black;
+    // cursor: pointer;
+    // font-weight: bold;
+    // font-size: 32px;  
+    // text-align: center;
 }
 
+// 
 
 .board-display-dropdown {
     display: fixed;
@@ -200,13 +199,22 @@
 
 .task-dropdown-button-container {
     display: none;
-    // width: 15px;
-    // height: 10px;
-    // margin-right: 10px;
+    width: 15px;
+    height: 10px;
+    margin-right: 10px;
 }
+
+// .task-dropdown-button-container {
+//     display: flex;
+//     align-items: center;
+//     width: 15px;
+//     height: 10px;
+//     margin-right: 10px;
+// }
 
 .task-dropdown-button {
     background: transparent;
+    display: none;
     margin: 0px;
     padding: 0px;
     width: 100%;

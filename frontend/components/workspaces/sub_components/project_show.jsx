@@ -52,7 +52,7 @@ class ProjectShow extends React.Component {
                     }
                 </div>
                 {/* <div id='new-task-container'> */}
-                    <TaskFormContainer project={this.props.project}/>
+                    <TaskFormContainer color={this.props.color} project={this.props.project}/>
                 {/* </div> */}
             </div>
         )

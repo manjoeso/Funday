@@ -11,7 +11,7 @@ class BoardIndex extends React.Component {
 
     setCurrentBoardClass (board) {
         if (board.id === this.props.currentBoard.id){
-            debugger
+            
             return ('selected-board-item-container');
         } else {
             return ('board-item-container');
@@ -31,6 +31,10 @@ class BoardIndex extends React.Component {
                                                    
                             <div key={board.id} className={`${this.setCurrentBoardClass(board)}`}>
                                 <div className='board-title'>
+                                    {/* <div>
+                                        <span class="iconify" data-icon="fluent:board-28-regular"></span>
+                                    </div>
+                                    */}
                                     <Link 
                                         to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}
                                     >
@@ -38,9 +42,9 @@ class BoardIndex extends React.Component {
                                     {board.title}
                                     </Link>
                                 </div>
-                                <div className='board-dropdown-container'>
-                                    <BoardDropdownContainer key={idx} board={board}></BoardDropdownContainer>
-                                </div>
+                                {/* <div className='board-dropdown-container'> */}
+                                <BoardDropdownContainer key={idx} board={board}></BoardDropdownContainer>
+                                {/* </div> */}
                             </div>
                             )
                         }

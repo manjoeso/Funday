@@ -147,7 +147,7 @@
 }
 .board-title {
     display: flex;
-    width: 85%;
+    width: 75%;
     // height: 80%;
     flex-direction: column;
     text-align: left;
@@ -168,13 +168,15 @@
     border-radius: 5px;
 }
 
-// .board-dropdown-container {
-//     display: flex;
-//     align-items: center;
-// }
+.board-dropdown-container {
+    display: flex;
+    align-items: center;
+    border: none;
+}
 
 .board-item-container {
     display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
@@ -186,10 +188,17 @@
     .board-dropdown-button {
         display: block;
     }
-
+    .board-dropdown-container {
+        border: none;
+    }
     .board-dropdown-button::after {
-        content: "\2026";
-        // font-size: 32px;
+        content: "\22EF";
+        border: none;
+        color: black;
+        font-size: 32px;
+        display: flex;
+        align-items: center;
+        border: none;
     }
 }
 
@@ -228,6 +237,7 @@
     // height: 100vh;
     display: flex;
     flex-direction: row;
+    box-sizing: border-box;
 }
 
 .dashboard-container{
@@ -275,6 +285,7 @@
 .projects-parent-container {
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     // justify-content: center;
     // align-items: center;
     width: 100%;
@@ -291,14 +302,31 @@
 }
 
 .single-project-container {
-    padding: 20px;
+    padding: 5px;
+    box-sizing: border-box;
 }
 
 .project-banner {
+    width: 100%;
+    padding-right: 0px;
+    margin-right: 0px;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding-bottom: 7px;
+}
+
+.project-banner-left {
+    display: flex;
+    // padding-left: 10px;
+    font-size: 18px;
+    width: 70%;
+}
+
+.project-banner-right {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
 }
 
 .project-banner-left:hover {
@@ -318,13 +346,6 @@
     display: none;
 }
 
-.project-banner-left {
-    display: flex;
-    // padding-left: 10px;
-    font-size: 18px;
-    width: 68%;
-
-}
 
 .project-edit-button-hidden {
     display: none;
@@ -342,11 +363,7 @@
     border: none;
 }
 
-.project-banner-right {
-    display: flex;
-    justify-content: space-around;
-    width: 33%;
-}
+
 
 // TASKS 
 
@@ -364,8 +381,15 @@
 }
 
 .task-item-content-container {
-    width: 100%;
+    width: 79%;
+    box-sizing: border-box;
+    position: fixed;
+    margin-left: 25px;
     background-color: rgb(236, 236, 236);
+}
+
+.task-item-button-container {
+    width: auto;
 }
 
 // holds all task, minus button
@@ -374,7 +398,6 @@
     // padding: 5px;
     .task-item-content-container {
         background-color: rgb(211, 211, 211);
-
     }
     .task-edit-button {
         display: inline;
@@ -382,12 +405,12 @@
         border: none;
     }
 
-    .task-dropdown-button-container {
+    .task-dropdown-button{
         display: flex;
         align-items: center;
         width: 15px;
         height: 10px;
-        margin-right: 10px;
+        // margin-right: 10px;
     }
 
 }
@@ -432,11 +455,16 @@
     width: 33%;
     border-right: 1px solid white;
     border-left: 1px solid white;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .task-status {
     width: 33%;
     border-right: 1px solid white;
+    text-align: center;
 }
 
 .task-due-date {
@@ -452,9 +480,16 @@
 }
 
 #new-task-input-field {
-    margin-left: 0;
-    width: 95%;
+    margin-left: 25px;
+    width: 93.75%;
     height: 25px;
+    border: 0.5px solid rgb(165, 165, 165);
+    opacity: 0.6;
+}
+
+#new-task-input-field:hover {
+    border: 1px solid black;
+    opacity: 1;
 }
 
 .new-task-form-button {
@@ -464,6 +499,7 @@
     background-color: #0085ff;
     color: white;
 }
+
 
 .single-project-container form {
     width: 100%;
