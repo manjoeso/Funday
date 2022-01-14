@@ -185,6 +185,7 @@
 .board-item-container:hover {
     background-color: rgba(228, 228, 228, 0.87);
     border-radius: 7px;
+    cursor: pointer;
 
     .board-dropdown-button {
         display: block;
@@ -200,6 +201,7 @@
         display: flex;
         align-items: center;
         border: none;
+
     }
 }
 
@@ -214,6 +216,7 @@
 
 .selected-board-item-container:hover {
     border-radius: 7px;
+    cursor: pointer;
 
     .board-dropdown-button {
         display: block;
