@@ -35,9 +35,9 @@ Using Funday.com, users will be able to :
 ## Display
 
 ![image](https://user-images.githubusercontent.com/63963324/149538578-d2beacbe-80a7-44c9-830c-b7d34f36403e.png)
+![image](https://user-images.githubusercontent.com/63963324/149538761-44aca5de-78cd-4194-8d9b-0a574440c8e0.png)
  
 ## Technologies, Libraries APIs 
 
-1. A public data API (https://coinmarketcap.com/api/) to import live and hisotrical data from a crypto currency exchange.
-2. Webpack to bundle and transpile the source JavaScript code.
-3. D3 API to bind data from API, and create the chart displaying the data.
+1. Webpack to bundle and transpile the source JavaScript code.
+2. Ruby on Rails, Javascript/React
