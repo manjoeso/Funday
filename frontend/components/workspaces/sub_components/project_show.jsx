@@ -30,9 +30,7 @@ class ProjectShow extends React.Component {
             <div className='single-project-container'>
                 <div className='project-banner'>
                     <div className='project-banner-left'>
-                        <div className='project-dropdown-container'>
-                            <ProjectDropdownContainer project={this.props.project}/>
-                        </div>
+                        <ProjectDropdownContainer project={this.props.project}/>
                         <ProjectTitleFormContainer color={this.props.color} project={this.props.project}/>
                     </div>
                     <div className='project-banner-right'>
