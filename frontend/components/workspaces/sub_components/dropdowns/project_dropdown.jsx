@@ -7,24 +7,28 @@ class ProjectDropdown extends React.Component {
         this.state = {
             open: false 
         }
-        this.focusOrBlur = this.focusOrBlur.bind(this); 
+        this.handleClick = this.handleClick.bind(this); 
+ 
     }
 
-    focusOrBlur(e) {
-        let newState = !this.state.open
-        this.setState({
-            open: newState
+    handleClick (e) {
+        e.preventDefault()
+        this.setState( state => {
+            return {
+                open: !state.open
+            }
         })
     }
 
     render() {
         return (
-                <button onFocus={this.focusOrBlur} onBlur={this.focusOrBlur} className="project-dropdown-button">
+                <div onClick={this.handleClick} className="project-dropdown-button">
                     {/* <DropdownIcon className="dropdown-icon"/> */}
                     <ul onClick={e => e.stopPropagation()} className={this.state.open ? "project-display-dropdown" : "no-dropdown"}>
                         <div onClick={() => this.props.deleteProject(this.props.project)} className="board-inner-dropdown-button">Delete</div>
+                        <div onClick={this.handleClick} className="board-inner-dropdown-button">Cancel</div>
                     </ul>
-                </button>
+                </div>
             
         )
     }
