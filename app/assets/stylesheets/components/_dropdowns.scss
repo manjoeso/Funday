@@ -107,7 +107,8 @@
 }
 
 .workspace-inner-dropdown-button:hover {
-    background-color:rgba(192, 192, 192, 0.25)
+    background-color:rgba(192, 192, 192, 0.25);
+    cursor: pointer;
 }
 
 // BOARDS 
@@ -155,7 +156,8 @@
 
 .board-inner-dropdown-button:hover {
     background-color: rgba(212, 211, 211, 0.87);
-    border-radius: 5px
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 // BOARD END
