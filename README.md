@@ -34,7 +34,7 @@ Using Funday.com, users will be able to :
  
 ## Display
 
-![image](https://user-images.githubusercontent.com/63963324/145435301-ee5eb19d-a36e-4b0f-8251-4e085b72215f.png)
+![image](https://user-images.githubusercontent.com/63963324/149538578-d2beacbe-80a7-44c9-830c-b7d34f36403e.png)
  
 ## Technologies, Libraries APIs 
 
