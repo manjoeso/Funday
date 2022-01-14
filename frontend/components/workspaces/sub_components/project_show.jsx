@@ -20,7 +20,7 @@ class ProjectShow extends React.Component {
                 returnArr.push(task)    
             }
         })
-        return returnArr;
+        return returnArr; 
     }
 
     render () {
