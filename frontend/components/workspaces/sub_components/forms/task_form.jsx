@@ -20,7 +20,6 @@ class TaskForm extends React.Component {
     render () {
         return (
             <form onSubmit={this.processCreate}> 
-                <label>
                 <input
                     id='new-task-input-field'
                     type='text'
@@ -31,7 +30,6 @@ class TaskForm extends React.Component {
                             //'border-color': `${this.props.color}`
                         }}
                     />
-                </label>
                 <button className='new-task-form-button'>Add</button>
             </form>
         )

@@ -34,38 +34,35 @@ class BoardShow extends React.Component {
         if(this.props.workspaces){
             return (
                 <div className='main-parent-container'>
-                    <ProtectedRoute path="/"  component={SidebarContainer} />
-                    <div className='dashboard-main-parent-container'>
+                    <div className='main-sidebar-container'>
+                        <ProtectedRoute path="/"  component={SidebarContainer} />
                         <div className='workspace-board-parent-container'>
                             <WorkspaceContainer currentWorkspaceId={currentWorkspaceId}/> 
                             <BoardIndexContainer 
                                 currentWorkspaceId={currentWorkspaceId}
                                 boards={this.props.boards}
                                 currentBoard={this.props.currentBoard}
-                                />  
+                            />  
                         </div>
-                        <div className='dashboard-container'>
-                            <div className='board-dashboard-banner'>
-                                <EditBoardFormContainer board={this.props.currentBoard}/>
-                                <div className='banner-right'>
-
+                    </div>
+                    <div className='dashboard-container'>
+                        <div className='board-dashboard-banner'>
+                            <EditBoardFormContainer board={this.props.currentBoard}/>
+                            <div className='banner-right'>
                             </div>  
-                            </div>
-                        
-                            <div className='project-nav-bar'>
-                                <ProjectFormContainer currentBoard={this.props.currentBoard}/>
-                               
-                            </div>
-                            <div className='projects-parent-container'>
-                                    {this.props.projects.map((project, idx) => 
-                                    <ProjectShowContainer 
-                                        key={project.id}
-                                        project={project} 
-                                        currentBoard={this.props.currentBoard}
-                                        color={this.assignColor(idx)}
-                                        >
-                                    </ProjectShowContainer>)}
-                            </div>
+                        </div>
+                        <div className='project-nav-bar'>
+                            <ProjectFormContainer currentBoard={this.props.currentBoard}/>
+                        </div>
+                        <div className='projects-parent-container'>
+                                {this.props.projects.map((project, idx) => 
+                                <ProjectShowContainer 
+                                    key={project.id}
+                                    project={project} 
+                                    currentBoard={this.props.currentBoard}
+                                    color={this.assignColor(idx)}
+                                    >
+                                </ProjectShowContainer>)}
                         </div>
                     </div>
                 </div>

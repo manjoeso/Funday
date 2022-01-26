@@ -1,36 +1,57 @@
+// MAIN CONTAINER, TOP LEVEL
 .main-parent-container {
     display: flex;
-    width: 100vh;
-    height: 100vh
+    width: 100%;
+    height: 100vh;
+    // overflow-y: hidden;
 }
 
 // SIDEBAR START
 
-
-
-
-.sidebar-container {
-//
-    position: fixed;
-    height: 100vh;
-//
+// SECOND LEVEL, TWO DIVS
+.main-sidebar-container { 
     display: flex;
-    flex-direction: column;
-    border-right: 2px solid black;
-    background-color: rgb(46, 53, 80)
-    // width: 65px;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+}
+
+// NOT FIXED
+.dashboard-container{
+    // padding: 0.5%;
+    margin: 0.25%;
+    width: 100%;
+    height: 96%;
+    // display: inline-block;
+    position: relative;
+    margin-left: 327px;
 }
 
 
+// THIRD LEVEL, SIDEBAR SPLIT
+.sidebar-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid black;
+    background-color: rgb(46, 53, 80);
+    width: 65px;
+}
 
+.workspace-board-parent-container {
+    height: 100%;
+    width: 235px;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f6f8;
+    border-right: 1px solid rgb(218, 216, 216);
+}
 
-// .workspace-home-link-button {
-
-// }
-
+// LEFT SIDEBAR START
 .sidebar-top-buttons {
     display: flex;
-    // align-items: flex-start;
     justify-content: flex-start;
     height: 50%;
     justify-content: center;
@@ -57,7 +78,6 @@
 
 }
 
-
 .logout-button {
     // padding: 10px;
     border: 2px solid white;
@@ -76,42 +96,20 @@
     cursor: pointer;
 }
 
+// END LEFT SIDEBAR 
+
+// RIGHT SIDEBAR
+
 .workspace-home-link-button:hover { 
     transform: scale(0.85);
     cursor: pointer;
-}
-// SIDEBAR END
-
-
-
-// WORKSPACE START
-
-
-
-
-
-.workspace-board-parent-container {
-//
-    position: fixed;
-    left: 65px;
-    height: 100vh;
-//
-
-
-    width: 235px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f5f6f8;
-    border-right: 1px solid rgb(218, 216, 216);
 }
 
 .workspace-parent-container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 10%;
+    height: 20%;
     margin: 5px;
 }
 
@@ -126,21 +124,17 @@
     display: flex;
 }
 
-
-
-// WORKSPACE END
-
+// workspace end
 
 // BOARD START 
 
 .board-parent-container{
-    height: 80%;
+    height: 75%; 
     width: 100%;
-    margin: 10px;
+    margin: 5px;
     padding-top: 10px;
     border-top: 1px solid rgb(218, 216, 216);
 }
-
 
 .board-list-container {
     margin-top: 10px;
@@ -213,7 +207,6 @@
     border-radius: 7px;
 }
 
-
 .selected-board-item-container:hover {
     border-radius: 7px;
     cursor: pointer;
@@ -238,23 +231,18 @@
     font-size: 14px;
 }
 
+// ALL SIDEBAR END
+
+// MAIN WORKSPACE START (NON-STICKY)
+
 .dashboard-main-parent-container {
-//
-    position: relative;
-    left: 320px;
-//
-    // width: 100vw;
-    // height: 100vh;
-    display: flex;
+    position: fixed;
+    right: 0px;
+    display: inline-block;
     flex-direction: row;
     box-sizing: border-box;
 }
 
-.dashboard-container{
-    width: 81vw;
-    padding: 10px;
-    margin: 10px;
-}
 
 // welcome dashboard
 .welcome-dashboard-parent-container {
@@ -267,7 +255,7 @@
 //board info display dashboard
 
 .board-dashboard-banner {
-    width: 100%;
+    width: 97%;
     font-size: 36px;
     font-weight: 400;
     margin: 15px;
@@ -276,7 +264,7 @@
 .board-banner-left input{
     background: none;
     border: none;
-    font-size: 32px;
+    font-size: 32em;
 }
 
 .new-project-button {
@@ -288,7 +276,7 @@
 }
 
 .project-nav-bar { 
-    width: 100%;
+    width: 97%;
     margin: 15px;
 }
 
@@ -296,11 +284,7 @@
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    // justify-content: center;
-    // align-items: center;
-    width: 100%;
-    // height: 100vh;
-    padding: 5px;
+    width: 98%;
 }
 
 .add-project-button {
@@ -312,15 +296,14 @@
 }
 
 .single-project-container {
-    padding: 5px;
     margin-bottom: 50px;
     box-sizing: border-box;
 }
 
 .project-banner {
     width: 100%;
-    padding-right: 0px;
-    margin-right: 0px;
+    // padding-right: 0px;
+    // margin-right: 0px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -330,38 +313,45 @@
 
 .project-banner-left {
     display: flex;
-    // padding-left: 10px;
     font-size: 18px;
-    width: 70%;    
+    width: 71%;    
 }
+
+.project-dropdown-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: lightgray;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 5px;
+    padding: 0px;
+    width: 15px;
+    height: 15px;
+
+    button {
+        display: flex;
+    }
+}
+
+// .project-dropdown-button:hover {
+//     background
+// }
 
 .project-banner-right {
     display: flex;
     justify-content: space-around;
-    width: 30%;
+    width: 29%;
 }
 
 .project-banner-left:hover {
     list-style: none;
-    // padding: 5px;
-    // background-color: rgb(211, 211, 211);
 
     .project-edit-button {
         display: inline;
         background: transparent;
         border: none;
     }
-    .project-dropdown-button {
-        display: block;
-        background-color: lightgray;
-        border: 1px solid black;
-        border-radius: 50%;
-        margin-right: 10px;
-        padding: 0px;
-        width: 15px;
-        height: 15px;
-    }
-
 }
 
 .project-edit-button {
@@ -385,8 +375,6 @@
     border: none;
 }
 
-
-
 // TASKS 
 
 .task-item-list-container div {
@@ -403,10 +391,10 @@
 }
 
 .task-item-content-container {
-    width: 79%;
+    width: 100%;
     box-sizing: border-box;
-    position: fixed;
-    margin-left: 25px;
+    // position: fixed;
+    margin-left: 0%;
     background-color: rgb(236, 236, 236);
 }
 
@@ -417,7 +405,6 @@
 // holds all task, minus button
 .task-container:hover {
     list-style: none;
-    // padding: 5px;
     .task-item-content-container {
         background-color: rgb(211, 211, 211);
     }
@@ -430,11 +417,9 @@
     .task-dropdown-button{
         display: flex;
         align-items: center;
-        width: 15px;
-        height: 10px;
-        // margin-right: 10px;
+        min-width: 15px;
+        min-height: 10px;
     }
-
 }
 
 .task-edit-button {
@@ -442,13 +427,10 @@
     margin-left: 5px;
 }
 
-
 .task-item-left-side {
     display: flex;
     width: 70%
 }
-
-
 
 .task-edit-button-hidden {
     display: none;
@@ -460,11 +442,6 @@
     justify-content: space-between;
     width: 30%;
 }
-
-// .task-title {
-//     width: 70%;
-//     border-right: 1px solid white;
-// }
 
 .task-title input {
     background: none;
@@ -502,26 +479,25 @@
 }
 
 #new-task-input-field {
-    margin-left: 25px;
-    width: 93.5%;
-    height: 25px;
+    margin-left: 1.45%;
+    width: 93.55%;
+    min-height: 25px;
     border: 0.5px solid rgb(165, 165, 165);
     opacity: 0.6;
 }
 
 #new-task-input-field:hover {
-    border: 1px solid black;
+    border: 0.5% solid black;
     opacity: 1;
 }
 
 .new-task-form-button {
-    width: 4.3%;
+    width: 4%;
     height: 30px;
     padding: 3px;
     background-color: #0085ff;
     color: white;
 }
-
 
 .single-project-container form {
     width: 100%;

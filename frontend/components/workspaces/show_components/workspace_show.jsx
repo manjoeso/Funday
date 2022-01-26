@@ -20,7 +20,7 @@ class WorkspaceShow extends React.Component {
     componentDidUpdate () {
         this.props.assignCurrentWorkspace(this.props.currentUser, parseInt(this.props.currentWorkspaceId))
     }
-
+ 
     render () {
         let currentWorkspaceId = this.props.match.params.workspace_id;
         if(this.props.workspaces.length > 0){

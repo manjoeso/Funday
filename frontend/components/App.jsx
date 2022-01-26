@@ -15,9 +15,11 @@ import BoardShowContainer from './workspaces/show_components/board_show_containe
 const App = () => (
   <div> 
       <Modal />
-      <AuthRoute exact path="/login" component={LoginFormContainer} />
-      <AuthRoute path="/signup" component={SignupFormContainer} />
-      <AuthRoute exact path="/" component={SplashContainer} />
+      <Switch>
+        <AuthRoute exact path="/login" component={LoginFormContainer} />
+        <AuthRoute path="/signup" component={SignupFormContainer} />
+        <AuthRoute exact path="/" component={SplashContainer} />
+      </Switch>
       <ProtectedRoute exact path="/" component={RedirectToDashContainer}/>
       <Switch>
         <ProtectedRoute path='/workspaces/:workspace_id' component={WorkspaceShowContainer} />
