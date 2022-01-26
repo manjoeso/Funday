@@ -11,7 +11,14 @@ class ProjectDropdown extends React.Component {
  
     }
 
-    
+    handleClick (e) {
+        e.preventDefault()
+        this.setState( state => {
+            return {
+                open: !state.open
+            }
+        })
+    }
 
     render() {
         return (
