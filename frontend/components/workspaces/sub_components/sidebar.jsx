@@ -12,6 +12,7 @@ class Sidebar extends React.Component {
             <div className='sidebar-container'>
                 <div className='sidebar-top-buttons'>
                     <Link className='workspace-home-link-button' to={`/workspaces/${id}`}>W</Link>
+                    {/* <a href='https://cdn2.iconfinder.com/data/icons/linkedin-ui/48/jee-90-512.png'></a> */}
                 </div>
                 <div className='sidebar-bottom-buttons'>
                     <button className='logout-button' onClick={()=> this.props.logout()}>{this.props.currentUser.name[0]}</button>

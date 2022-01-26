@@ -26,16 +26,18 @@ class WorkspaceShow extends React.Component {
         if(this.props.workspaces.length > 0){
             return (
                 <div className='main-parent-container'>
-                    <ProtectedRoute path="/"  component={SidebarContainer} />
-                    <div className='dashboard-main-parent-container'>
-                        <div className='workspace-board-parent-container'>
+                    <nav className='sidebar'>
+                        <ProtectedRoute path="/"  component={SidebarContainer} />
+                    </nav>
+                    <section className='main-work-area'>
+                        <nav className='workspace-board-parent-container'>
                             <WorkspaceContainer/> 
                             <BoardIndexContainer currentWorkspaceId={currentWorkspaceId} boards={this.props.boards}/>  
-                        </div>
-                        <div className='dashboard-container'>
+                        </nav>
+                        <section className='dashboard-container'>
                             <WelcomeDashboard  currentUser={this.props.currentUser}/>
-                        </div>
-                    </div>
+                        </section>
+                    </section>
                 </div>
             )
         } else {
