@@ -31,7 +31,6 @@ class TaskDropdown extends React.Component {
                     <div onClick={() => this.props.deleteTask(this.props.task)} className="task-inner-dropdown-button">Delete</div>
                     <div onClick={this.handleClick} className="task-inner-dropdown-button">Cancel</div>
                 </ul>
-
             </div>
             
         )

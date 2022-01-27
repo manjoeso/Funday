@@ -53,18 +53,15 @@ class WorkspaceDropdown extends React.Component {
     render() {
         if (this.props.currentWorkspace){
             return (
-                <div className="workspace-dropdown-button-container">
-                    <button onFocus={this.handleFocus} onBlur={this.handleFocus} className='workspace-dropdown-button'>
+                <div onFocus={this.handleFocus} className="workspace-dropdown-button-container">
+                    <button onBlur={this.handleFocus} className='workspace-dropdown-button'>
                         <div className='workspace-dropdown-icon'>
                             {this.props.currentWorkspace.title[0]}
                         </div>
                         <div className='workspace-dropdown-title'>
                             {this.props.currentWorkspace.title}
                         </div>
-                        <div className='arrow-icon'>
-                            {//placeholder for icon, in css
-                            }
-                        </div>
+                       
                         <div className={this.state.show ? "workspace-display-dropdown" : "no-dropdown"}>
                             <div className='workspace-inner-dropdown-container'>
                                     <div className='workspace-inner-dropdown-title'>
@@ -94,6 +91,10 @@ class WorkspaceDropdown extends React.Component {
                                     Add Workspace
                                     </div>
                             </div>
+                        </div>
+                        <div className='arrow-icon'>
+                                {//placeholder for icon, in css
+                                }
                         </div>
                     </button>
                 </div>

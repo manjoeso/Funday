@@ -1,5 +1,5 @@
 import React from 'react'
-
+import TaskStatusForm from './forms/task_status_form'
 class TaskIndexItem extends React.Component {
     constructor(props){
         super(props)
@@ -73,18 +73,7 @@ class TaskIndexItem extends React.Component {
                             Person
                         </div>
                     </div>
-                    <div className='task-status'>
-                        <form onSubmit={this.updateTaskStatus}>
-                            <select onChange={this.changeStatus} value={this.state.task.status}>
-                                <option value='Working on it'>Working on it</option>
-                                <option value='Stuck'>Stuck</option>
-                                <option value='Done'>Done</option>
-                                <option value=' '> </option>
-                            </select>
-                            {/* <input type='submit'></input> */}
-                        </form>
-                        {/* {this.props.task.status} */}
-                    </div>
+                    <TaskStatusForm task={this.props.task}/>
                     <div className='task-due-date'>
                         {this.props.task.due_date}
                     </div>

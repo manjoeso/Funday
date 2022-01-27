@@ -47,10 +47,10 @@ class ProjectTitleForm extends React.Component {
                             >
                             </input>
                 </form>
-                <button 
+                <span 
                     className={this.state.editButtonClass}
                     onClick={() => this.switchInput()}>Edit
-                </button>
+                </span>
             </div>               
         )
     }
