@@ -10,15 +10,16 @@ import { AuthRoute, ProtectedRoute } from '../../../util/route_util';
 class WorkspaceShow extends React.Component {
     constructor(props) {
         super(props)
-
-
     }
+
     componentDidMount () {
         this.props.fetchAllWorkspaceData(this.props.currentUser.id);
     }
 
     componentDidUpdate () {
-        this.props.assignCurrentWorkspace(this.props.currentUser, parseInt(this.props.currentWorkspaceId))
+        if (this.props.currentUser.current_workspace_id !== parseInt(this.props.currentWorkspaceId)){
+            this.props.assignCurrentWorkspace(this.props.currentUser, parseInt(this.props.currentWorkspaceId))
+        }
     }
  
     render () {
@@ -27,7 +28,7 @@ class WorkspaceShow extends React.Component {
             return (
                 <div className='main-parent-container'>
                     <nav className='sidebar'>
-                        <ProtectedRoute path="/"  component={SidebarContainer} />
+                        <ProtectedRoute path="/" component={SidebarContainer} />
                     </nav>
                     <section className='main-work-area'>
                         <nav className='workspace-board-parent-container'>
@@ -35,7 +36,7 @@ class WorkspaceShow extends React.Component {
                             <BoardIndexContainer currentWorkspaceId={currentWorkspaceId} boards={this.props.boards}/>  
                         </nav>
                         <section className='dashboard-container'>
-                            <WelcomeDashboard  currentUser={this.props.currentUser}/>
+                            <WelcomeDashboard currentUser={this.props.currentUser}/>
                         </section>
                     </section>
                 </div>

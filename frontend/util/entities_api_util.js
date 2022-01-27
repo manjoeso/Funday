@@ -5,6 +5,15 @@ export const fetchAllWorkspaceData = (userId) => {
     })
 }
 
+// workspace util functions
+export const createWorkspace = (workspace) => {
+    return $.ajax({
+        method: "POST",
+        url: `/api/workspaces/`,
+        data: {workspace}
+    })
+}
+
 // board util functions
 
 export const createBoard = (board, workspace_id) => {

@@ -1,9 +1,9 @@
 import React from 'react'
-import {Redirect} from 'react-redux'
-class BoardForm extends React.Component {
+
+class WorkspaceForm extends React.Component {
     constructor (props){
         super(props)
-        this.state = this.props.board;
+        this.state = this.props.workspace;
 
         this.processCreate = this.processCreate.bind(this)
     }
@@ -12,36 +12,40 @@ class BoardForm extends React.Component {
         return e => (this.setState({['title']: e.target.value}))
     }
 
-    processCreate () {
-        this.props.createBoard(this.state, parseInt(this.props.currentWorkspaceId))
-        .then(obj => this.createProjects(obj))
-        .then(obj => this.createProjects(obj))
-        .then(obj => this.props.history.push(`/${this.props.currentWorkspaceId}/boards/${obj.board.id}`))
-        .then(this.setState({['title']: ''}))
-        .then(this.props.closeModal())
-    } 
-
     handleFocus(event) {
         event.target.select();
     }
 
-    createProjects (obj) {
-        let project = {title: 'New Group'}
-        this.props.createProject(project, obj.board.id)
-            .then(obj => this.props.createTask({title: 'New Task', project_id: obj.project.id}))
+    processCreate () {
+        let {currentUser, createWorkspace} = this.props;
 
-        return (obj)
+        let newWorkspace = {user_id: currentUser.id, title: this.state.title };
+
+        createWorkspace(newWorkspace)
+        // .then(obj => this.createTasks(obj))
+        // .then(this.setState({['title']: ''})) // resets form input field
+
+        this.props.closeModal();
     }
- 
+    
+    // createTasks (obj) {
+    //     let task = {}
+    //     task['project_id'] = obj.project.id
+    //     task['title'] = 'Item 1'
+    //     this.props.createTask(task)
+    //     task['title'] = 'Item 2'
+    //     this.props.createTask(task)
+    // }
+
     render(){
-        return (
+        return(
             <div className='create-workspace-board-form-container'>
                 <div className='create-workspace-board-header'>
-                    <h1>Create Board</h1>
+                    <h1>Create Workspace</h1>
                 </div>
                 <form onSubmit={this.processCreate}>
                     <div className='create-workspace-board-input-container'>
-                        <h3>Board name</h3>
+                        <h3>Workspace name</h3>
                         <input type='text' 
                             value={this.state.title}
                             onChange={this.updateTitle()}
@@ -54,14 +58,15 @@ class BoardForm extends React.Component {
                             type='submit'
                             // onClick={() => this.props.closeModal()}
                         >
-                        Create Board
+                        Create Workspace
                         </button>
                         <button onClick={() => this.props.closeModal()} className='cancel-button'>Cancel</button>
                     </div>
                 </form>
             </div>
+
         )
     }
 }
 
-export default BoardForm;
+export default WorkspaceForm;

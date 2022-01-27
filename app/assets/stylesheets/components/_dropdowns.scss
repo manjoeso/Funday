@@ -1,5 +1,3 @@
-
-
 .workspace-dropdown-button:hover {
     cursor: pointer;
 }
@@ -10,21 +8,20 @@
     width: 100%;
     height: 40px;
     display: flex;
-    padding: 6px;
+    padding: 6px 6px 6px 0px;
     box-sizing: border-box;
-
+    position: relative;
 }
+
 .workspace-dropdown-button {
     display: flex;
     justify-content: row;
     background: transparent;
-
-    // width: 100%;
-    
     font-size: 16px;
     font-weight: bold;
     align-items: center;
     box-sizing: border-box;
+    border: none;
 }
 
 .workspace-dropdown-icon {
@@ -42,6 +39,7 @@
 }
 
 .workspace-dropdown-title {
+    
     width: auto;
     text-align: center;
 }
@@ -55,60 +53,84 @@
     content: "\2304";
     font-size:16px;
     text-align: center;
-    margin-left: 60px;
+    margin-left: 10px;
     margin-bottom: 10px;
 }
-// 2026
 
-
+// main dropdown container
 .workspace-display-dropdown {
-    top: 75px;
-    left: 66px;
-    position: fixed;
     display: flex;
     flex-direction: column;
+    // height: 150px;
+    top: 48px;
+    right: 0px;
+    left: 2px;
+    position: absolute;
+    z-index: 10;
     border-radius: 10px;
     background-color: white;
-    padding: 5px 10px 5px 10px;
-    min-width: 265px;
+    // padding: 5px 10px 5px 10px;
+    min-width: 250px;
     box-shadow: 5px 5px 5px 5px rgba(192, 192, 192, 0.25);
     line-height: 20px;
     text-align: left;
-    margin: 10px;
-    height: 150px;
-    // height: 300px;
+    // margin: 10px;
 }
 
-// .workspace-display-dropdown:focus {
-//     display: flex;
-// }   
-
 .workspace-inner-dropdown-container {
-    margin: 10px;
+    margin: 5px;
+    height: 100%;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
 }
 
+// 'My workspaces'
 .workspace-inner-dropdown-title {
     color: #676879;
     font-size: 14px;
 }
 
+.workspace-index-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: flex-start;
+}
+
 .workspace-inner-dropdown-button {
-//     background: none;
-    padding: 10px;
-    width: 90%;
     height: 100%;
+    width: 85%;
     text-decoration: none;
     color: inherit;
-//     font-size: 12px;
-//     border: 1px solid red;
-//     font-size: 18px;
+    margin: 5px 0px 5px 5px;
+    font-size: 14px;
 }
 
 .workspace-inner-dropdown-button:hover {
     background-color:rgba(192, 192, 192, 0.25);
+    border-radius: 5px;
     cursor: pointer;
+}
+
+#add-workspace {
+    border-top: 3px solid #dad8d8;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+	cursor: pointer;
+	outline: inherit;
+}
+
+#add-workspace:hover {
+    background-color:rgba(192, 192, 192, 0.25);
+    border-radius: 5px;
 }
 
 // BOARDS 
@@ -179,14 +201,37 @@
     z-index: 100;
  }
 
+ 
+.project-dropdown-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: lightgray;
+    border: none;
+    border-radius: 50%;
+    margin: 0px;
+    margin-top: 2px;
+    padding: 0px;
+    width: 15px;
+    height: 15px;
+    color: white;
+    font-size: 12px;
+    button {
+        display: flex;
+    }
+}
+
+.project-dropdown-button:hover {
+    cursor: pointer;
+}
+
 // PROJECT END
 
 .task-dropdown-button-container {
     display: none;
     width: 1%;
-    height: 10px;
-    margin-right: 0.25%;
-    margin-left: 0.25%;
+    margin-right: 0.5%;
+    margin-left: 0;
 }
 
 // .task-dropdown-button-container {
@@ -198,16 +243,21 @@
 // }
 
 .task-dropdown-button {
-    background: transparent;
     display: none;
+    text-align: center;
+    background: #e6e9ef;
+    border-radius: 4px;
     margin: 0px;
     padding: 0px;
-    width: 100%;
-    height: 100%;
+    width: 200%;
+    height: 60%;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
 }
 
 .task-display-dropdown {
-    top: 50px;
+    top: 65px;
     right: 20px;
     position: relative;
     border-radius: 10px;
@@ -220,5 +270,17 @@
     margin: 10px;
     z-index: 10;
  }
+
+.task-inner-dropdown-button {
+    background: none;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.task-inner-dropdown-button:hover {
+    background-color: rgba(212, 211, 211, 0.87);
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 // TASK START

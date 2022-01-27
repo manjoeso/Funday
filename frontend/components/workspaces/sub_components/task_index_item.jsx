@@ -50,7 +50,7 @@ class TaskIndexItem extends React.Component {
     render () {
         return (
             <div className='task-item-content-container'>
-                <div style={{'border-left': `7px solid ${this.props.color}`}} 
+                <div style={{'borderLeft': `7px solid ${this.props.color}`}} 
                     className='task-item-left-side'>
                     <div className='task-title'>
                         <form onSubmit={this.updateTaskTitle}>

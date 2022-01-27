@@ -16,10 +16,26 @@
 
 .sidebar-top-buttons {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    // justify-content: flex-start;
     height: 50%;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     padding-top: 50px;
+}
+
+.sidebar-top-buttons img {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+
+.sidebar-top-buttons img:hover{
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
 }
 
 .sidebar-bottom-buttons {
@@ -39,7 +55,7 @@
     text-align: center;
     font-weight: bold;
     transition: transform 0.5s;
-
+    margin-bottom: 10px;
 }
 
 .workspace-home-link-button:hover { 
@@ -48,12 +64,9 @@
 }
 
 .logout-button {
-    // padding: 10px;
     border: 2px solid white;
     font-size: 20px;
-    border-radius: 35px;
-    width: 43px;
-    height: 43px;
+    border-radius: 50%;
     text-align: center;
     background-color: green;
     color: white;

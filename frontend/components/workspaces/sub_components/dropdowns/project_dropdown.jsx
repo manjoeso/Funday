@@ -22,9 +22,15 @@ class ProjectDropdown extends React.Component {
 
     render() {
         return (
-                <div onClick={this.handleClick} 
+                <div>
+                    <button onClick={this.handleClick} 
+                    
                     className="project-dropdown-button"
-                    onMouseOver={this.props.color}>
+                    style={{'backgroundColor': this.props.color}}>
+                    ▼
+                    </button> 
+                    
+                    
                     {/* <DropdownIcon className="dropdown-icon"/> */}
                     <ul onClick={e => e.stopPropagation()} className={this.state.open ? "project-display-dropdown" : "no-dropdown"}>
                         <div onClick={() => this.props.deleteProject(this.props.project)} className="board-inner-dropdown-button">Delete</div>
@@ -38,34 +44,3 @@ class ProjectDropdown extends React.Component {
 
 export default ProjectDropdown;
 
-// import React from 'react'; 
-
-// class ClickDropdown extends React.Component {
-//     constructor(props) {
-//         super(props); 
-//         this.state = {
-//             show: false 
-//         }
-
-//         this.whenFocusOrBlur = this.whenFocusOrBlur.bind(this); 
-//     }
-
-//     whenFocusOrBlur(e) {
-//         const newState = !this.state.show 
-//         this.setState({show: newState})
-//     }
-
-//     render() {
-//         return (
-//             <div>
-//                 <button onFocus={this.whenFocusOrBlur} onBlur={this.whenFocusOrBlur}>ICON THAT TRIGGERS DROPDOWN
-//                     <ul onClick={e => e.stopPropagation()} classname={this.state.show ? "show-dropdown" : "clear"}>
-//                         <li>Click this</li>
-//                         <li>Click this too</li>
-//                         <li>Or click this</li>
-//                     </ul>
-//                 </button>
-//             </div>
-//         )
-//     }
-// }

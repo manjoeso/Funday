@@ -22,13 +22,17 @@ class TaskDropdown extends React.Component {
 
     render() {
         return (
+            <div>
                 <button onClick={this.handleClick} className="task-dropdown-button">
                     {/* <DropdownIcon className="dropdown-icon"/> */}
-                    <ul onClick={e => e.stopPropagation()} className={this.state.open ? "task-display-dropdown" : "no-dropdown"}>
-                        <div onClick={() => this.props.deleteTask(this.props.task)} className="board-inner-dropdown-button">Delete</div>
-                        <div onClick={this.handleClick} className="board-inner-dropdown-button">Cancel</div>
-                    </ul>
+                    ▼
                 </button>
+                <ul onClick={e => e.stopPropagation()} className={this.state.open ? "task-display-dropdown" : "no-dropdown"}>
+                    <div onClick={() => this.props.deleteTask(this.props.task)} className="task-inner-dropdown-button">Delete</div>
+                    <div onClick={this.handleClick} className="task-inner-dropdown-button">Cancel</div>
+                </ul>
+
+            </div>
             
         )
     }
