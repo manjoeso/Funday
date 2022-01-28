@@ -30,7 +30,6 @@ class WorkspaceDropdown extends React.Component {
         this.setState({show: false})
     }
 
-
     handleFocus (e) {
         // console.log("FOCUS")
         // console.log(e.target.tagName)

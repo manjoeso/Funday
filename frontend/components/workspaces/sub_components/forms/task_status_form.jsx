@@ -7,7 +7,23 @@ class TaskStatusForm extends React.Component {
             task: this.props.task,
             show: false
         }
-        // this.processCreate = this.processCreate.bind(this)
+        this.handleFocus = this.handleFocus.bind(this)
+    }
+
+    handleFocus (e) {
+        // console.log("FOCUS")
+        // console.log(e.target.tagName)
+        // console.log(e.currentTarget.tagName)
+        // if (e.target.tagName === 'BUTTON') {
+        //     setTimeout(() => this.setState({show: false}), 200)
+        //     // need to dispatch here?
+        //     this.props.assignCurrentWorkspaceId
+        //     return;
+        // }
+        const newState = !this.state.show 
+        debuger
+        this.setState({show: newState})
+        // setTimeout(() => this.setState({show: newState}), 200)
     }
 
     updateStatus (e) {
@@ -20,14 +36,16 @@ class TaskStatusForm extends React.Component {
 
  
     render () {
+        debugger
         return (
-            <div className='task-status'>
-                <form onSubmit={this.processChange}> 
-                    <input
-                        value={this.state.status}
-                        onChange={this.updateStatus()}
-                    />
-                </form>
+            <div onFocus={this.handleFocus} onBlur={this.handleFocus} className="task-status">
+                <div 
+                    className='task-status-display-button'
+                    >{this.props.task.status}
+                </div>
+                <div className={this.state.show ? "task-status-display-dropdown" : "no-dropdown"}>
+                    HELLO
+                </div>
             </div>
         )
     }
