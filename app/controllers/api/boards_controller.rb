@@ -9,7 +9,6 @@ class Api::BoardsController < ApplicationController
     end
 
     def create 
-        # debugger
         @board = Board.new(title: params[:board][:title], workspace_id: params[:workspace_id])
         if @board.save! 
             render :show

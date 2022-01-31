@@ -15,14 +15,19 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /(node_modules)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/env', '@babel/react']
-          }
-        },
+        use: [{
+            loader: 'babel-loader',
+              options: {
+                presets: ['@babel/env', '@babel/react']
+              }
+            },
+          ]  
+      },
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: ["style-loader", "css-loader", "sass-loader"]
       }
-    ]
+      ]
   },
   devtool: 'source-map'
 };

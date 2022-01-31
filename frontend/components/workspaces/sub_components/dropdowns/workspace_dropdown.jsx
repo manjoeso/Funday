@@ -31,14 +31,11 @@ class WorkspaceDropdown extends React.Component {
     }
 
     handleFocus (e) {
-        // console.log("FOCUS")
-        // console.log(e.target.tagName)
-        // console.log(e.currentTarget.tagName)
         if (e.target.tagName === 'A') {
-                setTimeout(() => this.setState({show: false}), 200)
-                // need to dispatch here?
-                this.props.assignCurrentWorkspaceId
-                return;
+            setTimeout(() => this.setState({show: false}), 200)
+            // need to dispatch here?
+            this.props.assignCurrentWorkspaceId
+            return;
         }
         const newState = !this.state.show 
         setTimeout(() => this.setState({show: newState}), 200)
@@ -60,7 +57,6 @@ class WorkspaceDropdown extends React.Component {
                         <div className='workspace-dropdown-title'>
                             {this.props.currentWorkspace.title}
                         </div>
-                       
                         <div className={this.state.show ? "workspace-display-dropdown" : "no-dropdown"}>
                             <div className='workspace-inner-dropdown-container'>
                                     <div className='workspace-inner-dropdown-title'>

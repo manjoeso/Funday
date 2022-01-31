@@ -274,26 +274,34 @@
 
 // TASKS 
 
-.task-item-list-container div{
-    list-style: none;
-    margin-bottom: 1px;
-    height: 30px;
-    display: flex;
-    align-items: center;
+.task-item-list-container {
+    // list-style: none;
+    // margin-bottom: 1px;
+    // height: 30px;
+    // display: flex;
+    // align-items: center;
+    // flex-direction: column;
 }
 
 .task-container {
+
     display: flex;
+    position: relative;
     flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    // list-style: none;
+    // margin-bottom: 1px;
+    height: 30px;
 }
 
-
-
 .task-item-content-container {
+    margin-left: 1.5%;
     width: 100%;
+    height: 30px;
+    display: flex;
     box-sizing: border-box;
     // position: fixed;
-    margin-left: 0%;
     background-color: rgb(236, 236, 236);
 }
 
@@ -329,6 +337,7 @@
 
 .task-item-left-side {
     display: flex;
+    align-items: center;
     width: 70%
 }
 
@@ -368,10 +377,14 @@
 }
 
 .task-due-date {
+    position: relative;
+    text-align: center;
     width: 33%;
     border-right: 1px solid white;
 }
-
+#task-form-container{
+    margin-left: 1.5%;
+}
 #new-task-container {
     margin: 0px;
     padding: 0px;
@@ -380,7 +393,6 @@
 }
 
 .task-container form {
-    margin-left: 1.5%;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -408,6 +420,24 @@
 
 .single-project-container form {
     width: 100%;
+}
+
+.react-datepicker-wrapper {
+    height: 100%;
+}
+.react-datepicker__input-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    input {
+        background-color: #f5f6f8;
+        background: transparent;
+        border: none;
+        text-align: center;
+        width: 95%;
+        height: 94%;
+        font-size: inherit;
+    }
 }
 
 

@@ -3,7 +3,6 @@ import TaskForm from './task_form';
 import { createTask } from '../../../../actions/task_actions';
 
 const mSTP = (state, ownProps) => {
-    // debugger
     return ({
         task: {title: '', project_id: ownProps.project.id },
     })

@@ -1,5 +1,7 @@
 import React from 'react'
-import TaskStatusForm from './forms/task_status_form'
+import TaskStatusFormContainer from './forms/task_status_form_container'
+import TaskDateFormContainer from './forms/task_date_form_container'
+
 class TaskIndexItem extends React.Component {
     constructor(props){
         super(props)
@@ -73,10 +75,8 @@ class TaskIndexItem extends React.Component {
                             Person
                         </div>
                     </div>
-                    <TaskStatusForm task={this.props.task}/>
-                    <div className='task-due-date'>
-                        {this.props.task.due_date}
-                    </div>
+                    <TaskStatusFormContainer task={this.props.task}/>
+                    <TaskDateFormContainer task={this.props.task}/>
                 </div>
             </div>
         )

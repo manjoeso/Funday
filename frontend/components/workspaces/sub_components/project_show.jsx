@@ -45,11 +45,11 @@ class ProjectShow extends React.Component {
                             <div style={{color: `${this.props.color}`}} className='task-dropdown-button-container'>
                                 <TaskDropdownContainer color={this.props.color} task={task}/>
                             </div>
-                            <TaskIndexItemContainer color={this.props.color} task={task}/>
+                                <TaskIndexItemContainer color={this.props.color} task={task}/>
                         </div>)
                     }
                 </div>
-                <div className='task-container'>
+                <div id='task-form-container' className='task-container'>
                     <TaskFormContainer color={this.props.color} project={this.props.project}/>
                 </div>
             </div>

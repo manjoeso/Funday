@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { updateTask } from '../../../../actions/task_actions';
-import TaskStatusForm from './task_status_form'
+import TaskDateForm from './task_date_form'
 
 
 // const mSTP = (state) => ({
@@ -11,4 +11,4 @@ const mDTP = (dispatch) => ({
     updateTask: (task, id) => dispatch(updateTask(task, id))
 })
 
-export default connect(null, mDTP)(TaskStatusForm)
+export default connect(null, mDTP)(TaskDateForm)

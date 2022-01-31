@@ -19,7 +19,6 @@ class ProjectForm extends React.Component {
     }
     
     createTasks (obj) {
-        debugger;
         let task = {}
         task['project_id'] = obj.project.id
         task['title'] = 'Item 1'

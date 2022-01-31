@@ -16,7 +16,6 @@ class Api::UsersController < ApplicationController
 
     def edit 
         @user = User.find(params[:id])
-        debugger
     end
     # def delete
     #     @user = User.find(params[:id])

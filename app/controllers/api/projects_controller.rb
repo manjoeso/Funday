@@ -7,7 +7,6 @@ class Api::ProjectsController < ApplicationController
     # end
 
     def create 
-        # debugger
         @project = Project.new(title: params[:project][:title], board_id: params[:board_id])
         if @project.save! 
             render :show
