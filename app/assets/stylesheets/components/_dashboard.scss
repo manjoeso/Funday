@@ -274,7 +274,7 @@
 
 // TASKS 
 
-.task-item-list-container div {
+.task-item-list-container div{
     list-style: none;
     margin-bottom: 1px;
     height: 30px;
@@ -361,6 +361,7 @@
 }
 
 .task-status {
+    position: relative;
     width: 33%;
     border-right: 1px solid white;
     text-align: center;

@@ -11,9 +11,9 @@ class TaskStatusForm extends React.Component {
     }
 
     handleFocus (e) {
-        // console.log("FOCUS")
-        // console.log(e.target.tagName)
-        // console.log(e.currentTarget.tagName)
+        console.log("FOCUS")
+        console.log(e.target.tagName)
+        console.log(e.currentTarget.tagName)
         // if (e.target.tagName === 'BUTTON') {
         //     setTimeout(() => this.setState({show: false}), 200)
         //     // need to dispatch here?
@@ -21,7 +21,6 @@ class TaskStatusForm extends React.Component {
         //     return;
         // }
         const newState = !this.state.show 
-        debuger
         this.setState({show: newState})
         // setTimeout(() => this.setState({show: newState}), 200)
     }
@@ -36,16 +35,28 @@ class TaskStatusForm extends React.Component {
 
  
     render () {
-        debugger
         return (
-            <div onFocus={this.handleFocus} onBlur={this.handleFocus} className="task-status">
-                <div 
-                    className='task-status-display-button'
+            <div className="task-status">
+                <button 
+                    id='task-status-display-button'
+                    onFocus={this.handleFocus} 
+                    onBlur={this.handleFocus}
                     >{this.props.task.status}
-                </div>
-                <div className={this.state.show ? "task-status-display-dropdown" : "no-dropdown"}>
-                    HELLO
-                </div>
+                </button>
+                <ul id={this.state.show ? "task-status-display-dropdown" : "no-dropdown"}>
+                    <li className='task-dropdown-item' id='working-on-it'>
+                        Working on it
+                    </li>
+                    <li className='task-dropdown-item' id='stuck'>
+                        Stuck
+                    </li>
+                    <li className='task-dropdown-item' id='done'>
+                        Done
+                    </li>
+                    <li className='task-dropdown-item' id='empty'>
+
+                    </li>
+                </ul>
             </div>
         )
     }

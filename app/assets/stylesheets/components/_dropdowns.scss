@@ -287,42 +287,83 @@
 
 // TASK STATUS START
 
-.task-status-display-button {
+#task-status-display-button {
     width: 100%;
     height: 100%;
+    border: none;
     box-sizing: border-box;
-    background-color: red;
-    margin: 0px;
+    margin-top: 4px;
 }
 
 
-.task-status-display-dropdown {
+#task-status-display-dropdown {
+    background-color: white;
     display: flex;
     flex-direction: column;
-    // height: 150px;
-    top: 48px;
-    right: 0px;
-    left: 2px;
+    align-items: center;
+    height: 200px;
+    width: 100%;
     position: absolute;
-    z-index: 10;
-    border-radius: 10px;
-    background-color: white;
+    top: 31px;
+    z-index: 100;
     // padding: 5px 10px 5px 10px;
-    min-width: 250px;
     box-shadow: 5px 5px 5px 5px rgba(192, 192, 192, 0.25);
     line-height: 20px;
-    text-align: left;
-    // margin: 10px;
 }
 
 .no-dropdown {
     display: none;
+}
 
-    div {
-        display: none;
-    }
+#no-dropdown {
+    display: none;
+}
 
-    button {
-        display: none;
-    }
+.task-dropdown-item {
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    margin: 4px 5px 4px 5px;
+    font-size: 12px;
+    display: flex;
+    // align-items: center;
+    color: white;
+    border: none;
+}
+
+.task-dropdown-item:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#working-on-it {
+    background-color: #f8a83c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#stuck {
+    background-color: #e2445c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#done {
+    background-color: #00c875;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#empty {
+    background-color: #c4c4c4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
