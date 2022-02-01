@@ -3,8 +3,7 @@ import React from 'react'
 class BoardTitleForm extends React.Component {
     constructor(props){
         super(props)
-
-        this.state = {
+        this.state = { 
             board: this.props.board,
             boardInputClass: 'board-input-not-selected'
         }
@@ -16,14 +15,18 @@ class BoardTitleForm extends React.Component {
         this.setState({board: this.props.board})
     }
 
+    // componentDidUpdate () {
+    //     if(this.props.board !== this.state.board){
+    //         this.setState({board: this.props.board})
+    //     }
+    // }
+
     updateTitle (e) {
         return e => (this.setState({board: {['title']: e.target.value}}))
     }
 
     updateBoardTitle (e) {
-        debugger
         let newBoard = Object.assign({}, this.state.board, {['id']: this.props.board.id})
-        debugger
         this.props.updateBoard(newBoard)
         this.setState({boardInputClass: 'board-input-not-selected'})
     }
@@ -34,19 +37,19 @@ class BoardTitleForm extends React.Component {
     }
 
     render(){
+        console.log(this.props.board.title)
+        console.log(this.state.board.title)
         return ( 
-            <div className='project-banner-title'>
-                <form onSubmit={this.updateBoardTitle}>
-                    <input
-                        id={this.state.boardInputClass}
-                        onBlur={this.updateBoardTitle}
-                        onFocus={this.selectInput}
-                        value={this.state.board.title}
-                        onChange={this.updateTitle()}
-                    >
-                    </input>
-                </form>
-            </div>               
+            <form onSubmit={this.updateBoardTitle}>
+                <input
+                    id={this.state.boardInputClass}
+                    onBlur={this.updateBoardTitle}
+                    onFocus={this.selectInput}
+                    value={this.state.board.title}
+                    onChange={this.updateTitle()}
+                >
+                </input>
+            </form>
         )
     }
 }

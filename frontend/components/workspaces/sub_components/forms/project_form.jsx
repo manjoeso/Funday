@@ -31,14 +31,11 @@ class ProjectForm extends React.Component {
         return (
             <div className='create-project-form-container'>
                 <form onSubmit={this.processCreate}>
-                    <label>
-                        <input type='text' 
-                            value={this.state.title}
-                            onChange={this.updateTitle()}
-                        />
-                    </label>
-                <button className='add-project-button' type='submit'>New Item</button>
+                    <button className='add-project-button' type='submit'>New Item</button>
                 </form>
+                <button className='add-project-item-button'>
+                    
+                </button>
             </div>
         )
     }

@@ -13,6 +13,19 @@ import { AuthRoute, ProtectedRoute } from '../../../util/route_util';
 class BoardShow extends React.Component {
     constructor(props) {
         super(props)
+
+    }
+
+    componentDidMount () {
+        if(this.props.workspaces.length < 1){
+            this.props.fetchAllWorkspaceData(this.props.currentUser.id);
+        }
+    }
+
+    componentDidUpdate () {
+        if (this.props.currentUser.current_workspace_id !== parseInt(this.props.currentWorkspaceId)){
+            this.props.assignCurrentWorkspace(this.props.currentUser, parseInt(this.props.currentWorkspaceId))
+        }
     }
 
     assignColor (idx) {
@@ -31,7 +44,7 @@ class BoardShow extends React.Component {
 
     render () {
         let currentWorkspaceId = this.props.match.params.workspace_id;
-        if(this.props.workspaces){
+        if(this.props.workspaces.length > 0){
             return (
                 <div className='main-parent-container'>
                     <nav className='sidebar'>
@@ -44,7 +57,7 @@ class BoardShow extends React.Component {
                                 currentWorkspaceId={currentWorkspaceId}
                                 boards={this.props.boards}
                                 currentBoard={this.props.currentBoard}
-                                />  
+                            />  
                         </nav>
                         <section className='dashboard-container'>
                             <div className='board-dashboard-banner'>

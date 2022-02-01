@@ -170,17 +170,53 @@
     width: 97%;
     font-size: 36px;
     font-weight: 400;
-    margin: 15px;
+    margin: 5px 10px 10px 10px;
 }
 
-.board-banner-left input{
-    background: none;
+#board-input-not-selected {
+    width: 50%;
+    font: inherit;
     border: none;
-    font-size: 32em;
+}
+
+#board-input-not-selected:hover {
+    border: dashed .75px rgb(173, 173, 173);
+    width: 50%;
+    font: inherit;
+}
+
+#board-input-selected {
+    width: 50%;
+    border: dashed .75px rgb(173, 173, 173);
+    margin-left: 10px;
+    font: inherit;
+    // background-color: red;
+}
+
+.create-project-form-container {
+    display: flex;
+    button {
+        background-color: #0085ff;
+        color: white;
+        border: none;
+    }
+    border-radius: 5px;
+    width: 110px;
+}
+
+.add-project-button {
+    height: 35px;
+    width: 90px;
+    border-right: 
+}
+
+.add-project-item-button::after {
+    content: '\f107';
+    height: 35px;
+    width: 20px;
 }
 
 .new-project-button {
-    background-color: blue;
     color: white;
     height: 35px;
     width: 95px;
@@ -189,7 +225,7 @@
 
 .project-nav-bar { 
     width: 97%;
-    margin: 15px;
+    margin: 10px;
 }
 
 .projects-parent-container {
@@ -199,13 +235,6 @@
     width: 98%;
 }
 
-.add-project-button {
-    background-color: #0085ff;
-    color: white;
-    height: 35px;
-    width: 90px;
-    border-radius: 5px;
-}
 
 .single-project-container {
     margin-bottom: 50px;
