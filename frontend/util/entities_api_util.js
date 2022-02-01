@@ -24,6 +24,14 @@ export const createBoard = (board, workspace_id) => {
     })
 }
 
+export const updateBoard = (board) => {
+    return $.ajax({
+        method: "PATCH",
+        url: `/api/boards/${board.id}`,
+        data: {board}
+    })
+}
+
 export const deleteBoard = (board) => {
     return $.ajax({
         method: "DELETE",

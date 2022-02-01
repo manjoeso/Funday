@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import EditBoardFormContainer from './forms/edit_board_form_container'
+import EditBoardFormContainer from './forms/board_title_form_container'
 import BoardDropdownContainer from './dropdowns/board_dropdown_container'
 
 class BoardIndex extends React.Component {

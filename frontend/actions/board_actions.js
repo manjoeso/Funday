@@ -1,10 +1,10 @@
 import * as WorkspaceApiUtil from '../util/entities_api_util';
-export const CREATE_BOARD = 'CREATE_BOARD';
+export const RECEIVE_BOARD = 'RECEIVE_BOARD';
 export const REMOVE_BOARD = 'REMOVE_BOARD';
 
 
 const receiveBoard = (board) => ({
-    type: CREATE_BOARD, 
+    type: RECEIVE_BOARD, 
     board
 }) 
 
@@ -19,6 +19,10 @@ export const createBoard = (board, currentWorkspaceId) => dispatch => (
         .then(board => dispatch(receiveBoard(board)))
 )
 
+export const updateBoard = (board) => dispatch => (
+    WorkspaceApiUtil.updateBoard(board)
+        .then(board => dispatch(receiveBoard(board)))
+)
 
 export const deleteBoard = (board) => dispatch => (
     WorkspaceApiUtil.deleteBoard(board)

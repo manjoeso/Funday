@@ -5,7 +5,7 @@ import WorkspaceContainer from '../sub_components/workspace_container';
 import BoardIndexContainer from '../sub_components/board_index_container';
 import ProjectShowContainer from '../sub_components/project_show_container'
 import ProjectFormContainer from '../sub_components/forms/create_project_form_container'
-import EditBoardFormContainer from '../sub_components/forms/edit_board_form_container'
+import BoardTitleFormContainer from '../sub_components/forms/board_title_form_container'
 
 import { AuthRoute, ProtectedRoute } from '../../../util/route_util';
 
@@ -48,9 +48,7 @@ class BoardShow extends React.Component {
                         </nav>
                         <section className='dashboard-container'>
                             <div className='board-dashboard-banner'>
-                                <EditBoardFormContainer board={this.props.currentBoard}/>
-                                <div className='banner-right'>
-                                </div>  
+                                <BoardTitleFormContainer board={this.props.currentBoard}/> 
                             </div>
                             <div className='project-nav-bar'>
                                 <ProjectFormContainer currentBoard={this.props.currentBoard}/>

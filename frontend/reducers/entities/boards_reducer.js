@@ -1,4 +1,4 @@
-import { CREATE_BOARD, REMOVE_BOARD } from '../../actions/board_actions';
+import { RECEIVE_BOARD, REMOVE_BOARD } from '../../actions/board_actions';
 import {RECEIVE_ALL_WORKSPACE_DATA} from '../../actions/workspace_actions'
 
 const boardsReducer = (oldState = {}, action) => {
@@ -8,7 +8,7 @@ const boardsReducer = (oldState = {}, action) => {
     switch(action.type){ 
         case RECEIVE_ALL_WORKSPACE_DATA:
             return action.payload['boards'];
-        case CREATE_BOARD:
+        case RECEIVE_BOARD:
             return Object.assign({}, oldState, {[action.board.id]: action.board})
         case REMOVE_BOARD:
             delete newState[action.board.id]

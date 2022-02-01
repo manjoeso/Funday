@@ -241,50 +241,43 @@
     }
 }
 
-
-
 .project-banner-left:hover {
     list-style: none;
-
-    .project-edit-button {
-        display: inline;
-        background: transparent;
-        border: none;
-    }
 }
 
-.project-edit-button {
-    display: none;
+.project-banner-title {
+    display: flex;
+    width: 100%;
 }
 
-
-.project-edit-button-hidden {
-    display: none;
-}
-
-.project-banner-title form input {
-    margin-left: 10px;
+.project-banner-title {
     display: flex;
     flex-direction: row;
     font-size: 20px;
 }
 
-
-.project-banner-title input{
-    background: none;
+#project-input-not-selected {
+    width: 50%;
+    font: inherit;
+    margin-left: 10px;
     border: none;
 }
 
-// TASKS 
-
-.task-item-list-container {
-    // list-style: none;
-    // margin-bottom: 1px;
-    // height: 30px;
-    // display: flex;
-    // align-items: center;
-    // flex-direction: column;
+#project-input-not-selected:hover {
+    border: dashed .75px rgb(173, 173, 173);
+    width: 50%;
+    margin-left: 10px;
+    font: inherit;
 }
+
+#project-input-selected {
+    width: 98.5%;
+    border: dashed .75px rgb(173, 173, 173);
+    margin-left: 10px;
+    font: inherit;
+    // background-color: red;
+}
+// TASKS 
 
 .task-container {
     margin-bottom: 1px;

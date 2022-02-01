@@ -16,7 +16,7 @@ class ProjectDropdown extends React.Component {
         this.setState( state => {
             return {
                 open: !state.open
-            }
+            } 
         })
     }
 

@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       resources :boards, only: [:index, :create, :show]
     end
 
-    resources :boards, only: [:index, :destroy] do
+    resources :boards, only: [:index, :update, :destroy] do
       resources :projects, only: [:create, :show, :destroy]
     end
 

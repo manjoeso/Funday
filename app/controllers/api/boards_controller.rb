@@ -16,6 +16,16 @@ class Api::BoardsController < ApplicationController
             @board = Board.new(title: 'New Board', workspace_id: params[:workspace_id])
         end
     end
+    
+    def update 
+        @board = Board.find(params[:id])
+        debugger
+        if @board.update(board_params)
+            render :show
+        else
+            render json: @board.errors.full_messages, status: 422
+        end
+    end
 
     def destroy 
         @board = Board.find(params[:id])
@@ -27,6 +37,6 @@ class Api::BoardsController < ApplicationController
     end
 
     def board_params 
-        # params.require(:board).permit(:title, :workspace_id)
+        params.require(:board).permit(:title, :workspace_id)
     end
 end

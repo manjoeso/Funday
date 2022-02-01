@@ -6,30 +6,30 @@ class ProjectTitleForm extends React.Component {
 
         this.state = {
             project: this.props.project,
-            disabled: true,
-            editButtonClass: 'project-edit-button'
+            projectInputClass: 'project-input-not-selected'
         }
 
         this.updateProjectTitle = this.updateProjectTitle.bind(this)
+        this.selectInput = this.selectInput.bind(this)
     }
 
     componentDidMount () {
         this.setState({project: this.props.project})
     }
 
-    switchInput () {
-        this.setState({ disabled: !this.state.disabled})
-        this.setState({ editButtonClass: 'project-edit-button-hidden'})
-    }
-
+    
     updateTitle (e) {
         return e => (this.setState({project: {['title']: e.target.value}}))
     }
-
+    
     updateProjectTitle () {
         this.props.updateProject(this.state.project, this.props.project.id)
-        this.setState({editButtonClass: 'project-edit-button'})
-        this.setState({disabled: !this.state.disabled})
+        this.setState({projectInputClass: 'project-input-not-selected'})
+        // this.setState({disabled: !this.state.disabled})
+    }
+    
+    selectInput () {
+        this.setState({ projectInputClass: 'project-input-selected'})
     }
 
     render () {
@@ -40,17 +40,16 @@ class ProjectTitleForm extends React.Component {
                 >{this.props.project.title}</p> */}
                 <form onSubmit={this.updateProjectTitle}>
                             <input
-                                disabled={this.state.disabled}
+                                // disabled={this.state.disabled}
+                                id={this.state.projectInputClass}
+                                onBlur={this.updateProjectTitle}
+                                onFocus={this.selectInput}
                                 value={this.state.project.title}
                                 onChange={this.updateTitle()}
                                 style={{color: `${this.props.color}`}}
                             >
                             </input>
                 </form>
-                <span 
-                    className={this.state.editButtonClass}
-                    onClick={() => this.switchInput()}>Edit
-                </span>
             </div>               
         )
     }

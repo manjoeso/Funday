@@ -7,6 +7,7 @@ class Sidebar extends React.Component {
     }
 
     render() {
+        debugger
         let id = this.props.workspaces[0].id
         return (
             <div className='sidebar-container'>
