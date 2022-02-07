@@ -11,7 +11,12 @@ export default class TaskDateForm extends React.Component {
         }
         this.handleDateSelect = this.handleDateSelect.bind(this)
     }
-    
+
+    componentDidUpdate () {
+        if(this.state.task !== this.props.task){
+            this.setState({['task']: this.props.task})
+        }
+    }
 
     handleDateSelect (date) {
         let newTask = Object.assign({}, this.state.task, {['due_date']: date})
