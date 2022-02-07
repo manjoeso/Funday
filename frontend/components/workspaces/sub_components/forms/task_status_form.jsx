@@ -47,7 +47,7 @@ class TaskStatusForm extends React.Component {
             backgroundColor = '#c4c4c4'
         }
         return (
-            <div className="task-status" onFocus={this.handleFocus} onBlur={this.handleBlur} >
+            <div className="task-status" onClick={this.handleFocus} onBlur={this.handleBlur} >
                 <button id='task-status-display-button'
                         style={{backgroundColor: backgroundColor}}
                         >

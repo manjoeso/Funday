@@ -41,6 +41,10 @@ class WorkspaceDropdown extends React.Component {
         setTimeout(() => this.setState({show: newState}), 200)
     }
 
+    handleBlur () {
+        this.setState({show: false})
+    }
+
     // createWorkspace () {
     //     let workspace = {title: }
     //     this.props.createWorkspace()

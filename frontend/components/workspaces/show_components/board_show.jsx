@@ -68,12 +68,12 @@ class BoardShow extends React.Component {
                             </div>
                             <div className='projects-parent-container'>
                                     {this.props.projects.map((project, idx) => 
-                                    <ProjectShowContainer 
-                                    key={project.id}
-                                    project={project} 
-                                    currentBoard={this.props.currentBoard}
-                                    color={this.assignColor(idx)}
-                                    />
+                                        <ProjectShowContainer 
+                                        key={project.id}
+                                        project={project} 
+                                        currentBoard={this.props.currentBoard}
+                                        color={this.assignColor(idx)}
+                                        />
                                     )}
                             </div>
                         </section>

@@ -15,11 +15,11 @@ class BoardTitleForm extends React.Component {
         this.setState({board: this.props.board})
     }
 
-    // componentDidUpdate () {
-    //     if(this.props.board !== this.state.board){
-    //         this.setState({board: this.props.board})
-    //     }
-    // }
+    componentWillMount () {
+        if(this.props.board !== this.state.board){
+            this.setState({board: this.props.board})
+        }
+    }
 
     updateTitle (e) {
         return e => (this.setState({board: {['title']: e.target.value}}))

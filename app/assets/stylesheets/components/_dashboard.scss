@@ -96,6 +96,7 @@
     .board-item-container {
         display: flex;
         align-items: center;
+        position: relative;
         max-height: 34px;
         // flex-direction: row;
     }
@@ -120,12 +121,12 @@
             display: flex;
             align-items: center;
             border: none;
-
         }
     }
 
     .selected-board-item-container {
         display: flex;
+        position: relative;
         align-items: center;
         max-height: 34px;
         background-color: #bfe4ff;

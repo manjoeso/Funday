@@ -150,10 +150,9 @@
 // 
 
 .board-display-dropdown {
-    display: fixed;
-    top: 30px;
-    right: 20px;
-    position: relative;
+    position: absolute;
+    top: 20px;
+    left: 140px;
     border-radius: 10px;
     background-color: white;
     padding: 5px 10px 5px 10px;
@@ -162,6 +161,7 @@
     line-height: 20px;
     text-align: left;
     margin: 10px;
+    z-index: 100;
 }
 
 

@@ -11,7 +11,6 @@ class BoardIndex extends React.Component {
 
     setCurrentBoardClass (board) {
         if (board.id === this.props.currentBoard.id){
-            
             return ('selected-board-item-container');
         } else {
             return ('board-item-container');
@@ -25,29 +24,23 @@ class BoardIndex extends React.Component {
         if(this.props.currentBoard){
             return (
                 <div className='board-parent-container'>
-                    <button className='add-board-display-button' onClick={() => this.props.openModal('addBoard')}>+ Add Board</button>
-                        {
-                            this.props.boards.map((board, idx) =>  
-                                                   
+                    <button className='add-board-display-button' onClick={() => this.props.openModal('addBoard')}>
+                        + Add Board
+                    </button>
+                    {
+                        this.props.boards.map((board, idx) =>                   
                             <div key={board.id} className={`${this.setCurrentBoardClass(board)}`}>
                                 <div className='board-title'>
-                                    {/* <div>
-                                        <span class="iconify" data-icon="fluent:board-28-regular"></span>
-                                    </div>
-                                    */}
                                     <Link 
                                         to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}
                                     >
-                                    {/* <EditBoardFormContainer board={board}/> */}
                                     {board.title}
                                     </Link>
                                 </div>
-                                {/* <div className='board-dropdown-container'> */}
                                 <BoardDropdownContainer key={idx} board={board}></BoardDropdownContainer>
-                                {/* </div> */}
                             </div>
-                            )
-                        }
+                        )
+                    }
                 </div>
             )
         } else {
