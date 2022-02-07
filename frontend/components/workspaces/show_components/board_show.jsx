@@ -73,8 +73,8 @@ class BoardShow extends React.Component {
                                     project={project} 
                                     currentBoard={this.props.currentBoard}
                                     color={this.assignColor(idx)}
-                                    >
-                                    </ProjectShowContainer>)}
+                                    />
+                                    )}
                             </div>
                         </section>
                     </section>

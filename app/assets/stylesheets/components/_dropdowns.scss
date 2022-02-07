@@ -183,25 +183,13 @@
 // BOARD END
 
 // PROJECT START
+.project-button-container {
+    position: absolute;
+}
 
-.project-display-dropdown {
-    top: 5%;
-    right: 10px;
-    position: relative;
-    border-radius: 10px;
-    background-color: white;
-    padding: 5px 10px 5px 20px;
-    min-width: 150px;
-    box-shadow: 5px 5px 5px 5px rgba(192, 192, 192, 0.25);
-    line-height: 20px;
-    text-align: left;
-    margin: 10px;
-    z-index: 100;
- }
-
- 
 .project-dropdown-button {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     // background-color: lightgray;
@@ -223,6 +211,21 @@
     cursor: pointer;
 }
 
+.project-display-dropdown {
+    top: 5%;
+    position: absolute;
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px 10px 5px 20px;
+    min-width: 150px;
+    box-shadow: 5px 5px 5px 5px rgba(192, 192, 192, 0.25);
+    line-height: 20px;
+    text-align: left;
+    margin: 10px;
+    z-index: 100;
+ }
+
+
 // PROJECT END
 
 .task-dropdown-button-container {
@@ -240,38 +243,40 @@
 .task-dropdown-button-container {
     display: flex;
     align-items: center;
-    width: 15px;
-    height: 10px;
+    position: absolute;
+    width: 17px;
+    height: 17px;
 }
 
-.task-dropdown-button {
-    display: none;
-    text-align: center;
-    background: #e6e9ef;
-    border-radius: 4px;
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-    height: 60%;
-    font-size: 12px;
-    border: none;
-    cursor: pointer;
-}
+    .task-dropdown-button {
+        display: none;
+        text-align: center;
+        position: relative;
+        background: #e6e9ef;
+        border-radius: 4px;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+    }
 
-.task-display-dropdown {
-    top: 65px;
-    right: 20px;
-    position: relative;
-    border-radius: 10px;
-    background-color: white;
-    padding: 5px 10px 5px 20px;
-    min-width: 150px;
-    box-shadow: 5px 5px 5px 5px rgba(192, 192, 192, 0.25);
-    line-height: 20px;
-    text-align: left;
-    margin: 10px;
-    z-index: 10;
- }
+    .task-display-dropdown {
+        top: 5px;
+        left: 0px;
+        position: absolute;
+        border-radius: 10px;
+        background-color: white;
+        padding: 5px 10px 5px 20px;
+        min-width: 150px;
+        box-shadow: 5px 5px 5px 5px rgba(192, 192, 192, 0.25);
+        line-height: 20px;
+        text-align: left;
+        margin: 10px;
+        z-index: 10;
+    }
 
 .task-inner-dropdown-button {
     background: none;

@@ -18,11 +18,11 @@ class TaskDropdown extends React.Component {
                 open: !state.open
             }
         })
-    }
+    } 
 
     render() {
         return (
-            <div>
+            <div style={{color: `${this.props.color}`}} className='task-dropdown-button-container'>
                 <button onClick={this.handleClick} className="task-dropdown-button">
                     {/* <DropdownIcon className="dropdown-icon"/> */}
                     ▼

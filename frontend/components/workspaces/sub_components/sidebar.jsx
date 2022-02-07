@@ -18,6 +18,9 @@ class Sidebar extends React.Component {
                     <a className='github' href="https://github.com/manjoeso">
                         <img style={{'backgroundColor': 'white'}} src={githublogoURL}/>
                     </a>
+                    <a className='angel' href="https://github.com/manjoeso">
+                        <img style={{'background': 'white'}} src={angellogoURL}/>
+                    </a>
                 </div>
                 <div className='sidebar-bottom-buttons'>
                     <button className='logout-button' onClick={()=> this.props.logout()}>{this.props.currentUser.name[0]}</button>

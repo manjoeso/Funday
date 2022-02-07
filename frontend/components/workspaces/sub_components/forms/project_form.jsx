@@ -5,17 +5,21 @@ class ProjectForm extends React.Component {
         super(props)
         this.state = this.props.project;
 
-        this.processCreate = this.processCreate.bind(this)
+        this.createProject = this.createProject.bind(this)
+        this.createItem = this.createItem.bind(this)
     }
 
-    updateTitle (e) {
-        return e => (this.setState({['title']: e.target.value}))
-    }
-
-    processCreate () {
-        this.props.createProject(this.state, parseInt(this.props.currentBoard.id))
+    createProject () {
+        this.props.createProject({title: 'New Group'}, parseInt(this.props.currentBoard.id))
         .then(obj => this.createTasks(obj))
         .then(this.setState({['title']: ''})) // resets form input field
+    }
+
+    createItem () {
+        let task = {}
+        task['project_id'] = this.props.firstProject.id
+        task['title'] = 'New Item'
+        this.props.createTask(task)
     }
     
     createTasks (obj) {
@@ -30,12 +34,8 @@ class ProjectForm extends React.Component {
     render(){
         return (
             <div className='create-project-form-container'>
-                <form onSubmit={this.processCreate}>
-                    <button className='add-project-button' type='submit'>New Item</button>
-                </form>
-                <button className='add-project-item-button'>
-                    
-                </button>
+                <button onClick={() => this.createItem()} className='add-project-button'>New Item</button>
+                <button onClick={() => this.createProject()} className='add-project-item-button'></button>
             </div>
         )
     }

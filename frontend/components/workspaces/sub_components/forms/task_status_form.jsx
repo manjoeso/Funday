@@ -13,8 +13,14 @@ class TaskStatusForm extends React.Component {
         this.handleBlur = this.handleBlur.bind(this)
     }
 
+    componentDidUpdate () {
+        if(this.state.task !== this.props.task){
+            this.setState({['task']: this.props.task})
+        }
+    }
+
     handleFocus (e) {
-        const newState = !this.state.show 
+        const newState = !this.state.show  
         this.setState({show: newState})
     }
 

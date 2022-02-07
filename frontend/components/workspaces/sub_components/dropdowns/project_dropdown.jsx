@@ -7,31 +7,33 @@ class ProjectDropdown extends React.Component {
         this.state = {
             open: false 
         }
-        this.handleClick = this.handleClick.bind(this); 
+        this.handleFocus = this.handleFocus.bind(this); 
+        this.handleBlur = this.handleBlur.bind(this); 
  
     }
 
-    handleClick (e) {
+    handleFocus (e) {
         e.preventDefault()
-        this.setState( state => {
-            return {
-                open: !state.open
-            } 
-        })
+        let newState = !this.state.open
+        this.setState({open: newState })
+    }
+
+    handleBlur () {
+        console.log('blur')
+        this.setState({open: false })
     }
 
     render() {
         return (
-                <div>
-                    <button onClick={this.handleClick} 
-                    className="project-dropdown-button"
-                    style={{'backgroundColor': this.props.color}}>
+                <div  className='project-button-container'>
+                    <button onFocus={this.handleFocus}  className="project-dropdown-button"
+                            style={{'backgroundColor': this.props.color}}>
                     ▼
                     </button> 
                     {/* <DropdownIcon className="dropdown-icon"/> */}
-                    <ul onClick={e => e.stopPropagation()} className={this.state.open ? "project-display-dropdown" : "no-dropdown"}>
+                    <ul onBlur={this.handleBlur} onFocus={this.handleFocus} className={this.state.open ? "project-display-dropdown" : "no-dropdown"}>
                         <div onClick={() => this.props.deleteProject(this.props.project)} className="board-inner-dropdown-button">Delete</div>
-                        <div onClick={this.handleClick} className="board-inner-dropdown-button">Cancel</div>
+                        <div onClick={this.handleBlur} className="board-inner-dropdown-button">Cancel</div>
                     </ul>
                 </div>
             

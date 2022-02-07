@@ -32,13 +32,10 @@ class BoardTitleForm extends React.Component {
     }
 
     selectInput () {
-        console.log('hello')
         this.setState({ boardInputClass: 'board-input-selected'})
     }
 
     render(){
-        console.log(this.props.board.title)
-        console.log(this.state.board.title)
         return ( 
             <form onSubmit={this.updateBoardTitle}>
                 <input
