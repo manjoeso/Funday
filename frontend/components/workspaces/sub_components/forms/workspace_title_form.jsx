@@ -72,6 +72,7 @@ class WorkspaceTitleForm extends React.Component {
                         placeholder='Add workspace description'
                         type={this.state.workspaceDescriptionInputClass === 'workspace-description-selected' ? 'textarea' : 'text'}
                     >
+                        
                     </input>
                 </form>
             </div>
