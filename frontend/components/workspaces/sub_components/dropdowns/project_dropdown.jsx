@@ -19,7 +19,6 @@ class ProjectDropdown extends React.Component {
     }
 
     handleBlur () {
-        console.log('blur')
         this.setState({open: false })
     }
 

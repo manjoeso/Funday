@@ -26,7 +26,7 @@ class TaskForm extends React.Component {
                     value={this.state.title}
                     onChange={this.updateTitle()}
                     placeholder='+ Add Item'
-                    style={{'border-left': `7px solid ${this.props.color}`
+                    style={{'borderLeft': `7px solid ${this.props.color}`
                             //'border-color': `${this.props.color}`
                         }}
                     />

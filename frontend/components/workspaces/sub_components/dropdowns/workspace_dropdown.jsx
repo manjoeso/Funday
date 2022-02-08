@@ -55,7 +55,7 @@ class WorkspaceDropdown extends React.Component {
             return (
                 <div onFocus={this.handleFocus} className="workspace-dropdown-button-container">
                     <button onBlur={this.handleFocus} className='workspace-dropdown-button'>
-                        <div className='workspace-dropdown-icon'>
+                        <div style={{backgroundColor: `${this.assignColor(this.props.workspaces.indexOf(this.props.currentWorkspace))}`}} className='workspace-dropdown-icon'>
                             {this.props.currentWorkspace.title[0]}
                         </div>
                         <div className='workspace-dropdown-title'>

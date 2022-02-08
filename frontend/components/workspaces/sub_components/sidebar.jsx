@@ -12,6 +12,9 @@ class Sidebar extends React.Component {
             <nav className='sidebar'>
                 <div className='sidebar-container'>
                     <div className='sidebar-top-buttons'>
+                        <a className='f' href="">
+                            <img style={{'background': 'white'}} src={fundaylogoURL}/>
+                        </a>
                         <Link className='workspace-home-link-button' to={`/workspaces/${id}`}>W</Link>
                         <a className='linkedin' href="https://www.linkedin.com/in/josephmanso1/">
                             <img src={linkedinlogoURL}/>
@@ -19,7 +22,7 @@ class Sidebar extends React.Component {
                         <a className='github' href="https://github.com/manjoeso">
                             <img style={{'backgroundColor': 'white'}} src={githublogoURL}/>
                         </a>
-                        <a className='angel' href="https://github.com/manjoeso">
+                        <a className='angel' href="https://angel.co/u/joseph-manso">
                             <img style={{'background': 'white'}} src={angellogoURL}/>
                         </a>
                     </div>

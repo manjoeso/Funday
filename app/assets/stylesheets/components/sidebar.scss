@@ -21,17 +21,20 @@
     height: 50%;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 10px;
 }
 
 .sidebar-top-buttons img {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     padding: 5px;
     margin: 5px;
     border-radius: 5px;
 }
 
+.f {
+    margin-bottom: 10px;
+}
 
 .sidebar-top-buttons img:hover{
     background-color: rgb(0, 0, 0);
@@ -48,9 +51,9 @@
 .workspace-home-link-button {
     background-color: gray;
     color: white;
-    font-size: 28px;
-    width: 25px;
-    height: 25px;
+    font-size: 22px;
+    width: 20px;
+    height: 20px;
     border-radius: 5px;
     text-align: center;
     font-weight: bold;

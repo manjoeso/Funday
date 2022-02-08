@@ -3,7 +3,7 @@ import {Link, useLocation} from 'react-router-dom'
 import SidebarContainer from '../sub_components/sidebar_container'
 import WorkspaceContainer from '../sub_components/workspace_container';
 import BoardIndexContainer from '../sub_components/board_index_container';
-import WelcomeDashboard from '../sub_components/welcome_dashboard'
+import WelcomeDashboardContainer from '../sub_components/welcome_dashboard_container'
 import { AuthRoute, ProtectedRoute } from '../../../util/route_util';
 
 
@@ -35,9 +35,7 @@ class WorkspaceShow extends React.Component {
                             <WorkspaceContainer/> 
                             <BoardIndexContainer currentWorkspaceId={currentWorkspaceId} boards={this.props.boards}/>  
                         </nav>
-                        <section className='dashboard-container'>
-                            <WelcomeDashboard currentUser={this.props.currentUser}/>
-                        </section>
+                        <WelcomeDashboardContainer boards={this.props.boards} currentUser={this.props.currentUser}/> 
                     </section>
                 </div>
             )

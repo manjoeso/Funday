@@ -1,0 +1,29 @@
+
+.ws-dash-parent-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ws-dash-top {
+    height: 22%;
+    background-color: #f5f6f8;
+}
+
+.ws-dash-bot-cont {
+    // width: 100%;
+    height: 78%;
+    margin-left: 5%;
+}
+
+.ws-dash-banner {
+    // width: 100%;
+    height: 20%;
+    margin-right: 3%;
+}
+
+.ws-dash-content {
+    // width: 100%;
+    height: 80%;
+}
