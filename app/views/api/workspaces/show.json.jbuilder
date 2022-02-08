@@ -1,1 +1,1 @@
-json.extract! @workspace, :id, :title
+json.extract! @workspace, :id, :title, :description

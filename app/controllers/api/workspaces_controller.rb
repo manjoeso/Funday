@@ -5,12 +5,13 @@ class Api::WorkspacesController < ApplicationController
         render :index
     end 
     
-    def edit
-        
-    end
-    
-    def show
-        
+    def update 
+        @workspace = Workspace.find(params[:id])
+        if @workspace.update(workspace_params)
+            render :show
+        else
+            render json: @workspace.errors.full_messages, status: 422
+        end
     end
     
     def create 
@@ -34,6 +35,10 @@ class Api::WorkspacesController < ApplicationController
         else
             render json: @workspace.errors.full_messages, status: 422
         end
+    end
+
+    def workspace_params 
+        params.require(:workspace).permit(:title, :description)
     end
 
 end

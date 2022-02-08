@@ -28,6 +28,13 @@ export const createWorkspace = workspace => dispatch => (
         .then(payload => dispatch(receiveWorkspace(payload)))
 )
 
+export const updateWorkspace = workspace => dispatch => (
+    WorkspaceApiUtil.updateWorkspace(workspace)
+        .then(payload => dispatch(receiveWorkspace(payload)))
+)
+
+
+
 export const deleteWorkspace = workspaceId => dispatch => (
     WorkspaceApiUtil.deleteWorkspace(workspaceId)
         .then(dispatch(removeWorkspace(workspaceId)))
