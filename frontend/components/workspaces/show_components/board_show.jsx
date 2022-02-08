@@ -47,25 +47,18 @@ class BoardShow extends React.Component {
         if(this.props.workspaces.length > 0){
             return (
                 <div className='main-parent-container'>
-                    <nav className='sidebar'>
-                        <ProtectedRoute path="/"  component={SidebarContainer} />
-                    </nav>
+                    <ProtectedRoute path="/" component={SidebarContainer} />
                     <section className='main-work-area'>
                         <nav className='workspace-board-parent-container'>
                             <WorkspaceContainer currentWorkspaceId={currentWorkspaceId}/> 
                             <BoardIndexContainer 
                                 currentWorkspaceId={currentWorkspaceId}
                                 boards={this.props.boards}
-                                currentBoard={this.props.currentBoard}
-                            />  
+                                currentBoard={this.props.currentBoard}/>  
                         </nav>
                         <section className='dashboard-container'>
-                            <div className='board-dashboard-banner'>
-                                <BoardTitleFormContainer board={this.props.currentBoard}/> 
-                            </div>
-                            <div className='project-nav-bar'>
-                                <ProjectFormContainer currentBoard={this.props.currentBoard}/>
-                            </div>
+                            <BoardTitleFormContainer board={this.props.currentBoard}/> 
+                            <ProjectFormContainer currentBoard={this.props.currentBoard}/>
                             <div className='projects-parent-container'>
                                     {this.props.projects.map((project, idx) => 
                                         <ProjectShowContainer 

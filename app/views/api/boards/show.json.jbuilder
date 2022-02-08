@@ -1,1 +1,1 @@
-json.extract! @board, :id, :title, :workspace_id
+json.extract! @board, :id, :title, :workspace_id, :description

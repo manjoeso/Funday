@@ -27,7 +27,7 @@ export default class TaskDateForm extends React.Component {
         if(date === null){
             return;
         }
-        let displayDate = new Date(date.slice(0, 4), parseInt(date.slice(5, 7)), date.slice(8, 10))
+        let displayDate = new Date(date.slice(0, 4), parseInt(date.slice(5, 7) - 1), date.slice(8, 10))
         console.log(displayDate)
         return displayDate.toDateString().slice(4);
     }

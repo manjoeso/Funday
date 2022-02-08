@@ -18,7 +18,7 @@ json.boards do
     @user.workspaces.each do |workspace|
         workspace.boards.each do |board|
             json.set! board.id do 
-                json.extract! board, :id, :title, :workspace_id
+                json.extract! board, :id, :title, :workspace_id, :description
             end
         end
     end
