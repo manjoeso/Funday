@@ -27,4 +27,13 @@ class Api::WorkspacesController < ApplicationController
         end
     end
 
+    def destroy 
+        @workspace = Workspace.find(params[:id])
+        if @workspace.destroy
+            render :show
+        else
+            render json: @workspace.errors.full_messages, status: 422
+        end
+    end
+
 end

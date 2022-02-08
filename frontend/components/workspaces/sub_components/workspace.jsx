@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import WorkspaceDropdownContainer from './dropdowns/workspace_dropdown_container'
+import WorkspaceDeleteDropdownContainer from './dropdowns/workspace_delete_dropdown_container'
 
 class Workspace extends React.Component {
     constructor(props) {
@@ -16,9 +17,7 @@ class Workspace extends React.Component {
         if(this.props.workspaces){
             return (
                 <div className='workspace-parent-container'>
-                    <div className='workspace-header'>
-                        Workspace
-                    </div>
+                    <WorkspaceDeleteDropdownContainer/>
                     <WorkspaceDropdownContainer workspaces={this.props.workspaces} />
                 </div>
             )

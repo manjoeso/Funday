@@ -50,6 +50,13 @@
         margin-top: 8px;
         margin-bottom: 9px;
         color: #676879;
+        display: flex;
+        align-items: center;
+    }
+
+    .workspace {
+        text-align: left;
+        width: 83%;
     }
 
     .workspace-index-container {
@@ -501,6 +508,9 @@
     width: 30%;
 }
 
+.task-title {
+    width: 45%;
+}
 .task-title input {
     background: none;
     border: none;

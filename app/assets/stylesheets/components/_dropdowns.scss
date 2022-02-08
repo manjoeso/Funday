@@ -39,7 +39,6 @@
 }
 
 .workspace-dropdown-title {
-    
     width: auto;
     text-align: center;
 }
@@ -56,6 +55,60 @@
     margin-left: 40px;
     margin-bottom: 10px;
 }
+
+.workspace-delete-dropdown-button::after {
+    content: "\22EF";
+    width: 100%;
+    border: none;
+    color: black;
+    margin: none;
+    font-size: 22px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    border: none;
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 0px 3px 0px 3px;
+}
+
+.workspace-delete-button-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 15%;
+}
+
+.workspace-delete-dropdown-button {
+    border: none;
+    background: none;
+    width: 100%;
+    margin: none;
+}
+
+.workspace-delete-display-dropdown {
+    top: 5px;
+    left: 0px;
+    position: absolute;
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px 10px 5px 20px;
+    min-width: 150px;
+    box-shadow: 5px 5px 5px 5px rgba(192, 192, 192, 0.25);
+    line-height: 20px;
+    text-align: left;
+    margin: 10px;
+    z-index: 1000;
+}
+
+.workspace-delete-dropdown-button:hover {
+    background-color: rgba(192, 192, 192, 0.25)
+}
+
+#delete-dropdown {
+    position: absolute;
+}
+
 
 // main dropdown container
 .workspace-display-dropdown {

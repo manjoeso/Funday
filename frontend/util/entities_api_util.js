@@ -14,6 +14,13 @@ export const createWorkspace = (workspace) => {
     })
 }
 
+export const deleteWorkspace = (workspaceId) => {
+    return $.ajax({
+        method: "POST",
+        url: `/api/workspaces/${workspaceId}`
+    })
+}
+
 // board util functions
 
 export const createBoard = (board, workspace_id) => {
