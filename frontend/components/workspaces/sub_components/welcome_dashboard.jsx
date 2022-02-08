@@ -42,7 +42,20 @@ class WelcomeDashboard extends React.Component {
                             </div>
                         </div>
                         <div className='ws-dash-content'>
-
+                            <div>
+                                Recent Boards
+                            </div>
+                            <ul>
+                                {this.props.boards.map(board => {
+                                    return (
+                                        <Link 
+                                            className='ws-board-item' 
+                                            to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}>
+                                        {board.title}
+                                        </Link>
+                                    )
+                                })}
+                            </ul>
                         </div>
                     </div>
                 </section>

@@ -100,3 +100,17 @@
 #wdns:hover {
     border: dashed .75px rgb(173, 173, 173);
 }
+
+.ws-board-item {
+    height: 45px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    // margin-left: 30px;
+    padding-left: 30px;
+}
+
+.ws-board-item:hover {
+    background-color: whitesmoke;
+    cursor: pointer;
+}
