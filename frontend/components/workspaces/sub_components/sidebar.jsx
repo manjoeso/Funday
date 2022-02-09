@@ -13,9 +13,11 @@ class Sidebar extends React.Component {
                 <div className='sidebar-container'>
                     <div className='sidebar-top-buttons'>
                         <a className='f' href="">
-                            <img style={{'background': 'white'}} src={fundaylogoURL}/>
+                            <img src={fundaylogoURL}/>
                         </a>
-                        <Link className='workspace-home-link-button' to={`/workspaces/${id}`}>W</Link>
+                        <Link className='workspace-home-link-button' to={`/workspaces/${id}`}>
+                            <img src={fourBoxes}/>
+                        </Link>
                         <a className='linkedin' href="https://www.linkedin.com/in/josephmanso1/">
                             <img src={linkedinlogoURL}/>
                         </a>

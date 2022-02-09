@@ -115,6 +115,9 @@
 
 // main dropdown container
 .workspace-display-dropdown {
+    a:link {
+        padding: 10px;
+    }
     display: flex;
     flex-direction: column;
     // height: 150px;

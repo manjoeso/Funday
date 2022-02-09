@@ -79,7 +79,9 @@ class Splash extends React.Component{
                             })}
                         </div>
                         <div className='get-started-big'>
-                            <Link className='signup-button-big' to='/signup'>Get Started </Link>
+                            <div className='big-button-cont'>
+                                <Link className='signup-button-big' to='/signup'>Get Started </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

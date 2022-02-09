@@ -80,13 +80,23 @@
     width: 30%;
 }
 
-// .signup-button-big {
-//     background-color: #0F1048;
-//     color: white;
-//     border-radius: 30px;
-//     font-size: 18px;
-//     padding: 50px;
-// }
+.get-started-big {
+    align-items: center;
+    margin-top: 10px;
+}
+
+.signup-button-big {
+    background-color: #6C6CFF;
+    color: white;
+    border-radius: 30px;
+    font-size: 18px;
+    padding: 15px 45px 15px 45px;
+}
+
+.big-button-cont {
+    margin-top: 65px;
+    text-align: center;
+}
 
 .splash-headers {
     text-align: center;
@@ -200,7 +210,8 @@
 .devicon-ruby-plain{
     font-size: 66px;
     text-align: center;
-    color: #F04095;
+    color: #009AFF;
+    
 }
 
 .devicon-react-original { // react

@@ -76,6 +76,9 @@
         // height: 80%;
         flex-direction: column;
         text-align: left;
+        a:link {
+            padding: 10px;
+        }
     }
 
     .add-board-display-button {
@@ -101,6 +104,9 @@
     }
 
     .board-item-container {
+        a:link {
+            padding: 10px;
+        }
         display: flex;
         align-items: center;
         position: relative;
@@ -257,6 +263,7 @@
 }
 
 #board-title-selected {
+
     width: 50%;
     border: solid .75px blue;
     font-size: 30px;
