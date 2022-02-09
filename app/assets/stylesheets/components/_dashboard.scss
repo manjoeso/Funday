@@ -102,6 +102,23 @@
         align-items: center;
         border: none;
     }
+    .gg-board {
+        display: block;
+        position: relative;
+        margin-left: 10px;
+        padding-left: 5px;
+        box-sizing: border-box;
+        transform: scale(var(--ggs,1));
+        width: 12px;
+        height: 10px;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        box-shadow:
+            0 0 0 2px,
+            inset 2px 0 0,inset -2px 0 0;
+        border-radius: 2px
+    }
+    
 
     .board-item-container {
         a:link {
@@ -254,6 +271,7 @@
     width: 50%;
     font-size: 30px;
     border: none;
+    font-weight: bold;
 }
 
 #board-title-not-selected:hover {
@@ -263,7 +281,7 @@
 }
 
 #board-title-selected {
-
+    font-weight: bold;
     width: 50%;
     border: solid .75px blue;
     font-size: 30px;
