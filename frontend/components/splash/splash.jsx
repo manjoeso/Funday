@@ -9,14 +9,36 @@ import { AuthRoute, ProtectedRoute } from '../../util/route_util';
 class Splash extends React.Component{
     constructor(props){
         super(props)
+        this.state = {
+            flag: [false, false, false, false, false, false, false, false]
+        }
     }
+
+    changeFlag (idx) {
+        let newFlag = this.state.flag;
+        newFlag[idx] = !newFlag[idx];
+        this.setState({['flag']: newFlag})
+    }
+
     render (){
-            return ( 
-                <div>
+        let titles = ['Ruby on Rails', 'Mongo DB', 'Javascript', 'PostgreSQL', 'Ruby', 'React', 'Redux', 'Nodejs']
+        let colors = ['#FF158A', '#A25DDC', '#FF9900', '#F04095', '#009AFF', '#00D2D2', '#579BFC','#FF7575', '#4ECCC6'] 
+        let images = [
+            ['imgicon',<i class="devicon-rails-plain-wordmark"></i>        ],
+            ['imgicon',<i class="devicon-mongodb-plain"></i>        ], 
+            ['imgicon',<i class="devicon-javascript-plain"></i>], 
+            ['imgicon',<i class="devicon-postgresql-plain"></i>        ], 
+            ['imgicon',<i class="devicon-ruby-plain"></i>], 
+            ['imgicon',<i class="devicon-react-original"></i>], 
+            ['imgicon',<i class="devicon-redux-original"></i>], 
+            ['imgicon',<i class="devicon-nodejs-plain"></i>]
+        ]
+        return ( 
+                <div className='splash-main'>
                     <div className="splash-navbar-container">
                         <nav className="nav-buttons-parent-container">
                             <Link to='/'>
-                                <img src="https://cdn.monday.com/images/logos/monday_logo_short.png"/>
+                                <img src={fundaybiglogoURL}/>
                             </Link>              
                             <div className="left-nav-buttons">
                                 {/* <div className="homepage-logo">
@@ -33,15 +55,32 @@ class Splash extends React.Component{
                             </div>
                         </nav>
                     </div>
-                    <div className='splash-headers'>
-                        <h1>A platform built for <br></br><b> a new way of working</b></h1>
-                        <h2>What would you like to manage with funday.com Work OS?</h2>
-                    </div>
-                    <div className="selectable-tags-container">
-                        <Link className='signup-button-big' to='/signup'>Get Started </Link>
-                         {// change to button eventually to fix styling
-                         }
-                        <img></img>
+                    <div className='splash-content-parent'>
+                        <div className='splash-headers'>
+                            <h1>Hire with purpose</h1>
+                            <h2>What qualities are you looking for in a Software Engineer?</h2>
+                        </div>
+                        <div className="selectable-tags-container">
+                            {titles.map((title, idx) => {
+                                return (
+                                    <div onClick={() => this.changeFlag(idx)} 
+                                        className={this.state.flag[idx] ? `splash-content-button-sel hs${idx}` : `splash-content-buttons h${idx}`}>
+                                        <div className='checkbox-container'>
+                                            <div className={this.state.flag[idx] ? `checkbox-sel hs${idx}` : `checkbox h${idx}`}>
+                                                
+                                            </div>
+                                        </div>
+                                        <div className={`${images[idx][0]}`}>
+                                            {images[idx][1]}
+                                        </div>
+                                        <h3>{title}</h3>
+                                    </div>
+                                ) 
+                            })}
+                        </div>
+                        <div className='get-started-big'>
+                            <Link className='signup-button-big' to='/signup'>Get Started </Link>
+                        </div>
                     </div>
                 </div>
             )

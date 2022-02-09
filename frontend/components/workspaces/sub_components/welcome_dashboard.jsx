@@ -44,6 +44,7 @@ class WelcomeDashboard extends React.Component {
                                 <div id='contact-me'>
                                     Contact me
                                 </div>
+                                
                             </div>
                         </div>
                         <div className='ws-dash-content'>
