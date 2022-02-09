@@ -2,8 +2,6 @@
 .ws-dash-parent-container {
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
 }
 // -----
 .ws-dash-top {
@@ -19,6 +17,7 @@
     height: 15%;
     margin-right: 3%;
     position: relative;
+    display: flex;
 }
 
 .ws-dash-content {
@@ -26,13 +25,48 @@
 }
 
     .ws-dash-banner-left {
+        display: flex;
+        flex-direction: column;
         width: 70%;
     }
 
     .ws-dash-banner-right {
         width: 30%;
+        display: flex;
+        flex-direction: row-reverse;
+        margin-right: 50px;
     }
 
+    #joined {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 15px 5px 0px 5px;
+        font-size: 18px;
+        border: 1px solid #c5c5c5;
+        color: #d3d4da;
+        background-color: #f5f6f9;
+        padding: 5px;
+        height: 30px;
+        width: 155px;
+        border-radius: 5px;
+    }
+    #contact-me {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 15px 45px 0px 5px;
+        height: 30px;
+        font-size: 18px;
+        padding: 7px 15px 7px 15px;
+        border-radius: 5px;
+        
+    }
+    #contact-me:hover {
+        background-color: #f5f6f9;
+        color: #0073ea;
+        cursor: pointer;
+    }
 .wsdbrs {
     width: 80%;
     margin-left: 160px;
@@ -84,7 +118,7 @@
 }
 
 #wtns:hover {
-    border: 1px solid rgb(218, 218, 218);
+    border: 2px solid rgb(218, 218, 218);
     outline: none;
 }
 
@@ -101,16 +135,41 @@
     border: dashed .75px rgb(173, 173, 173);
 }
 
-.ws-board-item {
+#ws-board-item {
     height: 45px;
     width: 60%;
     display: flex;
     align-items: center;
     // margin-left: 30px;
     padding-left: 30px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-decoration: none;
+    border-bottom: 0.5px solid gray;
+    a:link {
+        text-decoration: none;
+    }
 }
 
-.ws-board-item:hover {
-    background-color: whitesmoke;
+#ws-board-item:hover {
+    background-color: rgb(221, 220, 228);
     cursor: pointer;
+    border-radius: 5px;
+}
+
+#recent-boards {
+    color: #0073ea;
+    border-bottom: 2px solid #0073ea;
+    padding: 0px 10px 3px 10px;
+    width: 106px;
+}
+
+#boards-visited {
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 14px;
 }

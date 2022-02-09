@@ -58,6 +58,7 @@ class WorkspaceTitleForm extends React.Component {
                         onFocus={this.selectTitle}
                         value={this.state.workspace.title}
                         onChange={this.updateTitle()}
+                        placeholder='Add workspace title'
                     >
                     </input>
                 </form>

@@ -38,18 +38,26 @@ class WelcomeDashboard extends React.Component {
                                 <WorkspaceTitleFormContainer workspace={this.props.currentWorkspace}/>
                             </div>
                             <div className='ws-dash-banner-right'>
-                            
+                                <div id='joined'>
+                                    Joined
+                                </div>
+                                <div id='contact-me'>
+                                    Contact me
+                                </div>
                             </div>
                         </div>
                         <div className='ws-dash-content'>
-                            <div>
+                            <div id='recent-boards'>
                                 Recent Boards
+                            </div>
+                            <div id='boards-visited'>
+                                Boards you visted recently in this workspace
                             </div>
                             <ul>
                                 {this.props.boards.map(board => {
                                     return (
                                         <Link 
-                                            className='ws-board-item' 
+                                            id='ws-board-item' 
                                             to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}>
                                         {board.title}
                                         </Link>
