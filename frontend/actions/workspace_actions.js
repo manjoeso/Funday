@@ -4,7 +4,7 @@ export const RECEIVE_WORKSPACE = 'RECEIVE_WORKSPACE';
 export const REMOVE_WORKSPACE = 'REMOVE_WORKSPACE';
 
 const receiveAllWorkspaceData = (payload) => ({
-    type: RECEIVE_ALL_WORKSPACE_DATA, 
+    type: RECEIVE_ALL_WORKSPACE_DATA,  
     payload
 }) 
 

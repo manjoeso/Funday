@@ -20,6 +20,8 @@ Rails.application.routes.draw do
     end
 
     resources :tasks, only: [:destroy, :update]
+
+    resources :users_tasks, only: [:create, :destroy]
     # resources :users_workspaces, only: [:create, :destroy]
   end
   

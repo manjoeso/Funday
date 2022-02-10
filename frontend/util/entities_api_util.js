@@ -103,3 +103,12 @@ export const updateTask = (task, id) => {
         data: {task}
     })
 }
+
+// task users joins table 
+export const createUsersTask = (users_task) => { // needs to be object with 2 keys: user_id and task_id
+    return $.ajax({
+        method: "POST",
+        url: `/api/users_tasks`,
+        data: {users_task}
+    })
+}

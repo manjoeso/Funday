@@ -7,7 +7,7 @@ import tasksReducer from "./tasks_reducer";
 
 const entitiesReducer = combineReducers({
     users: usersReducer,
-    workspaces: workspacesReducer,
+    workspaces: workspacesReducer, 
     // boards: boardsReducer,
     projects: projectsReducer,
     tasks: tasksReducer,

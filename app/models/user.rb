@@ -20,6 +20,11 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: :UsersWorkspace
 
+    has_many :task_associations,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :UsersTask
+
     has_many :workspaces,
     through: :workspace_associations,
     source: :workspaces

@@ -3,6 +3,7 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import BoardFormContainer from '../workspaces/sub_components/forms/create_board_form_container';
 import WorkspaceFormContainer from '../workspaces/sub_components/forms/create_workspace_form_container';
+import UserInviteModalContainer from './user_invite_modal_container'
 // import SignupFormContainer from '../session_form/signup_form_container';
 
 function Modal({modal, closeModal}) {
@@ -16,6 +17,9 @@ function Modal({modal, closeModal}) {
       break;
     case 'addWorkspace':
       component = <WorkspaceFormContainer />;
+      break;
+    case 'inviteUsers':
+      component = <UserInviteModalContainer />;
       break;
     default:
       return null;

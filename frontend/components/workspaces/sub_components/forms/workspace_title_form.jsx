@@ -67,7 +67,7 @@ class WorkspaceTitleForm extends React.Component {
                         id={this.state.workspaceDescriptionInputClass}
                         onBlur={this.updateWorkspace}
                         onFocus={this.selectDescription}
-                        value={this.state.workspace.description}
+                        value={this.state.workspace.description ? this.state.workspace.description : ''}
                         onChange={this.updateDescription()}
                         placeholder='Add workspace description'
                         type={this.state.workspaceDescriptionInputClass === 'workspace-description-selected' ? 'textarea' : 'text'}

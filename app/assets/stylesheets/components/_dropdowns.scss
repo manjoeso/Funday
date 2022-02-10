@@ -197,7 +197,7 @@
 .board-dropdown-button {
     // height: 20px;
     display: none;
-
+    // margin-left: 5px;
     // border: none;
     // background: transparent;
     // color: black;
@@ -363,7 +363,6 @@
     cursor: pointer;
 }
 
-
 #task-status-display-dropdown {
     background-color: white;
     border: 1px solid white;
@@ -436,4 +435,49 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+
+#task-person-display-button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    box-sizing: border-box;
+    font: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#task-person-display-dropdown {
+    background-color: white;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // height: 200px;
+    width: 260%;
+    position: absolute;
+    top: 31px;
+    right: 0px;
+    z-index: 100;
+    // padding: 5px 10px 5px 10px;
+    box-shadow: 5px 5px 5px 5px rgba(192, 192, 192, 0.25);
+    line-height: 20px;
+}
+
+.task-users-dropdown-item {
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    margin: 4px 5px 4px 5px;
+    font-size: 12px;
+    display: flex;
+    // align-items: center;
+    color: white;
+    border: none;
+}
+
+.task-person-dropdown-item:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }

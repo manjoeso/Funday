@@ -1,6 +1,7 @@
 import React from 'react'
 import TaskStatusFormContainer from './forms/task_status_form_container'
 import TaskDateFormContainer from './forms/task_date_form_container'
+import TaskPersonFormContainer from './forms/task_person_form_container'
 
 class TaskIndexItem extends React.Component {
     constructor(props){
@@ -70,11 +71,7 @@ class TaskIndexItem extends React.Component {
                         onClick={() => this.switchInput()}>Edit</button>
                 </div>
                 <div className='task-item-right-side'>
-                    <div className='task-person'>
-                        <div>
-                            Person
-                        </div>
-                    </div>
+                    <TaskPersonFormContainer task={this.props.task}/>
                     <TaskStatusFormContainer task={this.props.task}/>
                     <TaskDateFormContainer task={this.props.task}/>
                 </div>

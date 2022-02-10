@@ -72,7 +72,8 @@
 
     .board-title {
         display: flex;
-        width: 75%;
+        margin-left: 10px;
+        width: 70%;
         // height: 80%;
         flex-direction: column;
         text-align: left;
@@ -105,7 +106,7 @@
     .gg-board {
         display: block;
         position: relative;
-        margin-left: 10raipx;
+        margin-left: 10px;
         padding-left: 5px;
         box-sizing: border-box;
         transform: scale(var(--ggs,1));
@@ -181,10 +182,12 @@
             content: "\22EF";
             border: none;
             color: black;
-            font-size: 32px;
+            font-size: 22px;
+            text-align: right;
             display: flex;
             align-items: center;
             border: none;
+            font-weight: bolder;
         }
     }
 
@@ -536,13 +539,11 @@
 }
 
 .task-person {
+    position: relative;
     width: 33%;
     border-right: 1px solid white;
     border-left: 1px solid white;
     text-align: center;
-    margin: auto;
-    display: flex;
-    justify-content: center;
 }
 
 .task-status {

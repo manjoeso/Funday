@@ -30,7 +30,7 @@ class BoardIndex extends React.Component {
                     {
                         this.props.boards.map((board, idx) =>                   
                             <div key={board.id} className={`${this.setCurrentBoardClass(board)}`}>
-                                <i class="gg-board"></i>
+                                <i className="gg-board"></i>
                                 <div className='board-title'>
                                     <Link 
                                         to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}
@@ -50,7 +50,7 @@ class BoardIndex extends React.Component {
                 {
                     this.props.boards.map((board, idx) =>              
                     <div key={board.id} className={`board-item-container`}>
-                        <i class="gg-board"></i>
+                        <i className="gg-board"></i>
                         <div className='board-title'>
                             <Link 
                                 to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}

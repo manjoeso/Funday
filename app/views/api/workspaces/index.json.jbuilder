@@ -2,17 +2,25 @@ json.workspaces do
     @user.workspaces.each do |workspace|
         json.set! workspace.id do 
             json.extract! workspace, :id, :title, :description
+            json.users do
+                json.array! workspace.users.each do |user|
+                    json.extract! user, :id
+                end
+            end
         end
     end
 end
-# json.workspaces do
-#     json.set! @user.id do 
-#         json.array! @user.workspaces do |workspace|
-#         # @user.workspaces.each do |workspace| 
-#             json.extract! workspace, :id, :title
-#         end
-#     end
-# end
+
+# grabs the members for each workspace, dumps them all under "users" in state
+json.users do 
+    @user.workspaces.each do |workspace|
+        workspace.users.each do |user|
+            json.set! user.id do 
+                json.extract! user, :id, :name, :email
+            end
+        end
+    end
+end
 
 json.boards do
     @user.workspaces.each do |workspace|
@@ -44,6 +52,11 @@ json.tasks do
                 project.tasks.each do |task|
                     json.set! task.id do
                         json.extract! task, :id, :title, :status, :due_date, :project_id
+                        json.users do
+                            json.array! task.users.each do |user|
+                                json.extract! user, :id
+                            end
+                        end
                     end
                 end
             end

@@ -20,6 +20,9 @@ class BoardShow extends React.Component {
         if(this.props.workspaces.length < 1){
             this.props.fetchAllWorkspaceData(this.props.currentUser.id);
         }
+        // if (!this.props.currentUser.current_workspace_id){
+        //     this.props.assignCurrentWorkspace(this.props.currentUser, parseInt(this.props.currentWorkspaceId))
+        // }
     }
 
     componentDidUpdate () {

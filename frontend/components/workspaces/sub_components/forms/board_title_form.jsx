@@ -80,7 +80,7 @@ class BoardTitleForm extends React.Component {
                     <div id='activity'>
                         Activity
                     </div>
-                    <div id='invite'>
+                    <div onClick={() => this.props.openModal('inviteUsers')} id='invite'>
                         Invite
                     </div>
                     <div id='invite'>

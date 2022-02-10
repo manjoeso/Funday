@@ -58,6 +58,7 @@ class WelcomeDashboard extends React.Component {
                                 {this.props.boards.map(board => {
                                     return (
                                         <Link 
+                                            key={board.id}
                                             id='ws-board-item' 
                                             to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}>
                                         {board.title}
