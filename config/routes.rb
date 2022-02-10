@@ -18,11 +18,9 @@ Rails.application.routes.draw do
     resources :projects, only: [:index, :destroy, :update] do
       resources :tasks, only: [:create, :show]
     end
-
     resources :tasks, only: [:destroy, :update]
-
     resources :users_tasks, only: [:create, :destroy]
-    # resources :users_workspaces, only: [:create, :destroy]
+    
   end
   
  

@@ -17,16 +17,20 @@ class TaskPersonForm extends React.Component {
     selectUsers () {
         let nonTaskUsers = [];
         this.props.workspaceUsers.forEach(user => {
-            if(!this.props.taskUsers.includes(user.id)){
+            if(!this.props.taskUsers.includes(user)){
                 nonTaskUsers.push(user)
             }
         })
         return nonTaskUsers;
     }
 
-    componentDidUpdate () {
+    componentDidUpdate (prevProps) {
         if(this.state.task !== this.props.task){
             this.setState({['task']: this.props.task})
+        }
+        if(prevProps.taskUsers !== this.props.taskUsers){
+            this.setState({'nonTaskUsers': this.selectUsers()})
+            this.setState({'taskUsers': this.props.taskUsers})
         }
     }
 
@@ -39,6 +43,12 @@ class TaskPersonForm extends React.Component {
         this.setState({show: false})
     }
 
+    addUserTask(user) {
+        let newUsersTask = {'user_id': user.id, 'task_id': this.props.task.id}
+        this.props.createUsersTask(newUsersTask)
+        this.setState({show: false})
+    }
+
     handleClick (type) {
         // let updatedTask = Object.assign({}, this.state.task, {['users']: type})
         // this.props.updateTask(updatedTask, updatedTask.id)
@@ -46,21 +56,23 @@ class TaskPersonForm extends React.Component {
     }
  
     render () {
-        debugger
         return (
             <div className='task-person' onClick={this.handleFocus} onBlur={this.handleBlur}>
                 <button id='task-person-display-button'>
                         Person
                     <ul onClick={e => e.stopPropagation()} id={this.state.show ? "task-person-display-dropdown" : "no-dropdown"}>
                         {this.state.taskUsers.map(user => {
-                            <li className='task-users-dropdown-item' id=''>
+                            return(<li key={user.id} className='task-users-dropdown-item'>
                                 {user.name}
-                            </li>
+                            </li>)
                         })}
+                        <div id='break-line-people'>
+                            Suggested People
+                        </div>
                         {this.state.nonTaskUsers.map(user => {
-                            <li className='task-users-dropdown-item' id=''>
+                            return(<li key={user.id} onClick={() => this.addUserTask(user)} className='task-users-dropdown-item'>
                                 {user.name}
-                            </li>
+                            </li>)
                         })}
                     </ul>
                 </button>

@@ -449,35 +449,43 @@
 }
 
 #task-person-display-dropdown {
+    position: absolute;
     background-color: white;
-    border: 1px solid white;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
     // height: 200px;
-    width: 260%;
-    position: absolute;
+    width: 130%;
     top: 31px;
     right: 0px;
-    z-index: 100;
+    z-index: 10000;
     // padding: 5px 10px 5px 10px;
     box-shadow: 5px 5px 5px 5px rgba(192, 192, 192, 0.25);
     line-height: 20px;
 }
-
+#break-line-people {
+    margin-top: 6px;
+    margin-left: 15px;
+    // width: 90%;
+    // border-bottom: 1px solid black;
+}
 .task-users-dropdown-item {
-    width: 80%;
+    // width: 25%;
+    width: 85%;
+    padding-left: 10px;
+    border: 1px solid black;
     height: 30px;
-    text-align: center;
-    margin: 4px 5px 4px 5px;
+    text-align: left;
+    margin: 2px 2px 4px 5px;
     font-size: 12px;
     display: flex;
-    // align-items: center;
-    color: white;
+    align-items: center;
+    color: black;
     border: none;
 }
 
-.task-person-dropdown-item:hover {
+.task-users-dropdown-item:hover {
     cursor: pointer;
-    opacity: 0.8;
+    background-color: #E6E9EF;
 }

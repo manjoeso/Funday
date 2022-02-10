@@ -2,7 +2,7 @@ class Api::UsersTasksController < ApplicationController
 
     def create 
         @users_task = UsersTask.new(users_task_params)
-        if @task.save! 
+        if @users_task.save! 
             render :show
         else
             render json: @users_task.errors.full_messages, status: 422
@@ -10,7 +10,7 @@ class Api::UsersTasksController < ApplicationController
     end
 
     def destroy 
-        @users_task = UsersTask.find(params{:id])
+        @users_task = UsersTask.find(params[:id])
         if @users_task.destroy 
             render :show
         else
