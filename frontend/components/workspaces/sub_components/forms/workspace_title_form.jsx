@@ -33,7 +33,6 @@ class WorkspaceTitleForm extends React.Component {
 
     updateWorkspace (e) {
         let newWorkspace = Object.assign({}, this.state.workspace, {['id']: this.props.workspace.id})
-        // debugger
         this.props.updateWorkspace(newWorkspace)
         this.setState({workspaceTitleInputClass: 'wtns'})
         this.setState({workspaceDescriptionInputClass: 'wdns'})

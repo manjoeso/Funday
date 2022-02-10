@@ -15,7 +15,6 @@ class BoardDropdown extends React.Component {
 
     handleClick (e) {
         e.preventDefault()
-        debugger
         if(this.props.location.pathname === `/${this.props.currentWorkspaceId}/boards/${this.props.board.id}`){
             this.props.history.push(`/workspaces/${this.props.currentWorkspaceId}`)
         }

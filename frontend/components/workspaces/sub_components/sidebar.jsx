@@ -22,10 +22,10 @@ class Sidebar extends React.Component {
                             <img src={linkedinlogoURL}/>
                         </a>
                         <a className='github' href="https://github.com/manjoeso">
-                            <img style={{'backgroundColor': 'white'}} src={githublogoURL}/>
+                            <img src={githublogoURL}/>
                         </a>
                         <a className='angel' href="https://angel.co/u/joseph-manso">
-                            <img style={{'background': 'white'}} src={angellogoURL}/>
+                            <img src={angellogoURL}/>
                         </a>
                     </div>
                     <div className='sidebar-bottom-buttons'>

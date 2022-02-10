@@ -22,53 +22,63 @@
     align-items: center;
 }
 
+
 .f img{
-    margin-top: 25px;
-    margin-bottom: 10px;
+    margin: 20px 0px;
     width: 25px;
     height: 35px;
     border-radius: 5px;
+    padding: 5px;
 }
 
 .workspace-home-link-button img{
     width: 30px;
     height: 30px;
     border-radius: 5px;
-    padding: 3px 2px 0px 2px;
-    
-}
-
-.workspace-home-link-button:hover { 
-    cursor: pointer;
-    background-color: white;
-    border-radius: 5px;
+    padding: 5px;
+    filter: invert(1);
+    &:hover {
+        background-color: white;
+    }
 }
 
 .linkedin img {
+    display: inline-block;
     width: 30px;
     height: 30px;
     border-radius: 5px;
-}
-
-.linkedin:hover {
-    background-color: black;
+    margin: 20px 0px;
+    padding: 5px;
+    &:hover {
+        background-color: black;
+    }
 }
 
 .github img {
     width: 30px;
     height: 30px;
     border-radius: 5px;
+    padding: 5px;
+    margin: 20px 0px;
+    filter: invert(1);
+    &:hover {
+        background-color: white;
+        filter: invert(1);
+    }
 }
+
 .angel img {
     width: 30px;
     height: 30px;
     border-radius: 5px;
+    padding: 5px;
+    margin: 20px 0px;
+    filter: invert(1);
+    &:hover {
+        background-color: white;
+        filter: invert(1);
+    }
 }
-
-// .sidebar-top-buttons img:hover{
-//     background-color: rgb(0, 0, 0);
-//     border-radius: 5px;
-// }
 
 .sidebar-bottom-buttons {
     display: flex;
@@ -79,8 +89,10 @@
 
 .logout-button {
     border: 2px solid white;
+    height: 50px;
+    width: 50px;
     font-size: 20px;
-    border-radius: 50%;
+    border-radius: 50px;
     text-align: center;
     background-color: green;
     color: white;
