@@ -43,7 +43,9 @@ class ProjectShow extends React.Component {
                     {this.tasksSelector(this.props.tasks, this.props.project.id).map(task =>
                         <div className='task-container' key={task.id}>
                             <TaskDropdownContainer color={this.props.color} task={task}/>
-                            <TaskIndexItemContainer color={this.props.color} task={task}/>
+                            <TaskIndexItemContainer currentWorkspaceId={this.props.currentWorkspaceId}
+                                                    color={this.props.color}
+                                                    task={task}/>
                         </div>)
                     }
                 </div>

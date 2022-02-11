@@ -19,14 +19,3 @@ export const signup = (user) => {
         url: "/api/users",   
         data: {user} })
 }
-
-// export const assignCurrentWorkspace = (currentUser, workspaceId) => {
-//     currentUser.workspaceId = workspaceId;
-//     return $.ajax({
-//         method: "PATCH",
-//         url: '/api/users',
-//         data: {currentUser}
-//     })
-// }
-
-// export const assignCurrentWorkspace = (workspaceId) => {}

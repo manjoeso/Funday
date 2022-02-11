@@ -32,7 +32,7 @@ class WorkspaceShow extends React.Component {
                     </nav>
                     <section className='main-work-area'>
                         <nav className='workspace-board-parent-container'>
-                            <WorkspaceContainer/> 
+                            <WorkspaceContainer cwId={currentWorkspaceId}/> 
                             <BoardIndexContainer currentWorkspaceId={currentWorkspaceId} boards={this.props.boards}/>  
                         </nav>
                         <WelcomeDashboardContainer boards={this.props.boards} currentUser={this.props.currentUser}/> 

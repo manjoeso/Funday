@@ -20,16 +20,16 @@ class BoardShow extends React.Component {
         if(this.props.workspaces.length < 1){
             this.props.fetchAllWorkspaceData(this.props.currentUser.id);
         }
-        // if (!this.props.currentUser.current_workspace_id){
-        //     this.props.assignCurrentWorkspace(this.props.currentUser, parseInt(this.props.currentWorkspaceId))
-        // }
-    }
-
-    componentDidUpdate () {
-        if (this.props.currentUser.current_workspace_id !== parseInt(this.props.currentWorkspaceId)){
+        if (this.props.currentUser.current_workspace_id === null){
             this.props.assignCurrentWorkspace(this.props.currentUser, parseInt(this.props.currentWorkspaceId))
         }
     }
+
+    // componentDidUpdate () {
+    //     if (this.props.currentUser.current_workspace_id !== parseInt(this.props.currentWorkspaceId)){
+    //         this.props.assignCurrentWorkspace(this.props.currentUser, parseInt(this.props.currentWorkspaceId))
+    //     }
+    // }
 
     assignColor (idx) {
         let colorOptions = {
@@ -65,10 +65,11 @@ class BoardShow extends React.Component {
                             <div className='projects-parent-container'>
                                     {this.props.projects.map((project, idx) => 
                                         <ProjectShowContainer 
-                                        key={project.id}
-                                        project={project} 
-                                        currentBoard={this.props.currentBoard}
-                                        color={this.assignColor(idx)}
+                                            key={project.id}
+                                            project={project} 
+                                            currentBoard={this.props.currentBoard}
+                                            color={this.assignColor(idx)}
+                                            currentWorkspaceId={currentWorkspaceId}
                                         />
                                     )}
                             </div>

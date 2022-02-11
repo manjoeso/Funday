@@ -18,7 +18,7 @@ class Workspace extends React.Component {
             return (
                 <div className='workspace-parent-container'>
                     <WorkspaceDeleteDropdownContainer/>
-                    <WorkspaceDropdownContainer workspaces={this.props.workspaces} />
+                    <WorkspaceDropdownContainer cwId={this.props.cwId} workspaces={this.props.workspaces} />
                 </div>
             )
         } else {

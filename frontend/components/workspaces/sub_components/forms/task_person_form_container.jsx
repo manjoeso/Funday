@@ -8,7 +8,7 @@ const mSTP = (state, ownProps) => {
     // debugger
     return ({
         taskUsers: usersTasksSelector(state, ownProps),
-        workspaceUsers: usersWorkspacesSelector(state)
+        workspaceUsers: usersWorkspacesSelector(state, ownProps)
     })
 }
 
