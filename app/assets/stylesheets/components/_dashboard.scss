@@ -544,7 +544,28 @@
     border-right: 1px solid white;
     border-left: 1px solid white;
     text-align: center;
+
+    &:hover {
+        .add-person {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute; 
+            right: 80%;
+            height: 18px;
+            width: 18px;
+            font-size: 16px;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+            background-color: rgb(34, 34, 219);
+        }
+    }
 }
+.add-person{
+    display: none;
+}
+
 
 .task-status {
     position: relative;
@@ -617,5 +638,61 @@
         font-size: inherit;
     }
 }
+#task-person-display-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.empty-person-box {
+    height: 30px;
+    width: 30px;
+    // background-color: white;
+}
+.one-person-box {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    font-size: 14px;
+    justify-content: center;
+    color: white;
+    background-color: #1c4f92;
+    border-radius: 15px;
+    background-color: #1c4f92;
+}
+
+.multiple-person-box {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    font-size: 14px;
+    justify-content: center;
+    color: white;
+    background-color: #1c4f92;
+    border-radius: 15px;
+    border: 1px solid #1c4f92;
+}
+
+.multi-person-cont {
+    display: flex;
+    position: relative;
+}
+
+#multi-1{
+    position: absolute;
+    right: 50%;
+    top: -13px;
+}
+
+#multi-2 {
+    position: absolute;
+    left: -7px;
+    top: -13px;
+}
+
+
+
+
 
 

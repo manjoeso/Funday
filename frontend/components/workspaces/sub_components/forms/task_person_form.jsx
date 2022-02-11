@@ -10,7 +10,6 @@ class TaskPersonForm extends React.Component {
             nonTaskUsers: this.selectUsers()
         }
         this.handleFocus = this.handleFocus.bind(this)
-        this.handleClick = this.handleClick.bind(this)
         this.handleBlur = this.handleBlur.bind(this)
     }
 
@@ -61,28 +60,37 @@ class TaskPersonForm extends React.Component {
         this.props.deleteUsersTask(joinId)
         this.setState({show: false})
     }
-
-    handleClick (type) {
-        // let updatedTask = Object.assign({}, this.state.task, {['users']: type})
-        // this.props.updateTask(updatedTask, updatedTask.id)
-        // this.setState({show: false})
-    }
  
     render () {
-        // {if(this.state.taskUsers.length === 0){
-        //     let personBox = 
-        //         <div className='empty-person-box'>
-
-        //         </div>
-        // }}
+        let personBox;
+        {if(this.state.taskUsers.length === 0){
+            personBox = <img src={personLogo} className='empty-person-box'/>
+        } else if(this.state.taskUsers.length === 1) {
+            personBox = <div className='one-person-box'>{this.state.taskUsers[0].name[0]}</div>
+        } else if(this.state.taskUsers.length === 2) {
+            personBox = 
+                <div  className='multi-person-cont'>
+                    <div id='multi-1' className='multiple-person-box'>{this.state.taskUsers[0].name[0]}</div>
+                    <div id='multi-2' className='multiple-person-box'>{this.state.taskUsers[1].name[0]}</div>
+                </div>
+        } else {
+            personBox = <div className='multi-person-cont'>
+                    <div id='multi-1' className='multiple-person-box'>{this.state.taskUsers[0].name[0]}</div>
+                    <div id='multi-2' className='multiple-person-box'>+ {this.state.taskUsers.length-1}</div>
+            </div>
+        }
+    }
         return (
             <div className='task-person' onClick={this.handleFocus} onBlur={this.handleBlur}>
                 <button id='task-person-display-button'>
+                    <div className='add-person'>+</div>
+                    {personBox}
                     <ul onClick={e => e.stopPropagation()} id={this.state.show ? "task-person-display-dropdown" : "no-dropdown"}>
-                        {personBox}
+                        {/* {personBox} */}
                         {this.state.taskUsers.map(user => {
-                            return(<li key={user.id} onClick={() => this.removeUserTask(user)} className='task-users-dropdown-item'>
-                                {user.name}
+                            return(<li key={user.id} onClick={() => this.removeUserTask(user)} className='task-users-dropdown-item-selected'>
+                                <div className='task-user-name' >{user.name}</div>
+                                <div className='remove-task-user'>X</div>
                             </li>)
                         })}
                         <div id='break-line-people'>

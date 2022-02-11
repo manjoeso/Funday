@@ -489,3 +489,41 @@
     cursor: pointer;
     background-color: #E6E9EF;
 }
+.task-users-dropdown-item-selected {
+    // width: 25%;
+    width: 85%;
+    padding-left: 10px;
+    border: 1px solid black;
+    height: 30px;
+    text-align: left;
+    margin: 2px 2px 4px 5px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    color: black;
+    border: none;
+    background-color: #cce5ff;
+}
+
+.task-users-dropdown-item-selected:hover {
+    cursor: pointer;
+}
+
+.task-user-name {
+    width: 85%;
+}
+.remove-task-user {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 14px;
+    width: 14px;
+    padding: 2px;
+    border-radius: 8px;
+}
+
+.remove-task-user:hover {
+    background-color: white;
+    
+}
