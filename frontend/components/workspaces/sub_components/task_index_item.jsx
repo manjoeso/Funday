@@ -72,7 +72,7 @@ class TaskIndexItem extends React.Component {
                         onClick={() => this.switchInput()}>Edit</button>
                 </div>
                 <div className='task-item-right-side'>
-                    <TaskPersonFormContainer currentWorkspaceId={this.props.currentWorkspaceId} task={this.props.task}/>
+                    <TaskPersonFormContainer task={this.props.task}/>
                     <TaskStatusFormContainer task={this.props.task}/>
                     <TaskDateFormContainer task={this.props.task}/>
                 </div>

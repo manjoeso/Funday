@@ -112,3 +112,9 @@ export const createUsersTask = (users_task) => { // needs to be object with 2 ke
         data: {users_task}
     })
 }
+export const deleteUsersTask = (join_id) => { // needs to be object with 2 keys: user_id and task_id
+    return $.ajax({
+        method: "DELETE",
+        url: `/api/users_tasks/${join_id}`
+    })
+}

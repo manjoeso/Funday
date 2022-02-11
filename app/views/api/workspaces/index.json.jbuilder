@@ -11,8 +11,8 @@ json.workspaces do
     end
 end
 
-# grabs the members for each workspace, dumps them all under "users" in state
-json.users do 
+# grabs the members for each workspace
+json.workspaceUsers do 
     @user.workspaces.each do |workspace|
         workspace.users.each do |user|
             json.set! user.id do 
@@ -55,6 +55,11 @@ json.tasks do
                         json.users do
                             json.array! task.users.each do |user|
                                 json.extract! user, :id
+                                UsersTask.where(task_id: task.id).all.each do |join|
+                                    if (user.id == join.user_id)
+                                        json.join_id join.id
+                                    end
+                                end
                             end
                         end
                     end

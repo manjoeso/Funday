@@ -10,4 +10,5 @@ class UsersTask < ApplicationRecord
     foreign_key: :task_id,
     class_name: :Task
 
+
 end

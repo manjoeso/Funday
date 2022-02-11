@@ -5,7 +5,7 @@ export const usersTasksSelector = function(state, ownProps)  {
     }
     let returnArr = [];
     userIdArray.forEach(userId => {
-        Object.values(state.entities.users).forEach(user => {
+        Object.values(state.entities.workspaceUsers).forEach(user => {
             if(userId.id === user.id){
                 returnArr.push(user)
             }

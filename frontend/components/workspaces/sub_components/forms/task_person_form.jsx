@@ -24,11 +24,11 @@ class TaskPersonForm extends React.Component {
         return nonTaskUsers;
     }
 
-    componentDidUpdate (prevProps) {
+    componentDidUpdate () {
         if(this.state.task !== this.props.task){
             this.setState({['task']: this.props.task})
         }
-        if(prevProps.taskUsers !== this.props.taskUsers){
+        if(this.state.taskUsers !== this.props.taskUsers){
             this.setState({'nonTaskUsers': this.selectUsers()})
             this.setState({'taskUsers': this.props.taskUsers})
         }
@@ -49,6 +49,19 @@ class TaskPersonForm extends React.Component {
         this.setState({show: false})
     }
 
+    removeUserTask(user) {
+        // need to find task, then user in task array, then key into joinId
+        let joinId;
+        this.props.task.users.forEach(userObj => {
+            if(userObj.id === user.id){
+                joinId = userObj.join_id
+            }
+        })
+        // debugger
+        this.props.deleteUsersTask(joinId)
+        this.setState({show: false})
+    }
+
     handleClick (type) {
         // let updatedTask = Object.assign({}, this.state.task, {['users']: type})
         // this.props.updateTask(updatedTask, updatedTask.id)
@@ -56,13 +69,19 @@ class TaskPersonForm extends React.Component {
     }
  
     render () {
+        // {if(this.state.taskUsers.length === 0){
+        //     let personBox = 
+        //         <div className='empty-person-box'>
+
+        //         </div>
+        // }}
         return (
             <div className='task-person' onClick={this.handleFocus} onBlur={this.handleBlur}>
                 <button id='task-person-display-button'>
-                        Person
                     <ul onClick={e => e.stopPropagation()} id={this.state.show ? "task-person-display-dropdown" : "no-dropdown"}>
+                        {personBox}
                         {this.state.taskUsers.map(user => {
-                            return(<li key={user.id} className='task-users-dropdown-item'>
+                            return(<li key={user.id} onClick={() => this.removeUserTask(user)} className='task-users-dropdown-item'>
                                 {user.name}
                             </li>)
                         })}
