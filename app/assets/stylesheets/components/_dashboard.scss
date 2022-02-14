@@ -333,6 +333,43 @@
     margin: 10px;
 }
 
+.search-bar-container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+#mag-glass {
+    width: 10px;
+}
+
+.search-input-container {
+    form {
+        width: 50px;
+    }
+}
+
+.search-selected {
+    height: 25px;
+    outline: none;
+    border: 0.5px solid #0085ff;
+}
+
+.search-not-selected {
+    width: 85px;
+    cursor: pointer;
+    text-align: center;
+    height: 25px;
+    // width: 50px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    &:hover {
+        background-color: #E6E9EF;
+    }
+}
+
+
 .main-table {
     height: 25px;
     width: 8%;

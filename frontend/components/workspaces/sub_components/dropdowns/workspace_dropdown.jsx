@@ -60,7 +60,7 @@ class WorkspaceDropdown extends React.Component {
                         </div>
                         <div className='workspace-dropdown-title'>
                             {/* {this.props.currentWorkspace.title} */}
-                            {this.props.currentWorkspace.title.length > 12 ? (`${this.props.currentWorkspace.title.slice(0, 12)}` + '...') : this.props.currentWorkspace.title}
+                            {this.props.currentWorkspace.title.length > 11 ? (`${this.props.currentWorkspace.title.slice(0, 11)}` + '...') : this.props.currentWorkspace.title}
 
                         </div>
                         <div className={this.state.show ? "workspace-display-dropdown" : "no-dropdown"}>

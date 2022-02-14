@@ -20,10 +20,15 @@ class ProjectShow extends React.Component {
                 returnArr.push(task)    
             }
         })
+        if(this.props.query) {
+            let filteredTasks = returnArr.filter(task => (task.title.toLowerCase()).includes(this.props.query.toLowerCase()))
+            return filteredTasks;
+        }
         return returnArr; 
     }
 
     render () {
+        // ternary here will be "if this.props.search === true .. use a different selector ? query here?"
         // have this.props.color for styling here
         // conditional here, if no tasks, make some, else display
         return (
