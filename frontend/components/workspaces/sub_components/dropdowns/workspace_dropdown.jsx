@@ -59,7 +59,7 @@ class WorkspaceDropdown extends React.Component {
                             {this.props.currentWorkspace.title[0]}
                         </div>
                         <div className='workspace-dropdown-title'>
-                        {this.props.currentWorkspace.title.length > 13 ? (`${this.props.currentWorkspace.title.slice(0, 13)}` + '...') : this.props.currentWorkspace.title}
+                            {this.props.currentWorkspace.title}
                         </div>
                         <div className={this.state.show ? "workspace-display-dropdown" : "no-dropdown"}>
                             <div className='workspace-inner-dropdown-container'>
@@ -78,7 +78,7 @@ class WorkspaceDropdown extends React.Component {
                                                     <span style={{'backgroundColor': this.assignColor(idx)}} className= 'workspace-dropdown-icon'>
                                                         {workspace.title[0]}
                                                     </span>
-                                                        {this.props.currentWorkspace.title.length > 13 ? (`${this.props.currentWorkspace.title.slice(0, 13)}` + '...') : this.props.currentWorkspace.title}
+                                                    {workspace.title}
                                                     </Link>
                                                 )
                                         })
