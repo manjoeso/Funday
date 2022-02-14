@@ -34,6 +34,9 @@ class ProjectForm extends React.Component {
     render(){
         return (
             <div className='project-nav-bar'>
+                <div className='main-table'>
+                    Main Table
+                </div>
                 <div className='create-project-form-container'>
                     <button onClick={() => this.createItem()} className='add-project-button'>New Item</button>
                     <button onClick={() => this.createProject()} className='add-project-item-button'></button>

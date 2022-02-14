@@ -314,10 +314,18 @@
     outline: none;
 }
 
+.project-nav-bar { 
+    width: 97%;
+    margin: 10px;
+}
 
-
-
-
+.main-table {
+    height: 25px;
+    width: 8%;
+    border-bottom: 1px solid blue;
+    text-align: center;
+    margin-bottom: 15px;
+}
 
 .create-project-form-container {
     display: flex;
@@ -338,14 +346,9 @@
     border: none;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-}
-
-.add-project-button:hover {
-    background-color: #0060b9
-}
-
-.add-project-item-button:hover {
-    background-color: #0060b9
+    &:hover {
+        background-color: #0060b9
+    }
 }
 
 .add-project-item-button{
@@ -358,6 +361,9 @@
     border-bottom: none;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
+    &:hover{
+        background-color: #0060b9
+    }
 }
 
 .add-project-item-button::after {
@@ -373,10 +379,7 @@
     border-radius: 5px;
 }
 
-.project-nav-bar { 
-    width: 97%;
-    margin: 10px;
-}
+
 
 .projects-parent-container {
     display: flex;
