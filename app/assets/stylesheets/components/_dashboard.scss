@@ -7,7 +7,10 @@
     padding: 0;
     background-color: white;
 }
-
+#root {
+    height: 100vh;
+    overflow-x: hidden;
+}
 // sidebar is in sidebar.scss
 
 // level 2 
@@ -24,7 +27,7 @@
     display: block;
     height: auto;
     width: 235px; 
-    // overflow-y: auto;
+    overflow-y: hidden;
     padding: 1% 1% 1% 1%;
     background-color: #f5f6f8;
     border-right: 1px solid rgb(218, 216, 216);
@@ -34,6 +37,7 @@
     width: 100%;
     display: block;
     padding: 15px;
+    overflow-y: auto;
     // overflow-y: auto;
 }
 
@@ -230,7 +234,7 @@
 #add-to-board {
     text-align: center;
     width: 100px;
-    height: 18px;
+    height: auto;
     font-size: 14px;
     margin-left: 15px;
     border: 1px solid gray;
@@ -461,21 +465,21 @@
 #project-input-not-selected {
     width: 50%;
     font: inherit;
-    margin-left: 10px;
+    // margin-left: 10px;
     border: none;
 }
 
 #project-input-not-selected:hover {
     border: dashed .75px rgb(173, 173, 173);
     width: 50%;
-    margin-left: 10px;
+    // margin-left: 10px;
     font: inherit;
 }
 
 #project-input-selected {
     width: 98.5%;
     border: dashed .75px rgb(173, 173, 173);
-    margin-left: 10px;
+    // margin-left: 10px;
     font: inherit;
     outline: none;
     // background-color: red;
