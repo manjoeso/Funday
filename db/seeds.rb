@@ -16,14 +16,14 @@ Task.destroy_all
 UsersTask.destroy_all
 
 user1 = User.create(email: 'john_smith@gmail.com', password: 'password', name: 'John Smith')
-user2 = User.create(email: 'josh_allen@gmail.com', password: 'password', name: 'Josh Allen')
-user3 = User.create(email: 'Stefon_Diggs@gmail.com', password: 'password', name: 'Demo User')
-user4 = User.create(email: 'ColeB@gmail.com', password: 'password', name: 'Cole Beasley')
+user9 = User.create(email: 'josh_allen@gmail.com', password: 'password', name: 'Josh Allen')
+user3 = User.create(email: 'demo_user@gmail.com', password: 'password', name: 'Demo User')
+user8 = User.create(email: 'ColeB@gmail.com', password: 'password', name: 'Cole Beasley')
 user5 = User.create(email: 'mctown@gmail.com', password: 'password', name: 'Isaiah Mckenzie')
 user6 = User.create(email: 'lknope@gmail.com', password: 'password', name: 'Leslie Knope')
 user7 = User.create(email: 'phalpert@gmail.com', password: 'password', name: 'Pam Halpert')
-user8 = User.create(email: 'swilliams@gmail.com', password: 'password', name: 'Serena Williams')
-user9 = User.create(email: 'aperkins@gmail.com', password: 'password', name: 'Anne Perkins')
+user4 = User.create(email: 'swilliams@gmail.com', password: 'password', name: 'Serena Williams')
+user2 = User.create(email: 'aperkins@gmail.com', password: 'password', name: 'Anne Perkins')
 
 workspace1 = Workspace.create(title: "Workspace1")
 workspace2 = Workspace.create(title: "Workspace2")
