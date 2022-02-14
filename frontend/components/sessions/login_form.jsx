@@ -97,7 +97,7 @@ class LoginForm extends React.Component {
                                 <br></br>
                                 <div className='sign-up-option-login-form'>
                                     <span>Don't have an account yet?</span>
-                                    <Link to='/signup'>Sign up</Link>
+                                    <Link to='/signup'> Sign up</Link>
                                 </div>
                             </div>
                     </div>

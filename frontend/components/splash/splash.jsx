@@ -45,8 +45,8 @@ class Splash extends React.Component{
                                     <Link to='/'>Monday.com</Link>
                                 </div> */}
                                 <ul className='nav-promo-link-buttons'>
-                                    <a className='splash-nav-button' href=''>Linked In</a>
-                                    <a className='splash-nav-button' href=''>Github Repo</a>
+                                    <a className='splash-nav-button' href='https://www.linkedin.com/in/josephmanso1/'>Linked In</a>
+                                    <a className='splash-nav-button' href='https://github.com/manjoeso'>Github Repo</a>
                                 </ul>
                             </div>
                             <div className="right-nav-buttons">

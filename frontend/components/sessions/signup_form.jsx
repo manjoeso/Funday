@@ -20,6 +20,7 @@ class SignupForm extends React.Component {
         // const user = Object.assign({}, this.state);
         this.props.processForm(this.state);
     }
+
     renderErrors() {
         return(
           <ul>
@@ -37,6 +38,8 @@ class SignupForm extends React.Component {
     }
     
     render () {
+        const demoUser = {email: 'demo_user@gmail.com', password: 'password'}
+
         let errors_class = '';
         if (this.props.errors.length > 0) { 
             errors_class = 'login-signup-error-display'
@@ -85,10 +88,21 @@ class SignupForm extends React.Component {
                                         <button className='login-action-button-wrapper'>Sign Up</button>
                                     </div>
                                 </form>
+                                <div className='or-sign-in-with-separator'>
+                                    <span className='separator-line'></span>
+                                    <h2>Or Sign in with</h2>
+                                    <span className='separator-line'></span>
+                                </div>
+                                <div className='demo-user'>
+                                    <button 
+                                        className='login-action-button-wrapper'
+                                        type='submit' 
+                                        onClick={() => this.props.login(demoUser)}>Demo User</button>
+                                </div>
                                 <br></br>
                                 <div className='sign-up-option-login-form'>
                                     <span>Already have an account?</span>
-                                    <Link errors={[]} to='/login'>Log in</Link>
+                                    <Link errors={[]} to='/login'> Log in</Link>
                                 </div>
                             </div>
                     </div>

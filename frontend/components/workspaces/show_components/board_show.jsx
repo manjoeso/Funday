@@ -13,7 +13,10 @@ import { AuthRoute, ProtectedRoute } from '../../../util/route_util';
 class BoardShow extends React.Component {
     constructor(props) {
         super(props)
-
+        
+        this.state = {
+            search: false
+        }
     }
 
     componentDidMount () {
@@ -24,12 +27,6 @@ class BoardShow extends React.Component {
             this.props.assignCurrentWorkspace(this.props.currentUser, parseInt(this.props.currentWorkspaceId))
         }
     }
-
-    // componentDidUpdate () {
-    //     if (this.props.currentUser.current_workspace_id !== parseInt(this.props.currentWorkspaceId)){
-    //         this.props.assignCurrentWorkspace(this.props.currentUser, parseInt(this.props.currentWorkspaceId))
-    //     }
-    // }
 
     assignColor (idx) {
         let colorOptions = {
@@ -62,7 +59,7 @@ class BoardShow extends React.Component {
                         <section className='dashboard-container'>
                             <BoardTitleFormContainer board={this.props.currentBoard}/> 
                             <ProjectFormContainer currentBoard={this.props.currentBoard}/>
-                            <div className='projects-parent-container'>
+                            <div className='projects-parent-container'> // only thing affected by search
                                     {this.props.projects.map((project, idx) => 
                                         <ProjectShowContainer 
                                             key={project.id}

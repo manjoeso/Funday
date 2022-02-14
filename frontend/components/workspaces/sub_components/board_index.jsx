@@ -35,7 +35,7 @@ class BoardIndex extends React.Component {
                                     <Link 
                                         to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}
                                     >
-                                    {board.title}
+                                    {board.title.length > 15 ? (`${board.title.slice(0, 15)}` + '...') : board.title}
                                     </Link>
                                 </div>
                                 <BoardDropdownContainer key={idx} board={board}></BoardDropdownContainer>
@@ -56,7 +56,7 @@ class BoardIndex extends React.Component {
                                 to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}
                             >
                             {/* <EditBoardFormContainer board={board}/> */}
-                            {board.title}
+                            {board.title.length > 15 ? (`${board.title.slice(0, 15)}` + '...') : board.title}
                             </Link>
                         </div>
                         <div className='board-dropdown-container'>

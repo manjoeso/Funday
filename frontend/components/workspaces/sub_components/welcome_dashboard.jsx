@@ -61,7 +61,7 @@ class WelcomeDashboard extends React.Component {
                                             key={board.id}
                                             id='ws-board-item' 
                                             to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}>
-                                        {board.title}
+                                        {board.title.length > 20 ? (`${board.title.slice(0, 20)}` + '...') : board.title}
                                         </Link>
                                     )
                                 })}
