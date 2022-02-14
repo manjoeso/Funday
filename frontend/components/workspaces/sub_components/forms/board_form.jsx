@@ -1,5 +1,6 @@
 import React from 'react'
 import {Redirect} from 'react-redux'
+
 class BoardForm extends React.Component {
     constructor (props){
         super(props)

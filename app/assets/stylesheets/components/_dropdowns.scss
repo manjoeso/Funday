@@ -59,57 +59,53 @@
     margin-bottom: 10px;
 }
 
-.workspace-delete-dropdown-button::after {
-    content: "\22EF";
-    width: 100%;
-    border: none;
-    color: black;
-    margin: none;
-    font-size: 22px;
-    text-align: right;
-    display: flex;
-    align-items: center;
-    border: none;
-    font-weight: bolder;
-    cursor: pointer;
-    padding: 0px 3px 0px 3px;
-}
-
 .workspace-delete-button-container {
-    display: flex;
-    flex-direction: column;
     position: relative;
-    width: 15%;
-}
+    text-align: center;
 
-.workspace-delete-dropdown-button {
+    &:hover {
+        background-color: rgba(192, 192, 192, 0.25)
+    }
+}
+#workspace-delete-dropdown-button {
     border: none;
     background: none;
     width: 100%;
     margin: none;
-}
+    cursor: pointer;
+    box-sizing: border-box;
 
-.workspace-delete-display-dropdown {
-    top: 5px;
-    left: 0px;
-    position: absolute;
-    border-radius: 10px;
+    &::after {
+        content: "\22EF";
+        color: black;
+        font-size: 22px;
+        font-weight: bolder;
+    }
+}
+#workspace-delete-display-dropdown {
     background-color: white;
-    padding: 5px 10px 5px 20px;
-    min-width: 150px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+    align-items: center;
+    width: 500%;
+    position: absolute;
+    top: 31px;
+    left: 0px;
+    z-index: 100;
+    // padding: 5px 10px 5px 10px;
     box-shadow: 5px 5px 5px 5px rgba(192, 192, 192, 0.25);
     line-height: 20px;
-    text-align: left;
-    margin: 10px;
-    z-index: 1000;
 }
 
-.workspace-delete-dropdown-button:hover {
-    background-color: rgba(192, 192, 192, 0.25)
-}
 
-#delete-dropdown {
-    position: absolute;
+#delete-workspace {
+    width: 90%;
+    color: red;
+    &:hover {
+        background-color: #E6E9EF;
+    }
 }
 
 

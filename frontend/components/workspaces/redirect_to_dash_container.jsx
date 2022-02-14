@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import RedirectToDash from './redirect_to_dash';
-import { fetchAllWorkspaceData } from '../../actions/workspace_actions'
+import { fetchAllWorkspaceData, createWorkspace } from '../../actions/workspace_actions'
 import { logout } from '../../actions/session_actions'
 
 
@@ -16,7 +16,8 @@ const mSTP = (state) => {
 
 const mDTP = (dispatch) => ({
     fetchAllWorkspaceData: (userId) => (dispatch(fetchAllWorkspaceData(userId))),
-    logout: () => (dispatch(logout()))
+    logout: () => (dispatch(logout())),
+    createWorkspace: (worspace) => dispatch(createWorkspace(worspace))
 })
  
 export default connect(mSTP, mDTP)(RedirectToDash)    

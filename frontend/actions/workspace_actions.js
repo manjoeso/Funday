@@ -34,7 +34,6 @@ export const updateWorkspace = workspace => dispatch => (
 )
 
 
-
 export const deleteWorkspace = workspaceId => dispatch => (
     WorkspaceApiUtil.deleteWorkspace(workspaceId)
         .then(dispatch(removeWorkspace(workspaceId)))

@@ -9,7 +9,8 @@ class RedirectToDash extends React.Component {
     }
 
     componentDidMount () {
-        this.props.fetchAllWorkspaceData(this.props.currentUser.id);
+        this.props.fetchAllWorkspaceData(this.props.currentUser.id)
+        .then();
         // this.props.assignCurrentWorkspace(this.props.currentUser, this.props.workspaces[0].id)
     }
    

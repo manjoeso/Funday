@@ -9,6 +9,7 @@ class WorkspaceDeleteDropdown extends React.Component {
 
         this.handleClick = this.handleClick.bind(this)
         this.handleBlur = this.handleBlur.bind(this)
+        this.handleDelete = this.handleDelete.bind(this)
     }
 
     handleClick () {
@@ -20,6 +21,11 @@ class WorkspaceDeleteDropdown extends React.Component {
         this.setState({show: false})
     }
 
+    handleDelete () {
+        this.props.deleteWorkspace(this.props.currentWorkspaceId)
+        .then(this.props.history.push(`/`))
+
+    }
     render() { 
         return ( 
             <div className='workspace-header'>
@@ -27,14 +33,13 @@ class WorkspaceDeleteDropdown extends React.Component {
                     Workspace
                 </div>
                 <div className='workspace-delete-button-container'>
-                    <button className='workspace-delete-dropdown-button' onClick={this.handleClick} onBlur={this.handleBlur}>
-
+                    <button id='workspace-delete-dropdown-button' onClick={this.handleClick} onBlur={this.handleBlur}>
+                        <ul onClick={e => e.stopPropagation()} id={this.state.show ? "workspace-delete-display-dropdown" : "no-dropdown"}>
+                            <li id='delete-workspace' onClick={this.handleDelete}>
+                                Delete Workspace
+                            </li>
+                        </ul>
                     </button>
-                    <ul onClick={e => e.stopPropagation()} id={this.state.show ? "workspace-delete-display-dropdown" : "no-dropdown"}>
-                        <li id='delete-workspace' onClick={() => this.props.deleteWorkspace(this.props.currentWorkspaceId)}>
-                            Delete
-                        </li>
-                    </ul>
                 </div>
             </div>
         );

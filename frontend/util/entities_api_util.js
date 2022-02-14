@@ -24,7 +24,7 @@ export const updateWorkspace = (workspace) => {
 
 export const deleteWorkspace = (workspaceId) => {
     return $.ajax({
-        method: "POST",
+        method: "DELETE",
         url: `/api/workspaces/${workspaceId}`
     })
 }
