@@ -78,7 +78,7 @@ class WorkspaceDropdown extends React.Component {
                                                     <span style={{'backgroundColor': this.assignColor(idx)}} className= 'workspace-dropdown-icon'>
                                                         {workspace.title[0]}
                                                     </span>
-                                                        {workspace.title}
+                                                        {this.props.currentWorkspace.title.length > 13 ? (`${this.props.currentWorkspace.title.slice(0, 13)}` + '...') : this.props.currentWorkspace.title}
                                                     </Link>
                                                 )
                                         })

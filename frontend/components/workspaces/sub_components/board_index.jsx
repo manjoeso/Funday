@@ -56,7 +56,7 @@ class BoardIndex extends React.Component {
                                 to={`/${this.props.currentWorkspaceId}/boards/${board.id}`}
                             >
                             {/* <EditBoardFormContainer board={board}/> */}
-                            {board.title.length > 15 ? (`${board.title.slice(0, 15)}` + '...') : board.title}
+                            {board.title.length > 7 ? (`${board.title.slice(0, 7)}` + '...') : board.title}
                             </Link>
                         </div>
                         <div className='board-dropdown-container'>
