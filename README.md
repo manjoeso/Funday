@@ -1,4 +1,5 @@
 # Funday (Monday.com Clone)
+![funday](https://user-images.githubusercontent.com/63963324/154087129-c97df329-888d-4ce3-8091-84534f80c04e.png)
 
 [Live link](https://funday-aa.herokuapp.com/?#) 
 
