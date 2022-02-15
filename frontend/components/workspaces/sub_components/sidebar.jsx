@@ -21,7 +21,7 @@ class Sidebar extends React.Component {
                         <a target="_blank" className='linkedin' href="https://www.linkedin.com/in/josephmanso1/">
                             <img src={linkedinlogoURL}/>
                         </a>
-                        <a  target="_blank" className='github' href="https://github.com/manjoeso">
+                        <a  target="_blank" className='github' href="https://github.com/manjoeso/Funday">
                             <img src={githublogoURL}/>
                         </a>
                         <a  target="_blank" className='angel' href="https://angel.co/u/joseph-manso">
