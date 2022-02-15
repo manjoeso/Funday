@@ -83,3 +83,5 @@ tasksSelector = function(tasks, groupId) {
     }
 ```
 # Display
+
+![image](https://user-images.githubusercontent.com/63963324/154096367-c8336c9a-3474-4a0e-9973-49cb2d2b6a92.png)
