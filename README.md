@@ -3,7 +3,7 @@
 
 [Live link](https://funday-aa.herokuapp.com/?#) 
 
-## Description 
+# Description 
 
 This project is my first portfolio piece designed to showcase my newly aqcuired abilities in developing a full stack application. This project was completed
 using postgres for database management, Ruby on Rails for backend, and Javascript/React for frontend. Completed during an App Academy bootcamp, this project was 
@@ -43,17 +43,18 @@ Funday is built with the React framework and Redux architecture on the frontend,
 
 ## Task List
 
-Fully flashed out task list where team members can share 'workspaces' where 'boards' and 'tasks' can be posted. Tasks can be assigned due-dates, status', and team members.
+Dynamic task list where team members can share 'workspaces' where 'boards' and 'tasks' can be posted. Tasks can be assigned due-dates, status', and team members. All information can be created, updated, and destroyed. 
 
 ![image](https://user-images.githubusercontent.com/63963324/154088778-223bce01-8515-4acd-bd78-c37f4c1ae150.png)
 
- 
+# Search Tasks
+
+ADD SEARCH GIF HERE
+
+Using an architecture taking advantage of backend associations, all of the searchable data for a users workspace is fetched to the front end Redux stata upon log-in, allowing for a fully front-end search bar. By using selectors to select out a user's group and respective tasks, I was able to display the searched components dynamically.
+
 ## Display
 
 ![image](https://user-images.githubusercontent.com/63963324/149538578-d2beacbe-80a7-44c9-830c-b7d34f36403e.png)
 ![image](https://user-images.githubusercontent.com/63963324/149538761-44aca5de-78cd-4194-8d9b-0a574440c8e0.png)
  
-## Technologies, Libraries APIs 
-
-1. Webpack to bundle and transpile the source JavaScript code.
-2. Ruby on Rails, Javascript/React
