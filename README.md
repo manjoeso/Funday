@@ -39,14 +39,14 @@ Feel free to reach out to me at jmanso93@gmail.com if you have any questions reg
 
 Funday is built with the React framework and Redux architecture on the frontend, supported by Ruby on Rails and a PostgreSQL database on the backend.
 
-## Functionality and MVPs
+## Core Functionality
 
-Using Funday.com, users will be able to :
+### Task List
 
-- Create, update, and maintain Workspaces that contain shared information for team members
-- Post and update Boards for each workspaces
-- Post and update Groups, and subsequent tasks for each Board
-- Assign team members, due dates, and status' (working on it, stuck, .etc) for each individual task
+Fully flashed out task list where team members can share 'workspaces' where 'boards' and 'tasks' can be posted. Tasks can be assigned due-dates, status', and team members.
+
+![image](https://user-images.githubusercontent.com/63963324/154088778-223bce01-8515-4acd-bd78-c37f4c1ae150.png)
+
  
 ## Display
 
