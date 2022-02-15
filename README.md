@@ -67,7 +67,7 @@ selectGroups () {
     }
 ```
 
-By then checking the local React state if there was content in the search bar, I was conditionally able to render the appropriate tasks related to the given Group without having to modify the existing task selector which otherwise will select all the relevant tasks for a group. 
+By then checking the local React state if there was content in the search bar, I was conditionally able to render the appropriate tasks related to the given group without having to modify the existing task selector which otherwise will select all the relevant tasks for a group. 
 
 ```
 tasksSelector = function(tasks, groupId) {
