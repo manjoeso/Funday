@@ -37,6 +37,8 @@ Feel free to reach out to me at jmanso93@gmail.com if you have any questions reg
 - jBuilder
 - Webpack
 
+Funday is built with the React framework and Redux architecture on the frontend, supported by Ruby on Rails and a PostgreSQL database on the backend.
+
 ## Functionality and MVPs
 
 Using Funday.com, users will be able to :
