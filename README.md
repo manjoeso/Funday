@@ -3,7 +3,7 @@
 
 [Live link](https://funday-aa.herokuapp.com/?#) 
 
-## Background 
+## Description 
 
 This project is my first portfolio piece designed to showcase my newly aqcuired abilities in developing a full stack application. This project was completed
 using postgres for database management, Ruby on Rails for backend, and Javascript/React for frontend. Completed during an App Academy bootcamp, this project was 
@@ -25,6 +25,17 @@ learn, and how much opportunity there is to grow as a web developer. Moreso, it 
 with enough time and research. 
 
 Feel free to reach out to me at jmanso93@gmail.com if you have any questions regarding my project. Thank you! 
+
+## Technologies 
+
+- React/Redux
+- Ruby on Rails
+- JavaScript, HTML, & SCSS
+- PostgreSQL
+- Node.js
+- jQuery
+- jBuilder
+- Webpack
 
 ## Functionality and MVPs
 
