@@ -1,30 +1,22 @@
 # Funday (Monday.com Clone)
+
 ![funday](https://user-images.githubusercontent.com/63963324/154087129-c97df329-888d-4ce3-8091-84534f80c04e.png)
 
 [Live link](https://funday-aa.herokuapp.com/?#) 
 
 # Description 
 
-This project is my first portfolio piece designed to showcase my newly aqcuired abilities in developing a full stack application. This project was completed
-using postgres for database management, Ruby on Rails for backend, and Javascript/React for frontend. Completed during an App Academy bootcamp, this project was 
-finished within a two-week time period after having just learned React. 
+Funday.com is a single-page, interactive task-managemnt web application designed to help you be a more productive you! With fully implement user-authentication, feel
+free to make your own account and invite other members to join your team. Keep track of tasks by assigning due-dates, status', and team members. Designed as a single-page application, funday.com is extremely fast and responsive, while persisting all of your updates and additions to a backend database. 
 
-Funday.com is an interactive task-managemnt web application designed to help you be a more productive you! With fully implement user-authentication, feel
-free to make your own account and invite other members to join your team. Create a new workspace, where you can divi up tasks to different projects, and assign
-different team members for each task. Designed as a single-page application, funday.com is extremely fast and responsive,
-while persisting all of your updates and additions to a backend database. 
-
-While I am proud of what I have completed, I am aware that this was mainly a learning experience for myself, and that there is much to improve upon.
-
-“Pride is not the opposite of shame, but it's source. True humility is the only antidote to shame.”
-
-― General Iroh
+This project is my first fullstack application, designed to showcase my abilities in frontend and backend devleipmentn. This project was completed
+using postgres for database management, Ruby on Rails for backend, and Javascript/React for frontend. 
 
 Working on this project has been a humbling experience as it has taught me a lot. More than anything, it has shown me how much more there is to 
 learn, and how much opportunity there is to grow as a web developer. Moreso, it has instilled confidence in myself, knowing that I can tackle anything
-with enough time and research. 
+with enough time and research... and documentation :)  
 
-Feel free to reach out to me at jmanso93@gmail.com if you have any questions regarding my project. Thank you! 
+Feel free to reach out to me at jmanso93@gmail.com if you have any questions regarding my project.
 
 # Technologies 
 
