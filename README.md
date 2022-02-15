@@ -45,4 +45,26 @@ ADD SEARCH GIF HERE
 
 Using an architecture taking advantage of backend associations, all of the searchable data for a users workspace is fetched to the front end Redux stata upon log-in, allowing for a fully front-end search bar. By using selectors to select out a user's group and respective tasks, I was able to display the searched components dynamically.
 
+CHALLENGE
+
+Since tasks have a 'belongs to' relationship with groups, the search had to be handled in two separate components. By modifying the exisiting set-up, I was able to re-factor the rendering code to dynamically take in selected tasks based on whether or not the search bar was active (had a string inside). For each cycle of the search (each new character inputted), I needed to check to see if the search bar still had content, and to select the correct groups to render.
+
+```
+selectGroups () {
+        let filteredGroups = {};
+        let query = this.state.query;
+        let newGroups = {}
+
+        this.props.groups.reverse().forEach(project => {
+            newGroups[group.id] = project;
+        })
+        this.props.allTasks.forEach(task => {
+            if((task.title.toLowerCase()).includes((query).toLowerCase())){
+                filteredGroups[task.group_id] = newGroups[task.group_id];
+            }
+        })
+        
+        return Object.values(filteredProjects);
+    }
+```
 # Display
