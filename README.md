@@ -53,9 +53,8 @@ Since tasks have a 'belongs to' relationship with groups, the search had to be h
 selectGroups () {
         let filteredGroups = {};
         let query = this.state.query;
-        let newGroups = {}
-
-        this.props.groups.reverse().forEach(project => {
+        let newGroups = {};
+        this.props.groups.forEach(project => {
             newGroups[group.id] = project;
         })
         this.props.allTasks.forEach(task => {
@@ -65,6 +64,26 @@ selectGroups () {
         })
         
         return Object.values(filteredProjects);
+    }
+```
+
+By then checking the local React state if there was content in the search bar, I was conditionally able to render the appropriate tasks related to the given Group without having to modify the existing task selector which otherwise will select all the relevant tasks for a group. 
+
+```
+tasksSelector = function(tasks, groupId) {
+        let taskArray = Object.values(tasks)
+        let returnArr = [];
+    
+        taskArray.forEach(task => {
+            if (task.group_id === groupId) {
+                returnArr.push(task)    
+            }
+        })
+        if(this.props.query) { // checks for 
+            let filteredTasks = returnArr.filter(task => (task.title.toLowerCase()).includes(this.props.query.toLowerCase()))
+            return filteredTasks;
+        }
+        return returnArr; 
     }
 ```
 # Display
