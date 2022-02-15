@@ -26,7 +26,7 @@ with enough time and research.
 
 Feel free to reach out to me at jmanso93@gmail.com if you have any questions regarding my project. Thank you! 
 
-## Technologies 
+# Technologies 
 
 - React/Redux
 - Ruby on Rails
@@ -39,9 +39,9 @@ Feel free to reach out to me at jmanso93@gmail.com if you have any questions reg
 
 Funday is built with the React framework and Redux architecture on the frontend, supported by Ruby on Rails and a PostgreSQL database on the backend.
 
-## Core Functionality
+# Core Functionality
 
-### Task List
+## Task List
 
 Fully flashed out task list where team members can share 'workspaces' where 'boards' and 'tasks' can be posted. Tasks can be assigned due-dates, status', and team members.
 
