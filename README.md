@@ -1,4 +1,6 @@
-# Full Stack Project "Funday.com" (Monday.com Clone)
+# Funday (Monday.com Clone)
+
+[Live link](https://funday-aa.herokuapp.com/?#) 
 
 ## Background 
 
