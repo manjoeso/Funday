@@ -53,8 +53,4 @@ ADD SEARCH GIF HERE
 
 Using an architecture taking advantage of backend associations, all of the searchable data for a users workspace is fetched to the front end Redux stata upon log-in, allowing for a fully front-end search bar. By using selectors to select out a user's group and respective tasks, I was able to display the searched components dynamically.
 
-## Display
-
-![image](https://user-images.githubusercontent.com/63963324/149538578-d2beacbe-80a7-44c9-830c-b7d34f36403e.png)
-![image](https://user-images.githubusercontent.com/63963324/149538761-44aca5de-78cd-4194-8d9b-0a574440c8e0.png)
- 
+# Display
