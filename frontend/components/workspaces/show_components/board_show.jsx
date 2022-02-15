@@ -83,20 +83,19 @@ class BoardShow extends React.Component {
     }
 
     selectProjects () {
-        // return array of project objects which have matching tasks to the query
         let filteredProjects = {};
         let query = this.state.query;
         let newProjects = {}
+
         this.props.projects.reverse().forEach(project => {
             newProjects[project.id] = project;
         })
-
         this.props.allTasks.forEach(task => {
-
             if((task.title.toLowerCase()).includes((query).toLowerCase())){
                 filteredProjects[task.project_id] = newProjects[task.project_id];
             }
         })
+        
         return Object.values(filteredProjects);
     }
 

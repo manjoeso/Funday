@@ -37,7 +37,7 @@ class Splash extends React.Component{
                 <div className='splash-main'>
                     <div className="splash-navbar-container">
                         <nav className="nav-buttons-parent-container">
-                            <Link to='/'>
+                            <Link  to='/'>
                                 <img src={fundaybiglogoURL}/>
                             </Link>              
                             <div className="left-nav-buttons">
@@ -45,13 +45,13 @@ class Splash extends React.Component{
                                     <Link to='/'>Monday.com</Link>
                                 </div> */}
                                 <ul className='nav-promo-link-buttons'>
-                                    <a className='splash-nav-button' href='https://www.linkedin.com/in/josephmanso1/'>Linked In</a>
-                                    <a className='splash-nav-button' href='https://github.com/manjoeso'>Github Repo</a>
+                                    <a target='_blank' className='splash-nav-button' href='https://www.linkedin.com/in/josephmanso1/'>Linked In</a>
+                                    <a target='_blank'className='splash-nav-button' href='https://github.com/manjoeso'>Github Repo</a>
                                 </ul>
                             </div>
                             <div className="right-nav-buttons">
-                                <Link className='splash-nav-button' to='/login'>Login</Link>
-                                <Link className='signup-button-small' to='/signup'><p>Get Started </p></Link>
+                                <Link  className='splash-nav-button' to='/login'>Login</Link>
+                                <Link  className='signup-button-small' to='/signup'><p>Get Started </p></Link>
                             </div>
                         </nav>
                     </div>

@@ -18,13 +18,13 @@ class Sidebar extends React.Component {
                         <Link className='workspace-home-link-button' to={`/workspaces/${id}`}>
                             <img src={fourBoxes}/>
                         </Link>
-                        <a className='linkedin' href="https://www.linkedin.com/in/josephmanso1/">
+                        <a target="_blank" className='linkedin' href="https://www.linkedin.com/in/josephmanso1/">
                             <img src={linkedinlogoURL}/>
                         </a>
-                        <a className='github' href="https://github.com/manjoeso">
+                        <a  target="_blank" className='github' href="https://github.com/manjoeso">
                             <img src={githublogoURL}/>
                         </a>
-                        <a className='angel' href="https://angel.co/u/joseph-manso">
+                        <a  target="_blank" className='angel' href="https://angel.co/u/joseph-manso">
                             <img src={angellogoURL}/>
                         </a>
                     </div>
