@@ -41,10 +41,9 @@ class WelcomeDashboard extends React.Component {
                                 <div id='joined'>
                                     Joined
                                 </div>
-                                <div id='contact-me'>
+                                {/* <div id='contact-me'>
                                     Contact me
-                                </div>
-                                
+                                </div> */}
                             </div>
                         </div>
                         <div className='ws-dash-content'>
