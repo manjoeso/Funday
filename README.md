@@ -34,7 +34,7 @@ Funday is built with the React framework and Redux architecture on the frontend,
 # Core Functionality
 
 ## Task List
-
+ 
 Dynamic task list where team members can share 'workspaces' where 'boards' and 'tasks' can be posted. Tasks can be assigned due-dates, statuses, and team members. All information can be created, updated, and destroyed. 
 
 ![image](https://user-images.githubusercontent.com/63963324/154088778-223bce01-8515-4acd-bd78-c37f4c1ae150.png)
