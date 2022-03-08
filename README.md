@@ -5,7 +5,7 @@
 [Live link](https://funday-aa.herokuapp.com/?#) 
 
 # Description 
-
+ 
 Funday.com is a single-page, interactive task-managemnt web application designed to help you be a more productive you! With fully implement user-authentication, feel
 free to make your own account and invite other members to join your team. Keep track of tasks by assigning due-dates, status', and team members. Designed as a single-page application, funday.com is extremely fast and responsive, while persisting all of your updates and additions to a backend database.  
 
